@@ -933,3 +933,100 @@
     text-align: center;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Vehicle Import Inquiry Form Styles */
+.import-inquiry-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.vehicle-import-form .form-group {
+    margin-bottom: 25px;
+}
+
+.vehicle-import-form .form-label {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+    display: block;
+}
+
+.vehicle-import-form .form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #495057;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vehicle-import-form .form-control:focus {
+    outline: none;
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.vehicle-import-form select.form-control {
+    height: 48px;
+    cursor: pointer;
+}
+
+.vehicle-import-form textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-import-submit {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    font-weight: 600;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.btn-import-submit:hover {
+    background: linear-gradient(135deg, #c82333, #a71e2a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+}
+
+.btn-import-submit i {
+    margin-right: 8px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .import-inquiry-form {
+        padding: 25px 20px;
+        margin: 0 15px;
+    }
+    
+    .vehicle-import-form .form-control {
+        padding: 14px 16px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .btn-import-submit {
+        width: 100%;
+        padding: 18px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .import-inquiry-form {
+        padding: 20px 15px;
+    }
+}
