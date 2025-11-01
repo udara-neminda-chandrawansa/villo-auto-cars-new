@@ -1030,3 +1030,140 @@
         padding: 20px 15px;
     }
 }
+
+
+/*
+=====================
+  client logo swiper
+=====================
+*/
+
+/* Logo Slider Container */
+.logo-slider-section {
+  width: 100%;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #091c3a 0%, #363636 100%);
+  overflow: hidden;
+
+  z-index: 99999999999999999999 !important;
+}
+
+.logo-slider-title {
+  text-align: center;
+  margin-bottom: 50px;
+  color: white !important;
+}
+
+.logo-slider-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: white !important;
+}
+
+.logo-slider-title p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Swiper Container */
+.logo-swiper {
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Logo Slide */
+.logo-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Logo Image */
+.logo-img {
+  max-width: 150px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  object-fit: contain;
+}
+
+.logo-img:hover {
+  
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Alternative Dark Background Version */
+.logo-slider-dark {
+  background: #2c3e50;
+}
+
+.logo-slider-dark .logo-img {
+  
+}
+
+.logo-slider-dark .logo-img:hover {
+  
+}
+
+/* Light Background Version */
+.logo-slider-light {
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-slider-light .logo-slider-title {
+  color: #333;
+}
+
+.logo-slider-light .logo-img {
+  
+}
+
+.logo-slider-light .logo-img:hover {
+  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo-slider-title h2 {
+    font-size: 2rem;
+  }
+
+  .logo-slider-title p {
+    font-size: 1rem;
+  }
+
+  .logo-img {
+    max-width: 100px;
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-slider-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .logo-img {
+    max-width: 80px;
+    max-height: 50px;
+  }
+}
+
+.my-shadow{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+@media (max-width: 992px) {
+  .my-shadow{
+    box-shadow: none;
+  }
+}
