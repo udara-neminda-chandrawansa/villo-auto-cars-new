@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+    <title>Autozone, Home-1</title>
+    <link href="favicon.png" type="image/x-icon" rel="shortcut icon" />
+    <link href="assets/css/master.css" rel="stylesheet" />
+    <link href="assets/css/index.css" rel="stylesheet" />
+
+    <link href="assets/plugins/iview/css/iview.css" rel="stylesheet" />
+    <link href="assets/plugins/iview/css/skin/style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- SWITCHER -->
+    <link href="assets/plugins/switcher/css/switcher.css" rel="stylesheet" id="switcher-css" media="all" />
+    <link href="assets/plugins/switcher/css/color1.css" rel="alternate stylesheet" title="color1" media="all" />
+    <link href="assets/plugins/switcher/css/color2.css" rel="alternate stylesheet" title="color2" media="all" />
+    <link href="assets/plugins/switcher/css/color3.css" rel="alternate stylesheet" title="color3" media="all" />
+    <link href="assets/plugins/switcher/css/color4.css" rel="alternate stylesheet" title="color4" media="all" />
+    <link href="assets/plugins/switcher/css/color5.css" rel="alternate stylesheet" title="color5" media="all" />
+    <script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+    <style>
+        .row {
+            gap: 10px;
+        }
+
+            .row * {
+            padding-left: 3px;
+            padding-right: 3px;
+            padding-top: 3px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+    <div id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
+       <div id="wrapper">
+            <!-- HEADER -->
+            <div class="header">
+                <div class="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="header-contacts">
+                                    <span class="header-contacts__item"><i class="icon fa fa-phone"></i>+ 987 654
+                                        3210</span>
+                                    <a class="header-contacts__item" href="mailto:autoz@zone.com"><i
+                                            class="icon fa fa-envelope"></i>autoz
+                                        (at) zone.com</a>
+                                </div>
+                                <ul class="social-links list-inline">
+                                    <li>
+                                        <a class="icon fa fa-facebook" href="javascript:void(0);"></a>
+                                    </li>
+                                    <li>
+                                        <a class="icon fa fa-twitter" href="javascript:void(0);"></a>
+                                    </li>
+                                    <li>
+                                        <a class="icon fa fa-youtube-play" href="javascript:void(0);"></a>
+                                    </li>
+                                    <li>
+                                        <a class="icon fa fa-instagram" href="javascript:void(0);"></a>
+                                    </li>
+                                    <li>
+                                        <a class="icon fa fa-google-plus" href="javascript:void(0);"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- end container -->
+                </div>
+                <!-- end top-header -->
+
+                <div class="header__inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12">
+                                <a href="index.html" class="logo">
+                                    <img class="logo__img img-responsive" src="assets/img/logo.png" height="50"
+                                        width="111" alt="Logo" />
+                                </a>
+                                <div class="navbar yamm">
+                                    <div class="navbar-header hidden-md hidden-lg hidden-sm">
+                                        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1"
+                                            class="navbar-toggle">
+                                            <span class="icon-bar"></span><span class="icon-bar"></span><span
+                                                class="icon-bar"></span>
+                                        </button>
+                                        <a href="javascript:void(0);" class="navbar-brand"></a>
+                                    </div>
+                                    <div id="navbar-collapse-1" class="navbar-collapse collapse">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="home.html">HOME</a></li>
+                                            <li>
+                                                <a href="vehicle-listings.html">VEHICLE LISTINGS</a>
+                                            </li>
+                                            <li><a href="car-details.html">CAR DETAILS</a></li>
+                                            <li class="dropdown">
+                                                <a href="news.html">NEWS</a>
+                                                <ul role="menu" class="dropdown-menu">
+                                                    <li><a href="news-grid.html">LEVEL 1</a></li>
+                                                    <li>
+                                                        <a href="news-details.html">LEVEL 1</a>
+
+                                                        <ul role="menu" class="dropdown-menu">
+                                                            <li><a href="news-grid.html">LEVEL 2</a></li>
+                                                            <li><a href="news-details.html">LEVEL 2</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="news-grid.html">NEWS GRID</a></li>
+                                            <li><a href="news-details.html">NEWS DETAILS</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end container -->
+                </div>
+                <!-- end header__inner -->
+            </div>
+            <!-- end header -->
+
+            <div id="sliderpro1" class="slider-pro main-slider">
+                <div class="sp-slides">
+                    <div class="sp-slide">
+                        <img class="sp-image" src="assets/media/main-slider/1.jpg"
+                            data-src="assets/media/main-slider/1.jpg" data-retina="assets/media/main-slider/1.jpg"
+                            alt="img" />
+
+                        <div class="item-wrap sp-layer sp-padding" data-horizontal="100" data-vertical="300"
+                            data-show-transition="left" data-hide-transition="up" data-show-delay="400"
+                            data-hide-delay="200">
+                            <div class="main-slider__inner text-left">
+                                <div class="custom-caption">
+                                    <a class="main-slider__btn btn-effect" href="javascript:void(0);"><span
+                                            class="main-slider__btn_inner">TOP BRANDS 2025</span></a>
+                                    <div class="main-slider__title">MODERN-CLASSIC</div>
+                                    <div class="main-slider__subtitle">
+                                        High Performance & Outstanding Technology Combined
+                                    </div>
+                                    <div class="decor-1"></div>
+                                    <div>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-lg px-5 py-3" style="
+                          font-size: 18px;
+                          letter-spacing: 1px;
+                          background-color: #e63946;
+                          border: none;
+                        ">
+                                            Book Appointment
+                                        </a>
+                                        <!-- <a class="main-slider__link" href="javascript:void(0);"><i class="icon fa fa-caret-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sp-slide">
+                        <img class="sp-image" src="assets/media/main-slider/2.jpg"
+                            data-src="assets/media/main-slider/2.jpg" data-retina="assets/media/main-slider/2.jpg"
+                            alt="img" />
+
+                        <div class="item-wrap sp-layer sp-padding" data-horizontal="100" data-vertical="300"
+                            data-show-transition="left" data-hide-transition="up" data-show-delay="400"
+                            data-hide-delay="200">
+                            <div class="main-slider__inner text-left">
+                                <div class="custom-caption">
+                                    <a class="main-slider__btn btn-effect" href="javascript:void(0);"><span
+                                            class="main-slider__btn_inner">TOP BRANDS 2025</span></a>
+                                    <div class="main-slider__title">MODERN-CLASSIC</div>
+                                    <div class="main-slider__subtitle">
+                                        High Performance & Outstanding Technology Combined
+                                    </div>
+                                    <div class="decor-1"></div>
+                                    <div>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-lg px-5 py-3" style="
+                          font-size: 18px;
+                          letter-spacing: 1px;
+                          background-color: #e63946;
+                          border: none;
+                        ">
+                                            Book Appointment
+                                        </a>
+                                        <!-- <a class="main-slider__link" href="javascript:void(0);"><i class="icon fa fa-caret-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- start filter container -->
+            <div class="container filteringpart">
+                <div class="inventory-filter">
+                    <div class="row g-4">
+                        <!-- Section 1: Filter Options (6 selectors in 2 rows) -->
+                        <div class="col-lg-8">
+                            <div class="row g-3">
+                                <!-- Row 1 -->
+                                <div class="col-md-4">
+                                    <label class="form-label">Select Make</label>
+                                    <select class="form-select">
+                                        <option selected>--Any Make--</option>
+                                        <option>Audi</option>
+                                        <option>BMW</option>
+                                        <option>Ferrari</option>
+                                        <option>Ford</option>
+                                        <option>Honda</option>
+                                        <option>Lamborghini</option>
+                                        <option>Lexus</option>
+                                        <option>Mercedes-Benz</option>
+                                        <option>Nissan</option>
+
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Select Model</label>
+                                    <select class="form-select">
+                                        <option selected>--Any Model--</option>
+                                        <option>Accord</option>
+                                        <option>Camry</option>
+                                        <option>Civic</option>
+                                        <option>Corolla</option>
+                                        <option>F-150</option>
+                                        <option>Model 3</option>
+                                        <option>Model S</option>
+                                        <option>Mustang</option>
+                                        <option>Silverado</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Select Body Style</label>
+                                    <select class="form-select">
+                                        <option selected>--Any Body Style--</option>
+                                        <option>Convertible</option>
+                                        <option>Coupe</option>
+                                        <option>Hatchback</option>
+                                        <option>Pickup Truck</option>
+                                        <option>Sedan</option>
+                                        <option>SUV</option>
+                                        <option>Van</option>
+                                        <option>Wagon</option>
+                                    </select>
+                                </div>
+
+                                <!-- Row 2 -->
+                                <div class="col-md-4">
+                                    <label class="form-label">Select Mileage</label>
+                                    <select class="form-select">
+                                        <option selected>--Any Mileage--</option>
+                                        <option>Under 10,000 miles</option>
+                                        <option>10,000 - 30,000 miles</option>
+                                        <option>30,000 - 50,000 miles</option>
+                                        <option>50,000 - 75,000 miles</option>
+                                        <option>75,000 - 100,000 miles</option>
+                                        <option>Over 100,000 miles</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Select Transmission</label>
+                                    <select class="form-select">
+                                        <option selected>--Any Transmission--</option>
+                                        <option>Automatic</option>
+                                        <option>Manual</option>
+                                        <option>CVT</option>
+                                        <option>Semi-Automatic</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Select Condition</label>
+                                    <select class="form-select">
+                                        <option selected>--Any Condition--</option>
+                                        <option>New</option>
+                                        <option>Used</option>
+                                        <option>Certified Pre-Owned</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Price Range & Search Button -->
+                        <div class="col-lg-4">
+                            <div class="price-section">
+                                <div class="price-header">Price Range</div>
+                                <div class="price-value" id="priceRangeDisplay">$6,900 - $801,700</div>
+
+                                <div class="slider-container">
+                                    <div id="sliderTrack"></div>
+                                    <div id="sliderRange"></div>
+                                    <input type="range" min="6900" max="801700" step="1000" value="6900" id="priceMin">
+                                    <input type="range" min="6900" max="801700" step="1000" value="801700"
+                                        id="priceMax">
+                                </div>
+
+                                <button class="btn-search">Search Inventory</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--start grid container-->
+            <div class="container pt-5 py-5">
+                <!-- Section Header -->
+                <div class="row pt-10 mb-5 position-relative">
+                    <div class="watermark outline-text">Suggested</div>
+                    <div class="col-lg-6">
+                        <div class="top-vehicles-label">Top Vehicles</div>
+                        <h2 class="section-title">
+                            Featured Vehicles Suggested<br />by Dealer
+                        </h2>
+                        <div class="title-underline"></div>
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center justify-content-lg-end">
+                        <div class="d-flex gap-3">
+                            <button class="filter-tab active">New</button>
+                            <button class="filter-tab">Certified Used</button>
+                            <button class="filter-tab">Used</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Cards -->
+                <div class="row">
+                    <!-- Card 1 - Lamborghini -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="car-card">
+                            <div class="car-image-wrapper">
+                                <img src="assets/media/gridImg/1_1.webp" alt="Car Primary" class="car-image primary" />
+                                <img src="assets/media/gridImg/1_2.webp" alt="Car Secondary"
+                                    class="car-image secondary" />
+
+                                <div class="image-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-random"></i>
+                                    </button>
+                                    <span class="compare-tooltip">Add to compare</span>
+                                    <button class="action-btn">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <div class="price-tag">
+                                    <span class="price-main">$85,000</span>
+                                    <span class="price-msrp">MSRP: $89,000</span>
+                                </div>
+                            </div>
+                            <div class="car-card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="car-title mb-0">
+                                        Toyota Urban Cruiser Taisor G 2025
+                                    </h3>
+                                </div>
+                                <div class="car-location">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
+                                </div>
+                                <div class="car-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-gas-pump"></i>
+                                        <span>Petrol</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-user"></i>
+                                        <span>20</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-cog"></i>
+                                        <span>4.0 cc</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-car"></i>
+                                        <span>SUV</span>
+                                    </div>
+                                </div>
+                                <div class="car-footer">
+                                    <div class="car-date">
+                                        <i class="far fa-calendar me-2"></i>March 26, 2021
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 - Ford Ranger -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="car-card">
+                            <div class="car-image-wrapper">
+                                <img src="assets/media/gridImg/2_1.webp" alt="Car Primary" class="car-image primary" />
+                                <img src="assets/media/gridImg/2_2.webp" alt="Car Secondary"
+                                    class="car-image secondary" />
+                                <div class="image-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-random"></i>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <div class="price-tag">
+                                    <span class="price-main">$85,060</span>
+                                    <span class="price-msrp">MSRP: $89,000</span>
+                                </div>
+                            </div>
+                            <div class="car-card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="car-title mb-0">Honda Vezel 1500cc Z Grade</h3>
+                                </div>
+                                <div class="car-location">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
+                                </div>
+                                <div class="car-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-gas-pump"></i>
+                                        <span>Petrol</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-user"></i>
+                                        <span>20</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-cog"></i>
+                                        <span>2.0 cc</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-car"></i>
+                                        <span>SUV</span>
+                                    </div>
+                                </div>
+                                <div class="car-footer">
+                                    <div class="car-date">
+                                        <i class="far fa-calendar me-2"></i>March 26, 2021
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 - Chevrolet Corvette -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="car-card">
+                            <div class="car-image-wrapper">
+                                <img src="assets/media/gridImg/3_1.webp" alt="Car Primary" class="car-image primary" />
+                                <img src="assets/media/gridImg/3_2.webp" alt="Car Secondary" class="car-image secondary"
+                                    onmouseenter="this.parentElement.querySelector('.image-actions').style.display='block';"
+                                    onmouseleave="this.parentElement.querySelector('.image-actions').style.display='none';" />
+                                
+                                <div class="image-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-random"></i>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <div class="price-tag">
+                                    <span class="price-main">$85,000</span>
+                                    <span class="price-msrp">MSRP: $89,000</span>
+                                </div>
+                            </div>
+                            <div class="car-card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="car-title mb-0">
+                                        Suzuki wagon r Stingry 2017/2018
+                                    </h3>
+                                </div>
+                                <div class="car-location">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
+                                </div>
+                                <div class="car-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-gas-pump"></i>
+                                        <span>Petrol</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-user"></i>
+                                        <span>5</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-cog"></i>
+                                        <span>6.2 cc</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-car"></i>
+                                        <span>SUV</span>
+                                    </div>
+                                </div>
+                                <div class="car-footer">
+                                    <div class="car-date">
+                                        <i class="far fa-calendar me-2"></i>March 26, 2021
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 - With DEAL Badge -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="car-card">
+                            <div class="car-image-wrapper">
+                                <img src="assets/media/gridImg/4_1.webp" alt="Car Primary" class="car-image primary" />
+                                <img src="assets/media/gridImg/4_2.webp" alt="Car Secondary"
+                                    class="car-image secondary" />
+                                <div class="image-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-random"></i>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <div class="price-tag">
+                                    <span class="price-main">$75,000</span>
+                                    <span class="price-msrp">MSRP: $82,000</span>
+                                </div>
+                            </div>
+                            <div class="car-card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="car-title mb-0">Toyota Roomy Custom G 2025</h3>
+                                </div>
+                                <div class="car-location">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
+                                </div>
+                                <div class="car-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-gas-pump"></i>
+                                        <span>Petrol</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-user"></i>
+                                        <span>20</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-cog"></i>
+                                        <span>3.0 cc</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-car"></i>
+                                        <span>SUV</span>
+                                    </div>
+                                </div>
+                                <div class="car-footer">
+                                    <div class="car-date">
+                                        <i class="far fa-calendar me-2"></i>March 26, 2021
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 - With DEAL Badge -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="car-card">
+                            <div class="car-image-wrapper">
+                                <img src="assets/media/gridImg/5_1.webp" alt="Car Primary" class="car-image primary" />
+                                <img src="assets/media/gridImg/5_2.webp" alt="Car Secondary"
+                                    class="car-image secondary" />
+                                <div class="image-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-random"></i>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <div class="price-tag">
+                                    <span class="price-main">$68,000</span>
+                                    <span class="price-msrp">MSRP: $74,000</span>
+                                </div>
+                            </div>
+                            <div class="car-card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="car-title mb-0">oyota Raize Hybrid Z 2025</h3>
+                                </div>
+                                <div class="car-location">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
+                                </div>
+                                <div class="car-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-gas-pump"></i>
+                                        <span>Petrol</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-user"></i>
+                                        <span>20</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-cog"></i>
+                                        <span>3.0 cc</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-car"></i>
+                                        <span>SUV</span>
+                                    </div>
+                                </div>
+                                <div class="car-footer">
+                                    <div class="car-date">
+                                        <i class="far fa-calendar me-2"></i>March 26, 2021
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 - With DEAL Badge -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="car-card">
+                            <div class="car-image-wrapper">
+                                <img src="assets/media/gridImg/6_1.webp" alt="Car Primary" class="car-image primary" />
+                                <img src="assets/media/gridImg/6_2.webp" alt="Car Secondary"
+                                    class="car-image secondary" />
+                                <div class="image-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-random"></i>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <div class="price-tag">
+                                    <span class="price-main">$55,000</span>
+                                    <span class="price-msrp">MSRP: $62,000</span>
+                                </div>
+                            </div>
+                            <div class="car-card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="car-title mb-0">
+                                        Kia Sonet GTX Plus 2025 - Brand New
+                                    </h3>
+                                </div>
+                                <div class="car-location">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
+                                </div>
+                                <div class="car-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-gas-pump"></i>
+                                        <span>Petrol</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-user"></i>
+                                        <span>5</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-cog"></i>
+                                        <span>3.0 cc</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-car"></i>
+                                        <span>Sedan</span>
+                                    </div>
+                                </div>
+                                <div class="car-footer">
+                                    <div class="car-date">
+                                        <i class="far fa-calendar me-2"></i>March 26, 2021
+                                    </div>
+                                    <div class="share-btn">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span class="scroll-top"> <i class="fa fa-angle-up"> </i></span>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/jquery-migrate-1.2.1.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
+    <script src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="assets/plugins/jelect/jquery.jelect.js"></script>
+
+    <!--HOME SLIDER-->
+
+    <script src="assets/plugins/sliderpro/js/jquery.sliderPro.min.js"></script>
+
+    <!--THEME-->
+    <script src="assets/js/cssua.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const minGap = 10000;
+        const min = 6900, max = 801700;
+        const priceMin = document.getElementById('priceMin');
+        const priceMax = document.getElementById('priceMax');
+        const priceRangeDisplay = document.getElementById('priceRangeDisplay');
+        const sliderRange = document.getElementById('sliderRange');
+
+        function formatPrice(val) {
+            return '$' + Number(val).toLocaleString();
+        }
+
+        function updateSliderRange() {
+            const minVal = parseInt(priceMin.value);
+            const maxVal = parseInt(priceMax.value);
+            const percentMin = ((minVal - min) / (max - min)) * 100;
+            const percentMax = ((maxVal - min) / (max - min)) * 100;
+            sliderRange.style.left = percentMin + '%';
+            sliderRange.style.width = (percentMax - percentMin) + '%';
+        }
+
+        function updatePriceRange(e) {
+            let minVal = parseInt(priceMin.value);
+            let maxVal = parseInt(priceMax.value);
+
+            if (maxVal - minVal < minGap) {
+                if (e && e.target === priceMin) {
+                    priceMin.value = maxVal - minGap;
+                    minVal = maxVal - minGap;
+                } else {
+                    priceMax.value = minVal + minGap;
+                    maxVal = minVal + minGap;
+                }
+            }
+
+            priceRangeDisplay.textContent = formatPrice(priceMin.value) + ' - ' + formatPrice(priceMax.value);
+            updateSliderRange();
+        }
+
+        priceMin.addEventListener('input', updatePriceRange);
+        priceMax.addEventListener('input', updatePriceRange);
+
+        // Initial update
+        updateSliderRange();
+    </script>
+    <script>
+        // Filter tab functionality
+        document.querySelectorAll(".filter-tab").forEach((tab) => {
+            tab.addEventListener("click", function () {
+                document
+                    .querySelectorAll(".filter-tab")
+                    .forEach((t) => t.classList.remove("active"));
+                this.classList.add("active");
+            });
+        });
+    </script>
+
+    <script>
+        // Hide all .image-actions by default
+        document
+            .querySelectorAll(".car-image-wrapper .image-actions")
+            .forEach((el) => {
+                el.style.display = "none";
+            });
+
+        // For all secondary images, show .image-actions on hover, hide on mouseout
+        document
+            .querySelectorAll(".car-image.secondary")
+            .forEach((img) => {
+                img.addEventListener("mouseenter", function () {
+                    const actions =
+                        this.parentElement.querySelector(".image-actions");
+                    if (actions) actions.style.display = "block";
+                });
+                img.addEventListener("mouseleave", function () {
+                    const actions =
+                        this.parentElement.querySelector(".image-actions");
+                    if (actions) actions.style.display = "none";
+                });
+            });
+
+        // For all primary images, always hide .image-actions on hover
+        document.querySelectorAll(".car-image.primary").forEach((img) => {
+            img.addEventListener("mouseenter", function () {
+                const actions =
+                    this.parentElement.querySelector(".image-actions");
+                if (actions) actions.style.display = "none";
+            });
+        });
+    </script>
+</body>
+
+</html>
