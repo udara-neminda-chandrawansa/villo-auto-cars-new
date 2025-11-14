@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+    <title>Villo Auto Cars - Contact Us</title>
+    <link href="assets/img/favicon.png" type="image/x-icon" rel="shortcut icon" />
+    <link href="assets/css/master.css" rel="stylesheet" />
+    <link href="assets/css/index.css" rel="stylesheet" />
+    <link href="assets/plugins/iview/css/iview.css" rel="stylesheet" />
+    <link href="assets/plugins/iview/css/skin/style.css" rel="stylesheet" />
+
+    <script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+
+    <style>
+        .row * {
+            padding-left: 3px;
+            padding-right: 3px;
+            padding-top: 3px;
+        }
+
+        /* Contact Details Styles */
+        .contact-details__wrap-title {
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .contact-details__title {
+            float: left;
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Contact Map */
+        .contact-map-box {
+            margin-bottom: 30px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .contact-map-box iframe {
+            width: 100%;
+            height: 430px;
+            border: none;
+        }
+
+        /* Tabs Styling */
+        .wrap-nav-tabs {
+            margin: 30px 0 0;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .wrap-nav-tabs .nav-tabs {
+            border: none;
+        }
+
+        .wrap-nav-tabs .nav-tabs>li {
+            margin-bottom: -2px;
+        }
+
+        .wrap-nav-tabs .nav-tabs>li>a {
+            border: none;
+            border-radius: 0;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 13px;
+            color: #666;
+            background: transparent;
+        }
+
+        .wrap-nav-tabs .nav-tabs>li.active>a,
+        .wrap-nav-tabs .nav-tabs>li>a:hover {
+            color: #d32f2f;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #d32f2f;
+        }
+
+        .tab-content {
+            padding: 30px 0;
+        }
+
+        .ui-title-inner {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        
+
+        /* Contact Form */
+        .contact-form-box {
+            background: #f8f8f8;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        .contact-form-box .form-control {
+            height: 50px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 10px 20px;
+            font-size: 14px;
+            background: #fff;
+            margin-bottom: 20px;
+        }
+
+        .contact-form-box textarea.form-control {
+            height: 150px;
+            resize: none;
+        }
+
+        .contact-form-box .form-control:focus {
+            border-color: #d32f2f;
+            outline: none;
+            box-shadow: 0 0 5px rgba(211, 47, 47, 0.2);
+        }
+
+        .contact-form-box .btn-submit {
+            background: #d32f2f;
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form-box .btn-submit:hover {
+            background: #b71c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
+        }
+
+        /* Sidebar Widget Styles */
+        .widget {
+            margin-bottom: 40px;
+        }
+
+        .widget-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .widget-content .list-descriptions {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .widget-content .list-descriptions dt {
+            font-size: 12px;
+            font-weight: 700;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
+
+        .widget-content .list-descriptions dt:first-child {
+            margin-top: 0;
+        }
+
+        .widget-content .list-descriptions dd {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 0;
+            line-height: 1.8;
+        }
+
+        /* Opening Hours Box */
+        .opening-hours-widget {
+            background: #f8f8f8;
+            padding: 25px;
+            border-radius: 5px;
+        }
+
+        .opening-hours-widget ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .opening-hours-widget ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+
+        .opening-hours-widget ul li:last-child {
+            border-bottom: none;
+        }
+
+        .opening-hours-widget ul li strong {
+            color: #333;
+            font-weight: 600;
+            display: inline-block;
+            min-width: 100px;
+        }
+
+        .opening-hours-widget ul li span {
+            color: #666;
+        }
+
+        .opening-hours-widget ul li span.text-red {
+            color: #d32f2f;
+            font-weight: 600;
+        }
+
+        /* Call to Action Section */
+        .section_letter {
+            background: #d32f2f;
+            padding: 50px 0;
+            margin: 50px 0 0;
+        }
+
+        .letter {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .letter__inner {
+            flex: 1;
+            padding-right: 30px;
+        }
+
+        .letter__title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .letter__info {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        .letter__btn .social-block {
+            background: #fff;
+            color: #d32f2f;
+            padding: 15px 40px;
+            border-radius: 3px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .letter__btn .social-block:hover {
+            background: #333;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Accordion Styles */
+        .accordion {
+            margin-top: 30px;
+        }
+
+        .accordion .panel {
+            border: 1px solid #e0e0e0;
+            border-radius: 0;
+            margin-bottom: 10px;
+            box-shadow: none;
+        }
+
+        .accordion .panel-heading {
+            background: #f8f8f8;
+            border-radius: 0;
+            padding: 0 0px;
+            /* keep horizontal spacing */
+            position: relative;
+            display: flex;
+            align-items: center;
+            /* vertically center children */
+        }
+
+        .accordion .panel-title {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #333;
+            padding: 15px 20px;
+            /* simpler padding when using flex */
+            margin: 0;
+            flex: 1;
+            /* take remaining space */
+            margin-bottom: 20px;
+        }
+
+        .accordion .btn-collapse {
+            position: relative;
+            /* participate in flex layout */
+            margin-right: 10px;
+            padding-bottom: 5px;
+            /* spacing between icon and title */
+            width: 34px;
+            height: 34px;
+            border: 2px solid #d32f2f;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .accordion .btn-collapse:hover {
+            background: #d32f2f;
+        }
+
+        .accordion .btn-collapse .icon {
+            padding-bottom: 2px;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .accordion .btn-collapse .icon:before {
+            content: "-";
+            color: #d32f2f;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1;
+            transition: all 0.3s ease;
+        }
+
+        .accordion .btn-collapse.collapsed .icon:before {
+            content: "+";
+            color: #d32f2f;
+        }
+
+        .accordion .btn-collapse:hover .icon:before {
+            color: #fff;
+        }
+
+        .accordion .panel-body {
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .letter {
+                flex-direction: column;
+            }
+
+            .letter__inner {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .contact-details__title {
+                font-size: 22px;
+            }
+
+            .contact-map-box iframe {
+                height: 300px;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+    <div id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
+        <div id="wrapper">
+            <!-- HEADER -->
+            <div class="header">
+                <div class="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="header-contacts">
+                                    <span class="header-contacts__item"><i class="icon fa fa-phone"></i> 076 905
+                                        7272</span>
+                                    <a class="header-contacts__item" href="mailto:villoauto@gmail.com"><i
+                                            class="icon fa fa-envelope"></i>
+                                        villoauto@gmail.com</a>
+                                </div>
+                                <ul class="social-links list-inline">
+                                    <li>
+                                        <a class="" href="javascript:void(0);"><i class="bi bi-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0);"><i class="bi bi-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0);"><i class="bi bi-whatsapp"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header__inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12">
+                                <a href="index.html" class="logo d-none d-lg-block">
+                                    <img class="logo__img img-responsive" src="assets/img/logo.png"
+                                        style="height: 100px; object-fit: contain;" alt="Logo" />
+                                </a>
+                                <div class="navbar yamm">
+                                    <div class="navbar-header hidden-md hidden-lg hidden-sm">
+                                        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1"
+                                            class="navbar-toggle">
+                                            <span class="icon-bar"></span><span class="icon-bar"></span><span
+                                                class="icon-bar"></span>
+                                        </button>
+                                        <a href="javascript:void(0);" class="navbar-brand"></a>
+                                    </div>
+                                    <div id="navbar-collapse-1" class="navbar-collapse collapse">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="index.html">HOME</a></li>
+                                            <li><a href="#">SERVICES</a></li>
+                                            <li><a href="#">ABOUT US</a></li>
+                                            <li><a href="gallery.html">GALLERY</a></li>
+                                            <li><a href="contact-us.html">CONTACT US</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END HEADER -->
+
+            <!-- PAGE TITLE -->
+            <div class="block-title">
+                <div class="block-title__inner section-bg section-bg_second">
+                    <div class="bg-inner">
+                        <h1 class="ui-title-page">CONTACT US</h1>
+                        <div class="decor-1 center-block"></div>
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">HOME</a></li>
+                            <li class="active">CONTACT US</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE TITLE -->
+
+            <!-- CONTACT DETAILS SECTION -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <main class="main-content">
+                            <article class="contact-details">
+                                <div class="contact-details__wrap-title clearfix">
+                                    <h2 class="contact-details__title">Get In Touch</h2>
+                                </div>
+
+                                <!-- Google Map -->
+                                <div class="contact-map-box">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.7692881407293!2d80.56775379999999!3d7.267075500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae369dddb5eb077%3A0x8e1e0407a46ff296!2sVillo%20Auto%20Cars!5e0!3m2!1sen!2slk!4v1753537417729!5m2!1sen!2slk"
+                                        allowfullscreen loading="lazy"></iframe>
+                                </div>
+
+                                <!-- Nav tabs -->
+                                <div class="wrap-nav-tabs">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#tab1" data-toggle="tab">CONTACT FORM</a>
+                                        </li>
+                                        <li><a href="#tab2" data-toggle="tab">LOCATION INFO</a></li>
+                                        <li><a href="#tab3" data-toggle="tab">OPENING HOURS</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab1">
+                                        <h3 class="ui-title-inner">Send Us A Message</h3>
+                                        <div class="decor-1"></div>
+                                        <p>We'd love to hear from you! Fill out the form below and we'll get back to you
+                                            as soon as possible.</p>
+
+                                        <div class="contact-form-box">
+                                            <form id="contactform" role="form" method="post" action="#">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="text" class="form-control" placeholder="Your Name*"
+                                                            name="name" required>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="email" class="form-control"
+                                                            placeholder="Your Email*" name="email" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Phone Number*" name="phone" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <textarea class="form-control" placeholder="Your Message*"
+                                                            rows="6" name="message" required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <button type="submit" class="btn-submit">SEND MESSAGE</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="tab2">
+                                        <h3 class="ui-title-inner">Our Location</h3>
+                                        <div class="decor-1"></div>
+                                        <p>Visit us at our showroom to browse our wide selection of quality vehicles.
+                                            Our friendly team is ready to assist you with all your automotive needs.</p>
+                                        <p><strong>Address:</strong><br>
+                                            No. 614, Colombo road, Nanuoya, Pilimathalawa, Kandy</p>
+                                        <p><strong>Contact:</strong><br>
+                                            Phone: 076 905 7272<br>
+                                            Email: villoauto@gmail.com</p>
+                                    </div>
+
+                                    <div class="tab-pane" id="tab3">
+                                        <h3 class="ui-title-inner">When To Visit</h3>
+                                        <div class="decor-1"></div>
+                                        <p>Our showroom is open six days a week. Feel free to drop by during our
+                                            business hours or schedule an appointment for a personalized consultation.
+                                        </p>
+
+                                        <div class="opening-hours-widget">
+                                            <ul>
+                                                <li><strong>Sunday</strong> <span class="text-red">Closed</span></li>
+                                                <li><strong>Monday</strong> <span>9:00 AM to 9:00 PM</span></li>
+                                                <li><strong>Tuesday</strong> <span>9:00 AM to 9:00 PM</span></li>
+                                                <li><strong>Wednesday</strong> <span>9:00 AM to 9:00 PM</span></li>
+                                                <li><strong>Thursday</strong> <span>9:00 AM to 9:00 PM</span></li>
+                                                <li><strong>Friday</strong> <span>9:00 AM to 9:00 PM</span></li>
+                                                <li><strong>Saturday</strong> <span>9:00 AM to 9:00 PM</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Accordion -->
+                                <div class="panel-group accordion" id="accordion-1">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <a class="btn-collapse" data-toggle="collapse" data-parent="#accordion-1"
+                                                href="#collapse-1">
+                                                <i class="icon"></i>
+                                            </a>
+                                            <h3 class="panel-title">Why Choose Villo Auto Cars?</h3>
+                                        </div>
+                                        <div id="collapse-1" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <p>We offer top-quality reconditioned and brand-new vehicles with
+                                                    flexible leasing options tailored to your needs. Our experienced
+                                                    team provides comprehensive support from selection to after-sales
+                                                    service.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <a class="btn-collapse collapsed" data-toggle="collapse"
+                                                data-parent="#accordion-1" href="#collapse-2">
+                                                <i class="icon"></i>
+                                            </a>
+                                            <h3 class="panel-title">Our Services</h3>
+                                        </div>
+                                        <div id="collapse-2" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p>Vehicle sales, leasing options, documentation assistance, financing
+                                                    guidance, after-sales support, and trade-in services.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <a class="btn-collapse collapsed" data-toggle="collapse"
+                                                data-parent="#accordion-1" href="#collapse-3">
+                                                <i class="icon"></i>
+                                            </a>
+                                            <h3 class="panel-title">How To Reach Us</h3>
+                                        </div>
+                                        <div id="collapse-3" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p>You can reach us by phone, email, WhatsApp, or visit our showroom in
+                                                    person. We're also available on Facebook and Instagram for updates
+                                                    and inquiries.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end accordion -->
+                            </article>
+
+                            <!-- Call to Action -->
+                            <div class="wrap-section-border">
+                                <section class="section_letter section-bg section-bg_primary">
+                                    <div class="letter bg-inner">
+                                        <div class="letter__inner">
+                                            <h2 class="letter__title">Looking for a specific vehicle or need custom
+                                                financing?</h2>
+                                            <div class="letter__info">
+                                                Contact us today and let our team help you find the perfect vehicle with
+                                                flexible payment options tailored to your budget.
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </section>
+                            </div>
+                        </main>
+                    </div>
+
+                    <!-- SIDEBAR -->
+                    <div class="col-md-4">
+                        <aside class="sidebar">
+                            <!-- Contact Information Widget -->
+                            <section class="widget">
+                                <h3 class="widget-title">Contact Information</h3>
+                                <div class="decor-1"></div>
+                                <div class="widget-content">
+                                    <dl class="list-descriptions list-unstyled">
+                                        <dt>Address:</dt>
+                                        <dd>No. 614, Colombo road, Nanuoya, Pilimathalawa, Kandy</dd>
+
+                                        <dt>Phone:</dt>
+                                        <dd>076 905 7272</dd>
+
+                                        <dt>Email:</dt>
+                                        <dd>villoauto@gmail.com</dd>
+
+                                        <dt>Working Hours:</dt>
+                                        <dd>Monday - Saturday: 9:00 AM - 9:00 PM<br>Sunday: Closed</dd>
+
+                                        <dt>Social Media:</dt>
+                                        <dd>
+                                            Follow us on Facebook, Instagram, and WhatsApp for the latest updates
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+
+                            <!-- Quick Contact Widget -->
+                            <section class="widget">
+                                <h3 class="widget-title">Quick Contact</h3>
+                                <div class="decor-1"></div>
+                                <div class="widget-content">
+                                    <div class="contact-form-box">
+                                        <form id="quickcontactform">
+                                            <input type="text" class="form-control" placeholder="Name*" required>
+                                            <input type="text" class="form-control" placeholder="Phone*" required>
+                                            <textarea class="form-control" placeholder="Message*" rows="4"
+                                                required></textarea>
+                                            <button type="submit" class="btn-submit" style="width: 100%;">QUICK
+                                                INQUIRY</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Share Widget -->
+                            <div class="widget widget_mod-b">
+                                <div class="wrap-social-block wrap-social-block_mod-a">
+                                    <div class="social-block">
+                                        <div class="social-block__inner">
+                                            <span class="social-block__title">SHARE THIS</span>
+                                            <ul class="social-block__list list-inline">
+                                                <li>
+                                                    <a href="javascript:void(0);" aria-label="Share on Facebook"><i
+                                                            class="fa-brands fa-facebook-f"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" aria-label="Share on Twitter"><i
+                                                            class="fa-brands fa-twitter"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" aria-label="Share on Google+"><i
+                                                            class="fa-brands fa-google-plus-g"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTACT DETAILS SECTION -->
+
+            <!--FOOTER-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-top">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="footer-column">
+                                    <h4>INVENTORY</h4>
+                                    <ul>
+                                        <li><a href="#">NEW VEHICLES</a></li>
+                                        <li><a href="#">USED VEHICLES</a></li>
+                                        <li><a href="#">PRE-OWNED VEHICLE SPECIALS</a></li>
+                                        <li><a href="#">PRICED UNDER 15K</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="footer-column">
+                                    <h4>FINANCING</h4>
+                                    <ul>
+                                        <li><a href="#">GET FINANCING</a></li>
+                                        <li><a href="#">PAYMENT CALCULATOR</a></li>
+                                        <li><a href="#">VALUE YOUR TRADE</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="footer-column">
+                                    <h4>QUICK LINKS</h4>
+                                    <ul>
+                                        <li><a href="#">FAQS</a></li>
+                                        <li><a href="#">WHY BUY FROM ALM</a></li>
+                                        <li><a href="#">FIVE QUESTIONS TO ASK</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="footer-column">
+                                    <h4>CONTACT</h4>
+                                    <ul>
+                                        <li><a href="tel:94769057272">076 905 7272</a></li>
+                                        <li><a href="mailto:villoauto@gmail.com">villoauto@gmail.com</a></li>
+                                        <li><a href="#">No. 614, Colombo road, Nanuoya, Pilimathalawa</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <div>
+                            <img src="assets/img/logo-footer.png" alt="logo" class="footer-logo">
+                        </div>
+                        <div class="copyright">
+                            2025 © All Rights Reserved | Villo Auto Cars (Pvt) Ltd | Designed & Developed by Silicon
+                            Radon Networks
+                            (Pvt) Ltd.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!--END FOOTER-->
+
+            <!--Messenger and WhatsApp Floating btns-->
+            <a href="https://m.me/94769057272" class="float" style="z-index: 999999;">
+                <i class="fa-brands fa-facebook-messenger my-float"></i>
+            </a>
+            <script async
+                src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+            <script>
+                var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "94769057272", "welcomeMessage": "Hello! How can we help you today?", "zIndex": 999999, "btnColorScheme": "light" };
+                window.onload = () => {
+                    _waEmbed(wa_btnSetting);
+                };
+            </script>
+        </div>
+    </div>
+
+    <div class="car-top">
+        <span><img src="assets/img/car.png" alt="car"></span>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/jquery-migrate-1.2.1.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
+    <script src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="assets/plugins/jelect/jquery.jelect.js"></script>
+    <script src="assets/plugins/sliderpro/js/jquery.sliderPro.min.js"></script>
+    <script src="assets/js/cssua.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <!-- Contact Form Handler -->
+    <script>
+        // Main Contact Form
+        document.getElementById('contactform').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                message: formData.get('message')
+            };
+
+            const subject = 'Contact Inquiry from ' + data.name;
+            const body = 'Name: ' + data.name + '\nEmail: ' + data.email + '\nPhone: ' + data.phone + '\n\nMessage:\n' + data.message + '\n\n--\nThis message was sent from the Villo Auto Cars contact form.';
+
+            const mailtoLink = 'mailto:villoauto@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+            window.location.href = mailtoLink;
+        });
+
+        // Quick Contact Form
+        document.getElementById('quickcontactform').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = this.querySelector('input[placeholder="Name*"]').value;
+            const phone = this.querySelector('input[placeholder="Phone*"]').value;
+            const message = this.querySelector('textarea').value;
+
+            const subject = 'Quick Inquiry from ' + name;
+            const body = 'Name: ' + name + '\nPhone: ' + phone + '\n\nMessage:\n' + message + '\n\n--\nThis is a quick inquiry from Villo Auto Cars website.';
+
+            const mailtoLink = 'mailto:villoauto@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+            window.location.href = mailtoLink;
+        });
+    </script>
+
+</body>
+
+</html>
