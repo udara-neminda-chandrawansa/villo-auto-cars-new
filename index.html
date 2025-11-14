@@ -85,1387 +85,1462 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/custom.css">
+  <!-- SWITCHER -->
+  <link href="assets/plugins/switcher/css/switcher.css" rel="stylesheet" id="switcher-css" media="all" />
+  <link href="assets/plugins/switcher/css/color1.css" rel="alternate stylesheet" title="color1" media="all" />
+  <link href="assets/plugins/switcher/css/color2.css" rel="alternate stylesheet" title="color2" media="all" />
+  <link href="assets/plugins/switcher/css/color3.css" rel="alternate stylesheet" title="color3" media="all" />
+  <link href="assets/plugins/switcher/css/color4.css" rel="alternate stylesheet" title="color4" media="all" />
+  <link href="assets/plugins/switcher/css/color5.css" rel="alternate stylesheet" title="color5" media="all" />
+
+  <script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
+  <!-- Loader -->
+  <div id="page-preloader"><span class="spinner"></span></div>
+  <!-- Loader end -->
+
   <div id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
-    <div id="wrapper">
-      <!-- HEADER -->
-      <div class="header">
-        <div class="top-header">
+    <!-- Start Switcher -->
+    <div class="switcher-wrapper">
+      <div class="demo_changer">
+        <div class="demo-icon customBgColor">
+          <i class="fa fa-cog fa-spin fa-2x"></i>
+        </div>
+        <div class="form_holder">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="predefined_styles">
+                <div class="skin-theme-switcher">
+                  <h4>Color</h4>
+                  <a href="javascript:void(0);" data-switchcolor="color1" class="styleswitch"
+                    style="background-color: #fe5656">
+                  </a>
+                  <a href="javascript:void(0);" data-switchcolor="color2" class="styleswitch"
+                    style="background-color: #4fb0fd">
+                  </a>
+                  <a href="javascript:void(0);" data-switchcolor="color3" class="styleswitch"
+                    style="background-color: #ffc73c">
+                  </a>
+                  <a href="javascript:void(0);" data-switchcolor="color4" class="styleswitch"
+                    style="background-color: #ff8300">
+                  </a>
+                  <a href="javascript:void(0);" data-switchcolor="color5" class="styleswitch"
+                    style="background-color: #02cc8b">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="assets/plugins/switcher/js/bootstrap-select.js"></script>
+      <script src="assets/plugins/switcher/js/evol.colorpicker.min.js"></script>
+      <script src="assets/plugins/switcher/js/dmss.js"></script>
+    </div>
+    <!-- End Switcher -->
+
+    <div id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
+      <div id="wrapper">
+        <!-- HEADER -->
+        <div class="header">
+          <div class="top-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="header-contacts">
+                    <span class="header-contacts__item"><i class="icon fa fa-phone"></i> 076 905 7272</span>
+                    <a class="header-contacts__item" href="mailto:villoauto@gmail.com"><i
+                        class="icon fa fa-envelope"></i>
+                      villoauto@gmail.com</a>
+                  </div>
+                  <ul class="social-links list-inline">
+                    <li>
+                      <a class="" href="javascript:void(0);"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a class="" href="javascript:void(0);"><i class="bi bi-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a class="" href="javascript:void(0);"><i class="bi bi-whatsapp"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+            </div>
+            <!-- end container -->
+          </div>
+          <!-- end top-header -->
+
+          <div class="header__inner">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-xs-12">
+                  <a href="index.html" class="logo d-none d-lg-block">
+                    <img class="logo__img img-responsive" src="assets/img/logo.png"
+                      style="height: 100px; object-fit: contain;" alt="Logo" />
+                  </a>
+                  <div class="navbar yamm">
+                    <div class="navbar-header hidden-md hidden-lg hidden-sm">
+                      <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1"
+                        class="navbar-toggle">
+                        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                      </button>
+                      <a href="javascript:void(0);" class="navbar-brand"></a>
+                    </div>
+                    <div id="navbar-collapse-1" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+                        <li><a href="index.html">HOME</a></li>
+                        <li>
+                        <li><a href="vehicle-listings.html">VEHICLE LISTINGS</a></li>
+                        <li>
+                          <a href="services.html">SERVICES</a>
+                        </li>
+                        <li>
+                          <a href="about-us.html">ABOUT US</a>
+                        </li>
+                        <li>
+                          <a href="gallery.html">GALLERY</a>
+                        </li>
+                        <li>
+                          <a href="contact-us.html">CONTACT US</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end container -->
+          </div>
+          <!-- end header__inner -->
+        </div>
+
+        <!--hero (large screens)-->
+        <div id="sliderpro1" class="slider-pro main-slider">
+          <div class="sp-slides">
+            <div class="sp-slide">
+              <img class="sp-image" src="assets/media/main-slider/1.jpg" data-src="assets/media/main-slider/1.jpg"
+                data-retina="assets/media/main-slider/1.jpg" alt="img" />
+
+              <div class="item-wrap sp-layer sp-padding" data-horizontal="100" data-vertical="300"
+                data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
+                <div class="main-slider__inner text-left">
+                  <div class="custom-caption">
+                    <a class="main-slider__btn btn-effect" href="javascript:void(0);">
+                      <span class="main-slider__btn_inner">Brand New Arrival</span>
+                    </a>
+                    <div class="main-slider__title">2020 Toyota Axio Hybrid</div>
+                    <div class="main-slider__subtitle">
+                      Reliable Performance & Exceptional Fuel Efficiency
+                    </div>
+                    <div class="decor-1"></div>
+                    <div class="main-slider__text">Starts from</div>
+                    <div>
+                      <span class="main-slider__price">Rs. 7,850,000</span>
+                      <a class="main-slider__link" href="javascript:void(0);"><i class="icon fa fa-caret-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sp-slide">
+              <img class="sp-image" src="assets/media/main-slider/2.jpg" data-src="assets/media/main-slider/2.jpg"
+                data-retina="assets/media/main-slider/2.jpg" alt="img" />
+
+              <div class="item-wrap sp-layer sp-padding" data-horizontal="100" data-vertical="300"
+                data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
+                <div class="main-slider__inner text-left">
+                  <div class="custom-caption">
+                    <a class="main-slider__btn btn-effect" href="javascript:void(0);">
+                      <span class="main-slider__btn_inner">Featured Deal</span>
+                    </a>
+                    <div class="main-slider__title">2019 Honda Vezel Z</div>
+                    <div class="main-slider__subtitle">
+                      Stylish Design with Advanced Safety Features
+                    </div>
+                    <div class="decor-1"></div>
+                    <div class="main-slider__text">Starts from</div>
+                    <div>
+                      <span class="main-slider__price">Rs. 8,450,000</span>
+                      <a class="main-slider__link" href="javascript:void(0);"><i class="icon fa fa-caret-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--hero (small screens)-->
+        <div id="sliderpro2" class="slider-pro main-slider">
+          <div class="sp-slides">
+            <div class="sp-slide">
+              <img class="sp-image" src="assets/media/main-slider/1.jpg" data-src="assets/media/main-slider/1.jpg"
+                data-retina="assets/media/main-slider/1.jpg" alt="img" />
+
+              <div class="item-wrap sp-layer sp-padding max-lg-larger" data-horizontal="100" data-vertical="80"
+                data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
+                <div class="main-slider__inner text-left">
+                  <div class="custom-caption">
+                    <a class="main-slider__btn btn-effect" href="javascript:void(0);">
+                      <span class="main-slider__btn_inner">Brand New Arrival</span>
+                    </a>
+                    <div class="main-slider__title">2020 Toyota Axio</div>
+                    <div class="main-slider__subtitle">
+                      Reliable Performance & Exceptional Fuel Efficiency
+                    </div>
+                    <div class="decor-1"></div>
+                    <div class="main-slider__text">Starts from</div>
+                    <div>
+                      <span class="main-slider__price">Rs. 7,850,000</span>
+                      <a class="main-slider__link" href="javascript:void(0);"><i class="icon fa fa-caret-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sp-slide">
+              <img class="sp-image" src="assets/media/main-slider/2.jpg" data-src="assets/media/main-slider/2.jpg"
+                data-retina="assets/media/main-slider/2.jpg" alt="img" />
+
+              <div class="item-wrap sp-layer sp-padding max-lg-larger" data-horizontal="100" data-vertical="80"
+                data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
+                <div class="main-slider__inner text-left">
+                  <div class="custom-caption">
+                    <a class="main-slider__btn btn-effect" href="javascript:void(0);">
+                      <span class="main-slider__btn_inner">Featured Deal</span>
+                    </a>
+                    <div class="main-slider__title">2019 Honda Vezel Z</div>
+                    <div class="main-slider__subtitle">
+                      Stylish Design with Advanced Safety Features
+                    </div>
+                    <div class="decor-1"></div>
+                    <div class="main-slider__text">Starts from</div>
+                    <div>
+                      <span class="main-slider__price">Rs. 8,450,000</span>
+                      <a class="main-slider__link" href="javascript:void(0);"><i class="icon fa fa-caret-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- start filter container -->
+        <div class="container filteringpart">
+          <div class="inventory-filter">
+            <div class="row g-4">
+              <!-- Section 1: Filter Options (6 selectors in 2 rows) -->
+              <div class="col-lg-8 col-12">
+                <div class=" g-3">
+                  <!-- Row 1 -->
+                  <div class="col-md-4 col-12">
+                    <label class="form-label w-100">Select Make</label>
+                    <select class="form-select w-100">
+                      <option selected>--Any Make--</option>
+                      <option>Audi</option>
+                      <option>BMW</option>
+                      <option>Ferrari</option>
+                      <option>Ford</option>
+                      <option>Honda</option>
+                      <option>Lamborghini</option>
+                      <option>Lexus</option>
+                      <option>Mercedes-Benz</option>
+                      <option>Nissan</option>
+
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label w-100">Select Model</label>
+                    <select class="form-select w-100">
+                      <option selected>--Any Model--</option>
+                      <option>Accord</option>
+                      <option>Camry</option>
+                      <option>Civic</option>
+                      <option>Corolla</option>
+                      <option>F-150</option>
+                      <option>Model 3</option>
+                      <option>Model S</option>
+                      <option>Mustang</option>
+                      <option>Silverado</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label w-100">Select Body Style</label>
+                    <select class="form-select w-100">
+                      <option selected>--Any Body Style--</option>
+                      <option>Convertible</option>
+                      <option>Coupe</option>
+                      <option>Hatchback</option>
+                      <option>Pickup Truck</option>
+                      <option>Sedan</option>
+                      <option>SUV</option>
+                      <option>Van</option>
+                      <option>Wagon</option>
+                    </select>
+                  </div>
+
+                  <!-- Row 2 -->
+                  <div class="col-md-4">
+                    <label class="form-label w-100">Select Mileage</label>
+                    <select class="form-select w-100">
+                      <option selected>--Any Mileage--</option>
+                      <option>Under 10,000 miles</option>
+                      <option>10,000 - 30,000 miles</option>
+                      <option>30,000 - 50,000 miles</option>
+                      <option>50,000 - 75,000 miles</option>
+                      <option>75,000 - 100,000 miles</option>
+                      <option>Over 100,000 miles</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label w-100">Select Transmission</label>
+                    <select class="form-select w-100">
+                      <option selected>--Any Transmission--</option>
+                      <option>Automatic</option>
+                      <option>Manual</option>
+                      <option>CVT</option>
+                      <option>Semi-Automatic</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label w-100">Select Condition</label>
+                    <select class="form-select w-100">
+                      <option selected>--Any Condition--</option>
+                      <option>New</option>
+                      <option>Used</option>
+                      <option>Certified Pre-Owned</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 2: Price Range & Search Button -->
+              <div class="col-lg-4 col-12">
+                <div class="price-section">
+                  <div class="price-header">Price Range</div>
+                  <div class="price-value" id="priceRangeDisplay">Rs. 6,900 - Rs. 801,700</div>
+
+                  <div class="slider-container">
+                    <div id="sliderTrack"></div>
+                    <div id="sliderRange"></div>
+                    <input type="range" min="6900" max="801700" step="1000" value="6900" id="priceMin">
+                    <input type="range" min="6900" max="801700" step="1000" value="801700" id="priceMax">
+                  </div>
+
+                  <a href="vehicle-listings.html" class="btn-search btn btn-primary">Search Inventory</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- about us -->
+        <div class="section_default section_mod-e section-bg-2 wow bounceInRight" style="padding-top: 0px;"
+          data-wow-duration="2s">
+          <section class="section_mod-d">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h2 class="ui-title-block">About Us</h2>
+                  <div class="ui-subtitle-block_mod-b">
+                    Serving Pilimathalawa with quality vehicles & trusted customer care
+                  </div>
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+              <div class="row">
+                <div class="col-md-5">
+                  <h3 class="ui-title-inner">
+                    <i class="decor-3 fa fa-caret-right"></i>Villo Auto Cars – Your trusted vehicle dealer in
+                    Pilimathalawa
+                  </h3>
+                  <div class="decor-1 decor-1_mod-c"></div>
+                  <div class="ui-description">
+                    <p>
+                      Villo Auto Cars is a family-owned automobile dealer based in Pilimathalawa, Sri Lanka. We
+                      specialise
+                      in both brand new and reconditioned cars, offering honest pricing and genuine mileage. Whether
+                      you're looking for compact city cars or rugged SUVs, we pride ourselves on delivering vehicles
+                      that
+                      meet your needs and budget.
+                    </p>
+                  </div>
+                  <p>
+                    From selection to after-sales, our team is committed to transparent service. We assist with
+                    financing
+                    options, complete documentation, and help you understand all costs involved. We aim to make buying a
+                    vehicle stress-free and trustworthy.
+                  </p>
+                  <p>
+                    Located conveniently in Pilimathalawa, Villo Auto Cars has built a reputation of integrity, quality,
+                    and customer satisfaction throughout the North Western Province.
+                  </p>
+                  <a class="link" href="#">Wide inventory of cars in stock</a>
+                  <div class="decor-1"></div>
+                  <a class="link" href="#">Genuine imported & local vehicles</a>
+                  <div class="decor-1"></div>
+                  <a class="link" href="#">Full support: financing, servicing & documentation</a>
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+            </div>
+            <!-- end container -->
+          </section>
+
+          <!-- end section-area -->
+        </div>
+
+
+        <!-- services -->
+        <div class="wrap-section-border wow bounceInUp" data-wow-duration="2s">
+          <section class="section_mod-b section-bg section-bg_primary"
+            style="padding-top: 30px; padding-bottom: 0px; height: fit-content;">
+            <div class="bg-inner border-section-top border-section-top_mod-a">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h2 class="ui-title-block ui-title-block_mod-a text-center">
+                      Our Services
+                    </h2>
+                    <div class="ui-subtitle-block_mod-a">
+                      Comprehensive vehicle solutions for your convenience
+                    </div>
+                    <div class="slider-services owl-carousel owl-theme owl-theme_mod-a enable-owl-carousel"
+                      data-min480="2" data-min768="3" data-min992="4" data-min1200="4" data-pagination="true"
+                      data-navigation="false" data-auto-play="4000" data-stop-on-hover="true">
+
+                      <!-- Vehicle Sales -->
+                      <div class="list-services">
+                        <i class="icon flaticon-car33"></i>
+                        <div class="decor-1"></div>
+                        <div class="list-services__inner">
+                          <h3 class="list-services__title">
+                            Vehicle <strong>SALES</strong>
+                          </h3>
+                          <div class="list-services__description">
+                            Wide selection of brand-new & reconditioned cars from trusted brands.
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end list-services -->
+
+                      <!-- Vehicle Imports -->
+                      <div class="list-services">
+                        <i class="icon flaticon-transport320"></i>
+                        <div class="decor-1"></div>
+                        <div class="list-services__inner">
+                          <h3 class="list-services__title">
+                            Vehicle <strong>IMPORTS</strong>
+                          </h3>
+                          <div class="list-services__description">
+                            Direct import services for custom vehicle orders from Japan & beyond.
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end list-services -->
+
+                      <!-- Financing Assistance -->
+                      <div class="list-services">
+                        <i class="icon flaticon-automobile8"></i>
+                        <div class="decor-1"></div>
+                        <div class="list-services__inner">
+                          <h3 class="list-services__title">
+                            Financing <strong>ASSISTANCE</strong>
+                          </h3>
+                          <div class="list-services__description">
+                            Support with bank leasing and flexible payment plans to suit your budget.
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end list-services -->
+
+                      <!-- Trade-Ins -->
+                      <div class="list-services">
+                        <i class="icon flaticon-transport391"></i>
+                        <div class="decor-1"></div>
+                        <div class="list-services__inner">
+                          <h3 class="list-services__title">
+                            Vehicle <strong>TRADE-INS</strong>
+                          </h3>
+                          <div class="list-services__description">
+                            Exchange your old car for a newer model at the best possible value.
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end list-services -->
+
+                      <!-- Documentation Support -->
+                      <div class="list-services">
+                        <i class="icon flaticon-repairing4"></i>
+                        <div class="decor-1"></div>
+                        <div class="list-services__inner">
+                          <h3 class="list-services__title">
+                            Documentation <strong>SUPPORT</strong>
+                          </h3>
+                          <div class="list-services__description">
+                            Assistance with vehicle registration, insurance, and legal paperwork.
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end list-services -->
+
+                    </div>
+                    <!-- end slider-services -->
+                  </div>
+                  <!-- end col -->
+                </div>
+                <!-- end row -->
+                <div class="border-section-bottom"></div>
+              </div>
+              <!-- end container -->
+            </div>
+            <!-- end bg-inner -->
+          </section>
+          <!-- end section_mod-b -->
+        </div>
+
+        <!--start grid container-->
+        <div class="container" style="padding-top: 30px;">
+          <!-- Section Header -->
+          <div class="row pt-10 mb-5 position-relative">
+            <!-- <div class="watermark outline-text">Suggested</div> -->
+            <div class="col-lg-6">
+              <div class="top-vehicles-label">Top Vehicles</div>
+              <h2 class="section-title">
+                Featured Vehicles Suggested<br />by Dealer
+              </h2>
+              <div class="title-underline"></div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center justify-content-end h-100 d-none">
+              <div class="d-flex h-100 justify-content-end gap-3">
+                <button class="filter-tab active">New</button>
+                <button class="filter-tab">Certified Used</button>
+                <button class="filter-tab">Used</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle Cards -->
+          <div class="row">
+            <!-- Card 1 - Lamborghini -->
+            <div class="col-lg-4 col-md-6">
+              <a href="car-details.html">
+                <div class="car-card">
+                  <div class="car-image-wrapper">
+                    <img src="assets/media/gridImg/1_1.webp" alt="Car Primary" class="car-image primary" />
+                    <img src="assets/media/gridImg/1_2.webp" alt="Car Secondary" class="car-image secondary" />
+
+                    <div class="image-actions">
+                      <button class="action-btn">
+                        <i class="fas fa-random"></i>
+                      </button>
+                      <span class="compare-tooltip">Add to compare</span>
+                      <button class="action-btn">
+                        <i class="fas fa-camera"></i>
+                      </button>
+                    </div>
+                    <div class="price-tag">
+                      <span class="price-main">Rs. 85,000</span>
+                      <span class="price-msrp">MSRP: Rs. 89,000</span>
+                    </div>
+                  </div>
+                  <div class="car-card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                      <h3 class="car-title mb-0">
+                        Toyota Urban Cruiser Taisor G 2025
+                      </h3>
+                    </div>
+                    <div class="car-location">
+                      <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
+                    </div>
+                    <div class="car-specs">
+                      <div class="spec-item">
+                        <i class="fas fa-gas-pump"></i>
+                        <span>Petrol</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-user"></i>
+                        <span>20</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-cog"></i>
+                        <span>4.0 cc</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-car"></i>
+                        <span>SUV</span>
+                      </div>
+                    </div>
+                    <div class="car-footer">
+                      <div class="car-date">
+                        <i class="far fa-calendar me-2"></i>March 26, 2021
+                      </div>
+                      <div class="share-btn">
+                        <i class="fas fa-share-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 2 - Ford Ranger -->
+            <div class="col-lg-4 col-md-6">
+              <a href="car-details.html">
+                <div class="car-card">
+                  <div class="car-image-wrapper">
+                    <img src="assets/media/gridImg/2_1.webp" alt="Car Primary" class="car-image primary" />
+                    <img src="assets/media/gridImg/2_2.webp" alt="Car Secondary" class="car-image secondary" />
+                    <div class="image-actions">
+                      <button class="action-btn">
+                        <i class="fas fa-random"></i>
+                      </button>
+                      <button class="action-btn">
+                        <i class="fas fa-camera"></i>
+                      </button>
+                    </div>
+                    <div class="price-tag">
+                      <span class="price-main">Rs. 85,060</span>
+                      <span class="price-msrp">MSRP: Rs. 89,000</span>
+                    </div>
+                  </div>
+                  <div class="car-card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                      <h3 class="car-title mb-0">Honda Vezel 1500cc Z Grade</h3>
+                    </div>
+                    <div class="car-location">
+                      <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
+                    </div>
+                    <div class="car-specs">
+                      <div class="spec-item">
+                        <i class="fas fa-gas-pump"></i>
+                        <span>Petrol</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-user"></i>
+                        <span>20</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-cog"></i>
+                        <span>2.0 cc</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-car"></i>
+                        <span>SUV</span>
+                      </div>
+                    </div>
+                    <div class="car-footer">
+                      <div class="car-date">
+                        <i class="far fa-calendar me-2"></i>March 26, 2021
+                      </div>
+                      <div class="share-btn">
+                        <i class="fas fa-share-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 3 - Chevrolet Corvette -->
+            <div class="col-lg-4 col-md-6">
+              <a href="car-details.html">
+                <div class="car-card">
+                  <div class="car-image-wrapper">
+                    <img src="assets/media/gridImg/3_1.webp" alt="Car Primary" class="car-image primary" />
+                    <img src="assets/media/gridImg/3_2.webp" alt="Car Secondary" class="car-image secondary"
+                      onmouseenter="this.parentElement.querySelector('.image-actions').style.display='block';"
+                      onmouseleave="this.parentElement.querySelector('.image-actions').style.display='none';" />
+
+                    <div class="image-actions">
+                      <button class="action-btn">
+                        <i class="fas fa-random"></i>
+                      </button>
+                      <button class="action-btn">
+                        <i class="fas fa-camera"></i>
+                      </button>
+                    </div>
+                    <div class="price-tag">
+                      <span class="price-main">Rs. 85,000</span>
+                      <span class="price-msrp">MSRP: Rs. 89,000</span>
+                    </div>
+                  </div>
+                  <div class="car-card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                      <h3 class="car-title mb-0">
+                        Suzuki wagon r Stingry 2017/2018
+                      </h3>
+                    </div>
+                    <div class="car-location">
+                      <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
+                    </div>
+                    <div class="car-specs">
+                      <div class="spec-item">
+                        <i class="fas fa-gas-pump"></i>
+                        <span>Petrol</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-user"></i>
+                        <span>5</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-cog"></i>
+                        <span>6.2 cc</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-car"></i>
+                        <span>SUV</span>
+                      </div>
+                    </div>
+                    <div class="car-footer">
+                      <div class="car-date">
+                        <i class="far fa-calendar me-2"></i>March 26, 2021
+                      </div>
+                      <div class="share-btn">
+                        <i class="fas fa-share-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 4 - With DEAL Badge -->
+            <div class="col-lg-4 col-md-6">
+              <a href="car-details.html">
+                <div class="car-card">
+                  <div class="car-image-wrapper">
+                    <img src="assets/media/gridImg/4_1.webp" alt="Car Primary" class="car-image primary" />
+                    <img src="assets/media/gridImg/4_2.webp" alt="Car Secondary" class="car-image secondary" />
+                    <div class="image-actions">
+                      <button class="action-btn">
+                        <i class="fas fa-random"></i>
+                      </button>
+                      <button class="action-btn">
+                        <i class="fas fa-camera"></i>
+                      </button>
+                    </div>
+                    <div class="price-tag">
+                      <span class="price-main">Rs. 75,000</span>
+                      <span class="price-msrp">MSRP: Rs. 82,000</span>
+                    </div>
+                  </div>
+                  <div class="car-card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                      <h3 class="car-title mb-0">Toyota Roomy Custom G 2025</h3>
+                    </div>
+                    <div class="car-location">
+                      <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
+                    </div>
+                    <div class="car-specs">
+                      <div class="spec-item">
+                        <i class="fas fa-gas-pump"></i>
+                        <span>Petrol</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-user"></i>
+                        <span>20</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-cog"></i>
+                        <span>3.0 cc</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-car"></i>
+                        <span>SUV</span>
+                      </div>
+                    </div>
+                    <div class="car-footer">
+                      <div class="car-date">
+                        <i class="far fa-calendar me-2"></i>March 26, 2021
+                      </div>
+                      <div class="share-btn">
+                        <i class="fas fa-share-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 5 - With DEAL Badge -->
+            <div class="col-lg-4 col-md-6">
+              <a href="car-details.html">
+                <div class="car-card">
+                  <div class="car-image-wrapper">
+                    <img src="assets/media/gridImg/5_1.webp" alt="Car Primary" class="car-image primary" />
+                    <img src="assets/media/gridImg/5_2.webp" alt="Car Secondary" class="car-image secondary" />
+                    <div class="image-actions">
+                      <button class="action-btn">
+                        <i class="fas fa-random"></i>
+                      </button>
+                      <button class="action-btn">
+                        <i class="fas fa-camera"></i>
+                      </button>
+                    </div>
+                    <div class="price-tag">
+                      <span class="price-main">Rs. 68,000</span>
+                      <span class="price-msrp">MSRP: Rs. 74,000</span>
+                    </div>
+                  </div>
+                  <div class="car-card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                      <h3 class="car-title mb-0">Toyota Raize Hybrid Z 2025</h3>
+                    </div>
+                    <div class="car-location">
+                      <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
+                    </div>
+                    <div class="car-specs">
+                      <div class="spec-item">
+                        <i class="fas fa-gas-pump"></i>
+                        <span>Petrol</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-user"></i>
+                        <span>20</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-cog"></i>
+                        <span>3.0 cc</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-car"></i>
+                        <span>SUV</span>
+                      </div>
+                    </div>
+                    <div class="car-footer">
+                      <div class="car-date">
+                        <i class="far fa-calendar me-2"></i>March 26, 2021
+                      </div>
+                      <div class="share-btn">
+                        <i class="fas fa-share-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 6 - With DEAL Badge -->
+            <div class="col-lg-4 col-md-6">
+              <a href="car-details.html">
+                <div class="car-card">
+                  <div class="car-image-wrapper">
+                    <img src="assets/media/gridImg/6_1.webp" alt="Car Primary" class="car-image primary" />
+                    <img src="assets/media/gridImg/6_2.webp" alt="Car Secondary" class="car-image secondary" />
+                    <div class="image-actions">
+                      <button class="action-btn">
+                        <i class="fas fa-random"></i>
+                      </button>
+                      <button class="action-btn">
+                        <i class="fas fa-camera"></i>
+                      </button>
+                    </div>
+                    <div class="price-tag">
+                      <span class="price-main">Rs. 55,000</span>
+                      <span class="price-msrp">MSRP: Rs. 62,000</span>
+                    </div>
+                  </div>
+                  <div class="car-card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                      <h3 class="car-title mb-0">
+                        Kia Sonet GTX Plus 2025 - Brand New
+                      </h3>
+                    </div>
+                    <div class="car-location">
+                      <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
+                    </div>
+                    <div class="car-specs">
+                      <div class="spec-item">
+                        <i class="fas fa-gas-pump"></i>
+                        <span>Petrol</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-user"></i>
+                        <span>5</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-cog"></i>
+                        <span>3.0 cc</span>
+                      </div>
+                      <div class="spec-item">
+                        <i class="fas fa-car"></i>
+                        <span>Sedan</span>
+                      </div>
+                    </div>
+                    <div class="car-footer">
+                      <div class="car-date">
+                        <i class="far fa-calendar me-2"></i>March 26, 2021
+                      </div>
+                      <div class="share-btn">
+                        <i class="fas fa-share-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vehicle Import Inquiry Form -->
+        <section class="section_default section_mod-e section-bg-2 wow bounceInLeft"
+          style="padding-top: 30px; padding-bottom: 30px;" data-wow-duration="2s">
           <div class="container">
             <div class="row">
               <div class="col-xs-12">
-                <div class="header-contacts">
-                  <span class="header-contacts__item"><i class="icon fa fa-phone"></i> 076 905 7272</span>
-                  <a class="header-contacts__item" href="mailto:villoauto@gmail.com"><i class="icon fa fa-envelope"></i>
-                    villoauto@gmail.com</a>
+                <h2 class="ui-title-block">Import Your Dream Vehicle</h2>
+                <div class="ui-subtitle-block_mod-b">
+                  Let us help you import the perfect vehicle tailored to your needs
                 </div>
-                <ul class="social-links list-inline">
-                  <li>
-                    <a class="" href="javascript:void(0);"><i class="bi bi-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a class="" href="javascript:void(0);"><i class="bi bi-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a class="" href="javascript:void(0);"><i class="bi bi-whatsapp"></i></a>
-                  </li>
-                </ul>
               </div>
-              <!-- end col -->
             </div>
-            <!-- end row -->
-          </div>
-          <!-- end container -->
-        </div>
-        <!-- end top-header -->
 
-        <div class="header__inner">
+            <div class="row" style="margin-top: 40px;">
+              <div class="col-md-8 col-md-offset-2">
+                <div class="import-inquiry-form">
+                  <form id="vehicleImportForm" class="vehicle-import-form">
+                    <div class="row">
+                      <!-- Name Field -->
+                      <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                          <label class="form-label">Full Name *</label>
+                          <input type="text" name="name" class="form-control" placeholder="Enter your full name"
+                            required>
+                        </div>
+                      </div>
+
+                      <!-- Phone Field -->
+                      <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                          <label class="form-label">Phone Number *</label>
+                          <input type="tel" name="phone" class="form-control" placeholder="Enter your phone number"
+                            required>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <!-- Email Field -->
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="form-label">Email Address *</label>
+                          <input type="email" name="email" class="form-control" placeholder="Enter your email address"
+                            required>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <!-- Brand Field -->
+                      <div class="col-md-4 col-sm-12">
+                        <div class="form-group">
+                          <label class="form-label">Preferred Brand *</label>
+                          <select name="brand" class="form-control" required>
+                            <option value="">--Select Brand--</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Suzuki">Suzuki</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Mercedes-Benz">Mercedes-Benz</option>
+                            <option value="Audi">Audi</option>
+                            <option value="Lexus">Lexus</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Kia">Kia</option>
+                            <option value="Other">Other</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <!-- Model Field -->
+                      <div class="col-md-4 col-sm-12">
+                        <div class="form-group">
+                          <label class="form-label">Model</label>
+                          <input type="text" name="model" class="form-control" placeholder="e.g., Prius, Vezel, Axio">
+                        </div>
+                      </div>
+
+                      <!-- Year Field -->
+                      <div class="col-md-4 col-sm-12">
+                        <div class="form-group">
+                          <label class="form-label">Preferred Year</label>
+                          <select name="year" class="form-control">
+                            <option value="">--Select Year--</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="Older">Older than 2015</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <!-- Mileage Field -->
+                      <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                          <label class="form-label">Mileage Preference</label>
+                          <select name="mileage" class="form-control">
+                            <option value="">--Select Mileage--</option>
+                            <option value="Under 10,000 km">Under 10,000 km</option>
+                            <option value="10,000 - 30,000 km">10,000 - 30,000 km</option>
+                            <option value="30,000 - 50,000 km">30,000 - 50,000 km</option>
+                            <option value="50,000 - 75,000 km">50,000 - 75,000 km</option>
+                            <option value="75,000 - 100,000 km">75,000 - 100,000 km</option>
+                            <option value="Over 100,000 km">Over 100,000 km</option>
+                            <option value="No preference">No preference</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <!-- Condition Field -->
+                      <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                          <label class="form-label">Condition *</label>
+                          <select name="condition" class="form-control" required>
+                            <option value="">--Select Condition--</option>
+                            <option value="Brand New">Brand New</option>
+                            <option value="Used">Used</option>
+                            <option value="No preference">No preference</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <!-- Message Field -->
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="form-label">Additional Requirements</label>
+                          <textarea name="message" class="form-control" rows="4"
+                            placeholder="Please describe any specific requirements, budget range, or additional details..."></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12 text-center">
+                        <button type="submit" class="btn-import-submit">
+                          <i class="fa fa-paper-plane"></i> Submit Import Inquiry
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Client logos -->
+        <section class="logo-slider-section">
+          <div class="logo-slider-title">
+            <h2>Global Automotive Leaders</h2>
+            <p>Building the future of mobility together</p>
+          </div>
+
+          <div class="swiper logo-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide logo-slide">
+                <img src="assets/img/brands/bmw.png" alt="Porsche Logo" class="logo-img">
+              </div>
+
+              <div class="swiper-slide logo-slide">
+                <img src="assets/img/brands/mbenz.png" alt="Tesla Logo" class="logo-img">
+              </div>
+
+              <div class="swiper-slide logo-slide">
+                <img src="assets/img/brands/toyota.png" alt="Nissan Logo" class="logo-img">
+              </div>
+
+              <div class="swiper-slide logo-slide">
+                <img src="assets/img/brands/mitsubishi.png" alt="Hyundai Logo" class="logo-img">
+              </div>
+
+              <div class="swiper-slide logo-slide">
+                <img src="assets/img/brands/btd.png" alt="BMW Logo" class="logo-img">
+              </div>
+
+              <div class="swiper-slide logo-slide">
+                <img src="assets/img/brands/tesla.png" alt="Mercedes Logo" class="logo-img">
+              </div>
+
+              <div class="swiper-slide logo-slide">
+                <img src="assets/img/brands/hyundai.png" alt="Mercedes Logo" class="logo-img">
+              </div>
+
+              <div class="swiper-slide logo-slide">
+                <img src="assets/img/brands/porsche.png" alt="Mercedes Logo" class="logo-img">
+              </div>
+
+              <div class="swiper-slide logo-slide">
+                <img src="assets/img/brands/maserati.png" alt="Mercedes Logo" class="logo-img">
+              </div>
+
+              <div class="swiper-slide logo-slide">
+                <img src="assets/img/brands/ferrari.png" alt="Mercedes Logo" class="logo-img">
+              </div>
+
+              <div class="swiper-slide logo-slide">
+                <img src="assets/img/brands/land-rover.png" alt="Mercedes Logo" class="logo-img">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--numbers-->
+        <section class="section_default wow bounceInUp" data-wow-duration="2s">
           <div class="container">
-            <div class="row">
-              <div class="col-md-12 col-xs-12">
-                <a href="index.html" class="logo d-none d-lg-block">
-                  <img class="logo__img img-responsive" src="assets/img/logo.png"
-                    style="height: 100px; object-fit: contain;" alt="Logo" />
-                </a>
-                <div class="navbar yamm">
-                  <div class="navbar-header hidden-md hidden-lg hidden-sm">
-                    <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle">
-                      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                    </button>
-                    <a href="javascript:void(0);" class="navbar-brand"></a>
+            <div class="text-center">
+              <h2 class="section-title">
+                We are known for trend-setting styles and<br>customization.
+              </h2>
+              <p class="section-description">
+                For 15 years, we raising the standard of used car retailing with one of the most innovative and reliable
+                used vehicle programmes ever created.
+              </p>
+            </div>
+
+            <div class="stats-container">
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-warehouse"></i>
+                </div>
+                <div class="stat-number">1200+</div>
+                <div class="stat-label">Vehicles in stock</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="stat-number">20k</div>
+                <div class="stat-label">Happy Customers</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="stat-number">15</div>
+                <div class="stat-label">Showrooms</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-award"></i>
+                </div>
+                <div class="stat-number">30</div>
+                <div class="stat-label">Awards</div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button class="cta-button">Call us today!</button>
+            </div>
+          </div>
+        </section>
+
+        <!--footer new-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer-top">
+              <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="footer-column">
+                    <h4>INVENTORY</h4>
+                    <ul>
+                      <li><a href="#">NEW VEHICLES</a></li>
+                      <li><a href="#">USED VEHICLES</a></li>
+                      <li><a href="#">PRE-OWNED VEHICLE SPECIALS</a></li>
+                      <li><a href="#">PRICED UNDER 15K</a></li>
+                    </ul>
                   </div>
-                  <div id="navbar-collapse-1" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                      <li><a href="index.html">HOME</a></li>
-                      <li>
-                        <a href="servies.html">SERVICES</a>
-                      </li>
-                      <li>
-                        <a href="about-us.html">ABOUT US</a>
-                      </li>
-                      <li>
-                        <a href="gallery.html">GALLERY</a>
-                      </li>
-                      <li>
-                        <a href="contact-us.html">CONTACT US</a>
-                      </li>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="footer-column">
+                    <h4>FINANCING</h4>
+                    <ul>
+                      <li><a href="#">GET FINANCING</a></li>
+                      <li><a href="#">PAYMENT CALCULATOR</a></li>
+                      <li><a href="#">VALUE YOUR TRADE</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="footer-column">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                      <li><a href="#">FAQS</a></li>
+                      <li><a href="#">WHY BUY FROM ALM</a></li>
+                      <li><a href="#">FIVE QUESTIONS TO ASK</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="footer-column">
+                    <h4>CONTACT</h4>
+                    <ul>
+                      <li><a href="tel:94769057272">076 905 7272</a></li>
+                      <li><a href="mailto:villoauto@gmail.com">villoauto@gmail.com</a></li>
+                      <li><a href="#">No. 614, Colombo road, Nanuoya, Pilimathalawa</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- end container -->
-        </div>
-        <!-- end header__inner -->
-      </div>
 
-      <!--hero (large screens)-->
-      <div id="sliderpro1" class="slider-pro main-slider">
-        <div class="sp-slides">
-          <div class="sp-slide">
-            <img class="sp-image" src="assets/media/main-slider/1.jpg" data-src="assets/media/main-slider/1.jpg"
-              data-retina="assets/media/main-slider/1.jpg" alt="img" />
-
-            <div class="item-wrap sp-layer sp-padding" data-horizontal="100" data-vertical="300"
-              data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
-              <div class="main-slider__inner text-left">
-                <div class="custom-caption">
-                  <a class="main-slider__btn btn-effect" href="javascript:void(0);">
-                    <span class="main-slider__btn_inner">Brand New Arrival</span>
-                  </a>
-                  <div class="main-slider__title">2020 Toyota Axio Hybrid</div>
-                  <div class="main-slider__subtitle">
-                    Reliable Performance & Exceptional Fuel Efficiency
-                  </div>
-                  <div class="decor-1"></div>
-                  <div class="main-slider__text">Starts from</div>
-                  <div>
-                    <span class="main-slider__price">Rs. 7,850,000</span>
-                    <a class="main-slider__link" href="javascript:void(0);"><i class="icon fa fa-caret-right"></i></a>
-                  </div>
-                </div>
+            <div class="footer-bottom">
+              <div>
+                <img src="assets/img/logo-footer.png" alt="logo" class="footer-logo">
               </div>
-            </div>
-          </div>
-
-          <div class="sp-slide">
-            <img class="sp-image" src="assets/media/main-slider/2.jpg" data-src="assets/media/main-slider/2.jpg"
-              data-retina="assets/media/main-slider/2.jpg" alt="img" />
-
-            <div class="item-wrap sp-layer sp-padding" data-horizontal="100" data-vertical="300"
-              data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
-              <div class="main-slider__inner text-left">
-                <div class="custom-caption">
-                  <a class="main-slider__btn btn-effect" href="javascript:void(0);">
-                    <span class="main-slider__btn_inner">Featured Deal</span>
-                  </a>
-                  <div class="main-slider__title">2019 Honda Vezel Z</div>
-                  <div class="main-slider__subtitle">
-                    Stylish Design with Advanced Safety Features
-                  </div>
-                  <div class="decor-1"></div>
-                  <div class="main-slider__text">Starts from</div>
-                  <div>
-                    <span class="main-slider__price">Rs. 8,450,000</span>
-                    <a class="main-slider__link" href="javascript:void(0);"><i class="icon fa fa-caret-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--hero (small screens)-->
-      <div id="sliderpro2" class="slider-pro main-slider">
-        <div class="sp-slides">
-          <div class="sp-slide">
-            <img class="sp-image" src="assets/media/main-slider/1.jpg" data-src="assets/media/main-slider/1.jpg"
-              data-retina="assets/media/main-slider/1.jpg" alt="img" />
-
-            <div class="item-wrap sp-layer sp-padding max-lg-larger" data-horizontal="100" data-vertical="80"
-              data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
-              <div class="main-slider__inner text-left">
-                <div class="custom-caption">
-                  <a class="main-slider__btn btn-effect" href="javascript:void(0);">
-                    <span class="main-slider__btn_inner">Brand New Arrival</span>
-                  </a>
-                  <div class="main-slider__title">2020 Toyota Axio</div>
-                  <div class="main-slider__subtitle">
-                    Reliable Performance & Exceptional Fuel Efficiency
-                  </div>
-                  <div class="decor-1"></div>
-                  <div class="main-slider__text">Starts from</div>
-                  <div>
-                    <span class="main-slider__price">Rs. 7,850,000</span>
-                    <a class="main-slider__link" href="javascript:void(0);"><i class="icon fa fa-caret-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="sp-slide">
-            <img class="sp-image" src="assets/media/main-slider/2.jpg" data-src="assets/media/main-slider/2.jpg"
-              data-retina="assets/media/main-slider/2.jpg" alt="img" />
-
-            <div class="item-wrap sp-layer sp-padding max-lg-larger" data-horizontal="100" data-vertical="80"
-              data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
-              <div class="main-slider__inner text-left">
-                <div class="custom-caption">
-                  <a class="main-slider__btn btn-effect" href="javascript:void(0);">
-                    <span class="main-slider__btn_inner">Featured Deal</span>
-                  </a>
-                  <div class="main-slider__title">2019 Honda Vezel Z</div>
-                  <div class="main-slider__subtitle">
-                    Stylish Design with Advanced Safety Features
-                  </div>
-                  <div class="decor-1"></div>
-                  <div class="main-slider__text">Starts from</div>
-                  <div>
-                    <span class="main-slider__price">Rs. 8,450,000</span>
-                    <a class="main-slider__link" href="javascript:void(0);"><i class="icon fa fa-caret-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- start filter container -->
-      <div class="container filteringpart">
-        <div class="inventory-filter">
-          <div class="row g-4">
-            <!-- Section 1: Filter Options (6 selectors in 2 rows) -->
-            <div class="col-lg-8 col-12">
-              <div class=" g-3">
-                <!-- Row 1 -->
-                <div class="col-md-4 col-12">
-                  <label class="form-label w-100">Select Make</label>
-                  <select class="form-select w-100">
-                    <option selected>--Any Make--</option>
-                    <option>Audi</option>
-                    <option>BMW</option>
-                    <option>Ferrari</option>
-                    <option>Ford</option>
-                    <option>Honda</option>
-                    <option>Lamborghini</option>
-                    <option>Lexus</option>
-                    <option>Mercedes-Benz</option>
-                    <option>Nissan</option>
-
-                  </select>
-                </div>
-                <div class="col-md-4">
-                  <label class="form-label w-100">Select Model</label>
-                  <select class="form-select w-100">
-                    <option selected>--Any Model--</option>
-                    <option>Accord</option>
-                    <option>Camry</option>
-                    <option>Civic</option>
-                    <option>Corolla</option>
-                    <option>F-150</option>
-                    <option>Model 3</option>
-                    <option>Model S</option>
-                    <option>Mustang</option>
-                    <option>Silverado</option>
-                  </select>
-                </div>
-                <div class="col-md-4">
-                  <label class="form-label w-100">Select Body Style</label>
-                  <select class="form-select w-100">
-                    <option selected>--Any Body Style--</option>
-                    <option>Convertible</option>
-                    <option>Coupe</option>
-                    <option>Hatchback</option>
-                    <option>Pickup Truck</option>
-                    <option>Sedan</option>
-                    <option>SUV</option>
-                    <option>Van</option>
-                    <option>Wagon</option>
-                  </select>
-                </div>
-
-                <!-- Row 2 -->
-                <div class="col-md-4">
-                  <label class="form-label w-100">Select Mileage</label>
-                  <select class="form-select w-100">
-                    <option selected>--Any Mileage--</option>
-                    <option>Under 10,000 miles</option>
-                    <option>10,000 - 30,000 miles</option>
-                    <option>30,000 - 50,000 miles</option>
-                    <option>50,000 - 75,000 miles</option>
-                    <option>75,000 - 100,000 miles</option>
-                    <option>Over 100,000 miles</option>
-                  </select>
-                </div>
-                <div class="col-md-4">
-                  <label class="form-label w-100">Select Transmission</label>
-                  <select class="form-select w-100">
-                    <option selected>--Any Transmission--</option>
-                    <option>Automatic</option>
-                    <option>Manual</option>
-                    <option>CVT</option>
-                    <option>Semi-Automatic</option>
-                  </select>
-                </div>
-                <div class="col-md-4">
-                  <label class="form-label w-100">Select Condition</label>
-                  <select class="form-select w-100">
-                    <option selected>--Any Condition--</option>
-                    <option>New</option>
-                    <option>Used</option>
-                    <option>Certified Pre-Owned</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!-- Section 2: Price Range & Search Button -->
-            <div class="col-lg-4 col-12">
-              <div class="price-section">
-                <div class="price-header">Price Range</div>
-                <div class="price-value" id="priceRangeDisplay">Rs. 6,900 - Rs. 801,700</div>
-
-                <div class="slider-container">
-                  <div id="sliderTrack"></div>
-                  <div id="sliderRange"></div>
-                  <input type="range" min="6900" max="801700" step="1000" value="6900" id="priceMin">
-                  <input type="range" min="6900" max="801700" step="1000" value="801700" id="priceMax">
-                </div>
-
-                <button class="btn-search">Search Inventory</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- about us -->
-      <div class="section_default section_mod-e section-bg-2 wow bounceInRight" style="padding-top: 0px;"
-        data-wow-duration="2s">
-        <section class="section_mod-d">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
-                <h2 class="ui-title-block">About Us</h2>
-                <div class="ui-subtitle-block_mod-b">
-                  Serving Pilimathalawa with quality vehicles & trusted customer care
-                </div>
-              </div>
-              <!-- end col -->
-            </div>
-            <!-- end row -->
-            <div class="row">
-              <div class="col-md-5">
-                <h3 class="ui-title-inner">
-                  <i class="decor-3 fa fa-caret-right"></i>Villo Auto Cars – Your trusted vehicle dealer in
-                  Pilimathalawa
-                </h3>
-                <div class="decor-1 decor-1_mod-c"></div>
-                <div class="ui-description">
-                  <p>
-                    Villo Auto Cars is a family-owned automobile dealer based in Pilimathalawa, Sri Lanka. We specialise
-                    in both brand new and reconditioned cars, offering honest pricing and genuine mileage. Whether
-                    you're looking for compact city cars or rugged SUVs, we pride ourselves on delivering vehicles that
-                    meet your needs and budget.
-                  </p>
-                </div>
-                <p>
-                  From selection to after-sales, our team is committed to transparent service. We assist with financing
-                  options, complete documentation, and help you understand all costs involved. We aim to make buying a
-                  vehicle stress-free and trustworthy.
-                </p>
-                <p>
-                  Located conveniently in Pilimathalawa, Villo Auto Cars has built a reputation of integrity, quality,
-                  and customer satisfaction throughout the North Western Province.
-                </p>
-                <a class="link" href="#">Wide inventory of cars in stock</a>
-                <div class="decor-1"></div>
-                <a class="link" href="#">Genuine imported & local vehicles</a>
-                <div class="decor-1"></div>
-                <a class="link" href="#">Full support: financing, servicing & documentation</a>
-              </div>
-              <!-- end col -->
-            </div>
-            <!-- end row -->
-          </div>
-          <!-- end container -->
-        </section>
-
-        <!-- end section-area -->
-      </div>
-
-
-      <!-- services -->
-      <div class="wrap-section-border wow bounceInUp" data-wow-duration="2s">
-        <section class="section_mod-b section-bg section-bg_primary"
-          style="padding-top: 30px; padding-bottom: 0px; height: fit-content;">
-          <div class="bg-inner border-section-top border-section-top_mod-a">
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-12">
-                  <h2 class="ui-title-block ui-title-block_mod-a text-center">
-                    Our Services
-                  </h2>
-                  <div class="ui-subtitle-block_mod-a">
-                    Comprehensive vehicle solutions for your convenience
-                  </div>
-                  <div class="slider-services owl-carousel owl-theme owl-theme_mod-a enable-owl-carousel"
-                    data-min480="2" data-min768="3" data-min992="4" data-min1200="4" data-pagination="true"
-                    data-navigation="false" data-auto-play="4000" data-stop-on-hover="true">
-
-                    <!-- Vehicle Sales -->
-                    <div class="list-services">
-                      <i class="icon flaticon-car33"></i>
-                      <div class="decor-1"></div>
-                      <div class="list-services__inner">
-                        <h3 class="list-services__title">
-                          Vehicle <strong>SALES</strong>
-                        </h3>
-                        <div class="list-services__description">
-                          Wide selection of brand-new & reconditioned cars from trusted brands.
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end list-services -->
-
-                    <!-- Vehicle Imports -->
-                    <div class="list-services">
-                      <i class="icon flaticon-transport320"></i>
-                      <div class="decor-1"></div>
-                      <div class="list-services__inner">
-                        <h3 class="list-services__title">
-                          Vehicle <strong>IMPORTS</strong>
-                        </h3>
-                        <div class="list-services__description">
-                          Direct import services for custom vehicle orders from Japan & beyond.
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end list-services -->
-
-                    <!-- Financing Assistance -->
-                    <div class="list-services">
-                      <i class="icon flaticon-automobile8"></i>
-                      <div class="decor-1"></div>
-                      <div class="list-services__inner">
-                        <h3 class="list-services__title">
-                          Financing <strong>ASSISTANCE</strong>
-                        </h3>
-                        <div class="list-services__description">
-                          Support with bank leasing and flexible payment plans to suit your budget.
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end list-services -->
-
-                    <!-- Trade-Ins -->
-                    <div class="list-services">
-                      <i class="icon flaticon-transport391"></i>
-                      <div class="decor-1"></div>
-                      <div class="list-services__inner">
-                        <h3 class="list-services__title">
-                          Vehicle <strong>TRADE-INS</strong>
-                        </h3>
-                        <div class="list-services__description">
-                          Exchange your old car for a newer model at the best possible value.
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end list-services -->
-
-                    <!-- Documentation Support -->
-                    <div class="list-services">
-                      <i class="icon flaticon-repairing4"></i>
-                      <div class="decor-1"></div>
-                      <div class="list-services__inner">
-                        <h3 class="list-services__title">
-                          Documentation <strong>SUPPORT</strong>
-                        </h3>
-                        <div class="list-services__description">
-                          Assistance with vehicle registration, insurance, and legal paperwork.
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end list-services -->
-
-                  </div>
-                  <!-- end slider-services -->
-                </div>
-                <!-- end col -->
-              </div>
-              <!-- end row -->
-              <div class="border-section-bottom"></div>
-            </div>
-            <!-- end container -->
-          </div>
-          <!-- end bg-inner -->
-        </section>
-        <!-- end section_mod-b -->
-      </div>
-
-      <!--start grid container-->
-      <div class="container" style="padding-top: 30px;">
-        <!-- Section Header -->
-        <div class="row pt-10 mb-5 position-relative">
-          <!-- <div class="watermark outline-text">Suggested</div> -->
-          <div class="col-lg-6">
-            <div class="top-vehicles-label">Top Vehicles</div>
-            <h2 class="section-title">
-              Featured Vehicles Suggested<br />by Dealer
-            </h2>
-            <div class="title-underline"></div>
-          </div>
-          <div class="col-lg-6 d-flex align-items-center justify-content-end h-100 d-none">
-            <div class="d-flex h-100 justify-content-end gap-3">
-              <button class="filter-tab active">New</button>
-              <button class="filter-tab">Certified Used</button>
-              <button class="filter-tab">Used</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Vehicle Cards -->
-        <div class="row">
-          <!-- Card 1 - Lamborghini -->
-          <div class="col-lg-4 col-md-6">
-            <div class="car-card">
-              <div class="car-image-wrapper">
-                <img src="assets/media/gridImg/1_1.webp" alt="Car Primary" class="car-image primary" />
-                <img src="assets/media/gridImg/1_2.webp" alt="Car Secondary" class="car-image secondary" />
-
-                <div class="image-actions">
-                  <button class="action-btn">
-                    <i class="fas fa-random"></i>
-                  </button>
-                  <span class="compare-tooltip">Add to compare</span>
-                  <button class="action-btn">
-                    <i class="fas fa-camera"></i>
-                  </button>
-                </div>
-                <div class="price-tag">
-                  <span class="price-main">Rs. 85,000</span>
-                  <span class="price-msrp">MSRP: Rs. 89,000</span>
-                </div>
-              </div>
-              <div class="car-card-body">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                  <h3 class="car-title mb-0">
-                    Toyota Urban Cruiser Taisor G 2025
-                  </h3>
-                </div>
-                <div class="car-location">
-                  <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
-                </div>
-                <div class="car-specs">
-                  <div class="spec-item">
-                    <i class="fas fa-gas-pump"></i>
-                    <span>Petrol</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-user"></i>
-                    <span>20</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-cog"></i>
-                    <span>4.0 cc</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-car"></i>
-                    <span>SUV</span>
-                  </div>
-                </div>
-                <div class="car-footer">
-                  <div class="car-date">
-                    <i class="far fa-calendar me-2"></i>March 26, 2021
-                  </div>
-                  <div class="share-btn">
-                    <i class="fas fa-share-alt"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 - Ford Ranger -->
-          <div class="col-lg-4 col-md-6">
-            <div class="car-card">
-              <div class="car-image-wrapper">
-                <img src="assets/media/gridImg/2_1.webp" alt="Car Primary" class="car-image primary" />
-                <img src="assets/media/gridImg/2_2.webp" alt="Car Secondary" class="car-image secondary" />
-                <div class="image-actions">
-                  <button class="action-btn">
-                    <i class="fas fa-random"></i>
-                  </button>
-                  <button class="action-btn">
-                    <i class="fas fa-camera"></i>
-                  </button>
-                </div>
-                <div class="price-tag">
-                  <span class="price-main">Rs. 85,060</span>
-                  <span class="price-msrp">MSRP: Rs. 89,000</span>
-                </div>
-              </div>
-              <div class="car-card-body">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                  <h3 class="car-title mb-0">Honda Vezel 1500cc Z Grade</h3>
-                </div>
-                <div class="car-location">
-                  <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
-                </div>
-                <div class="car-specs">
-                  <div class="spec-item">
-                    <i class="fas fa-gas-pump"></i>
-                    <span>Petrol</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-user"></i>
-                    <span>20</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-cog"></i>
-                    <span>2.0 cc</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-car"></i>
-                    <span>SUV</span>
-                  </div>
-                </div>
-                <div class="car-footer">
-                  <div class="car-date">
-                    <i class="far fa-calendar me-2"></i>March 26, 2021
-                  </div>
-                  <div class="share-btn">
-                    <i class="fas fa-share-alt"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 - Chevrolet Corvette -->
-          <div class="col-lg-4 col-md-6">
-            <div class="car-card">
-              <div class="car-image-wrapper">
-                <img src="assets/media/gridImg/3_1.webp" alt="Car Primary" class="car-image primary" />
-                <img src="assets/media/gridImg/3_2.webp" alt="Car Secondary" class="car-image secondary"
-                  onmouseenter="this.parentElement.querySelector('.image-actions').style.display='block';"
-                  onmouseleave="this.parentElement.querySelector('.image-actions').style.display='none';" />
-
-                <div class="image-actions">
-                  <button class="action-btn">
-                    <i class="fas fa-random"></i>
-                  </button>
-                  <button class="action-btn">
-                    <i class="fas fa-camera"></i>
-                  </button>
-                </div>
-                <div class="price-tag">
-                  <span class="price-main">Rs. 85,000</span>
-                  <span class="price-msrp">MSRP: Rs. 89,000</span>
-                </div>
-              </div>
-              <div class="car-card-body">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                  <h3 class="car-title mb-0">
-                    Suzuki wagon r Stingry 2017/2018
-                  </h3>
-                </div>
-                <div class="car-location">
-                  <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
-                </div>
-                <div class="car-specs">
-                  <div class="spec-item">
-                    <i class="fas fa-gas-pump"></i>
-                    <span>Petrol</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-user"></i>
-                    <span>5</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-cog"></i>
-                    <span>6.2 cc</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-car"></i>
-                    <span>SUV</span>
-                  </div>
-                </div>
-                <div class="car-footer">
-                  <div class="car-date">
-                    <i class="far fa-calendar me-2"></i>March 26, 2021
-                  </div>
-                  <div class="share-btn">
-                    <i class="fas fa-share-alt"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 - With DEAL Badge -->
-          <div class="col-lg-4 col-md-6">
-            <div class="car-card">
-              <div class="car-image-wrapper">
-                <img src="assets/media/gridImg/4_1.webp" alt="Car Primary" class="car-image primary" />
-                <img src="assets/media/gridImg/4_2.webp" alt="Car Secondary" class="car-image secondary" />
-                <div class="image-actions">
-                  <button class="action-btn">
-                    <i class="fas fa-random"></i>
-                  </button>
-                  <button class="action-btn">
-                    <i class="fas fa-camera"></i>
-                  </button>
-                </div>
-                <div class="price-tag">
-                  <span class="price-main">Rs. 75,000</span>
-                  <span class="price-msrp">MSRP: Rs. 82,000</span>
-                </div>
-              </div>
-              <div class="car-card-body">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                  <h3 class="car-title mb-0">Toyota Roomy Custom G 2025</h3>
-                </div>
-                <div class="car-location">
-                  <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
-                </div>
-                <div class="car-specs">
-                  <div class="spec-item">
-                    <i class="fas fa-gas-pump"></i>
-                    <span>Petrol</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-user"></i>
-                    <span>20</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-cog"></i>
-                    <span>3.0 cc</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-car"></i>
-                    <span>SUV</span>
-                  </div>
-                </div>
-                <div class="car-footer">
-                  <div class="car-date">
-                    <i class="far fa-calendar me-2"></i>March 26, 2021
-                  </div>
-                  <div class="share-btn">
-                    <i class="fas fa-share-alt"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 5 - With DEAL Badge -->
-          <div class="col-lg-4 col-md-6">
-            <div class="car-card">
-              <div class="car-image-wrapper">
-                <img src="assets/media/gridImg/5_1.webp" alt="Car Primary" class="car-image primary" />
-                <img src="assets/media/gridImg/5_2.webp" alt="Car Secondary" class="car-image secondary" />
-                <div class="image-actions">
-                  <button class="action-btn">
-                    <i class="fas fa-random"></i>
-                  </button>
-                  <button class="action-btn">
-                    <i class="fas fa-camera"></i>
-                  </button>
-                </div>
-                <div class="price-tag">
-                  <span class="price-main">Rs. 68,000</span>
-                  <span class="price-msrp">MSRP: Rs. 74,000</span>
-                </div>
-              </div>
-              <div class="car-card-body">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                  <h3 class="car-title mb-0">Toyota Raize Hybrid Z 2025</h3>
-                </div>
-                <div class="car-location">
-                  <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
-                </div>
-                <div class="car-specs">
-                  <div class="spec-item">
-                    <i class="fas fa-gas-pump"></i>
-                    <span>Petrol</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-user"></i>
-                    <span>20</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-cog"></i>
-                    <span>3.0 cc</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-car"></i>
-                    <span>SUV</span>
-                  </div>
-                </div>
-                <div class="car-footer">
-                  <div class="car-date">
-                    <i class="far fa-calendar me-2"></i>March 26, 2021
-                  </div>
-                  <div class="share-btn">
-                    <i class="fas fa-share-alt"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 6 - With DEAL Badge -->
-          <div class="col-lg-4 col-md-6">
-            <div class="car-card">
-              <div class="car-image-wrapper">
-                <img src="assets/media/gridImg/6_1.webp" alt="Car Primary" class="car-image primary" />
-                <img src="assets/media/gridImg/6_2.webp" alt="Car Secondary" class="car-image secondary" />
-                <div class="image-actions">
-                  <button class="action-btn">
-                    <i class="fas fa-random"></i>
-                  </button>
-                  <button class="action-btn">
-                    <i class="fas fa-camera"></i>
-                  </button>
-                </div>
-                <div class="price-tag">
-                  <span class="price-main">Rs. 55,000</span>
-                  <span class="price-msrp">MSRP: Rs. 62,000</span>
-                </div>
-              </div>
-              <div class="car-card-body">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                  <h3 class="car-title mb-0">
-                    Kia Sonet GTX Plus 2025 - Brand New
-                  </h3>
-                </div>
-                <div class="car-location">
-                  <i class="fas fa-map-marker-alt me-2"></i>Miami, USA
-                </div>
-                <div class="car-specs">
-                  <div class="spec-item">
-                    <i class="fas fa-gas-pump"></i>
-                    <span>Petrol</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-user"></i>
-                    <span>5</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-cog"></i>
-                    <span>3.0 cc</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="fas fa-car"></i>
-                    <span>Sedan</span>
-                  </div>
-                </div>
-                <div class="car-footer">
-                  <div class="car-date">
-                    <i class="far fa-calendar me-2"></i>March 26, 2021
-                  </div>
-                  <div class="share-btn">
-                    <i class="fas fa-share-alt"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Vehicle Import Inquiry Form -->
-      <section class="section_default section_mod-e section-bg-2 wow bounceInLeft"
-        style="padding-top: 30px; padding-bottom: 30px;" data-wow-duration="2s">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12">
-              <h2 class="ui-title-block">Import Your Dream Vehicle</h2>
-              <div class="ui-subtitle-block_mod-b">
-                Let us help you import the perfect vehicle tailored to your needs
-              </div>
-            </div>
-          </div>
-
-          <div class="row" style="margin-top: 40px;">
-            <div class="col-md-8 col-md-offset-2">
-              <div class="import-inquiry-form">
-                <form id="vehicleImportForm" class="vehicle-import-form">
-                  <div class="row">
-                    <!-- Name Field -->
-                    <div class="col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <label class="form-label">Full Name *</label>
-                        <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
-                      </div>
-                    </div>
-
-                    <!-- Phone Field -->
-                    <div class="col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <label class="form-label">Phone Number *</label>
-                        <input type="tel" name="phone" class="form-control" placeholder="Enter your phone number"
-                          required>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <!-- Email Field -->
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label class="form-label">Email Address *</label>
-                        <input type="email" name="email" class="form-control" placeholder="Enter your email address"
-                          required>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <!-- Brand Field -->
-                    <div class="col-md-4 col-sm-12">
-                      <div class="form-group">
-                        <label class="form-label">Preferred Brand *</label>
-                        <select name="brand" class="form-control" required>
-                          <option value="">--Select Brand--</option>
-                          <option value="Toyota">Toyota</option>
-                          <option value="Honda">Honda</option>
-                          <option value="Nissan">Nissan</option>
-                          <option value="Mazda">Mazda</option>
-                          <option value="Suzuki">Suzuki</option>
-                          <option value="Mitsubishi">Mitsubishi</option>
-                          <option value="BMW">BMW</option>
-                          <option value="Mercedes-Benz">Mercedes-Benz</option>
-                          <option value="Audi">Audi</option>
-                          <option value="Lexus">Lexus</option>
-                          <option value="Hyundai">Hyundai</option>
-                          <option value="Kia">Kia</option>
-                          <option value="Other">Other</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <!-- Model Field -->
-                    <div class="col-md-4 col-sm-12">
-                      <div class="form-group">
-                        <label class="form-label">Model</label>
-                        <input type="text" name="model" class="form-control" placeholder="e.g., Prius, Vezel, Axio">
-                      </div>
-                    </div>
-
-                    <!-- Year Field -->
-                    <div class="col-md-4 col-sm-12">
-                      <div class="form-group">
-                        <label class="form-label">Preferred Year</label>
-                        <select name="year" class="form-control">
-                          <option value="">--Select Year--</option>
-                          <option value="2024">2024</option>
-                          <option value="2023">2023</option>
-                          <option value="2022">2022</option>
-                          <option value="2021">2021</option>
-                          <option value="2020">2020</option>
-                          <option value="2019">2019</option>
-                          <option value="2018">2018</option>
-                          <option value="2017">2017</option>
-                          <option value="2016">2016</option>
-                          <option value="2015">2015</option>
-                          <option value="Older">Older than 2015</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <!-- Mileage Field -->
-                    <div class="col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <label class="form-label">Mileage Preference</label>
-                        <select name="mileage" class="form-control">
-                          <option value="">--Select Mileage--</option>
-                          <option value="Under 10,000 km">Under 10,000 km</option>
-                          <option value="10,000 - 30,000 km">10,000 - 30,000 km</option>
-                          <option value="30,000 - 50,000 km">30,000 - 50,000 km</option>
-                          <option value="50,000 - 75,000 km">50,000 - 75,000 km</option>
-                          <option value="75,000 - 100,000 km">75,000 - 100,000 km</option>
-                          <option value="Over 100,000 km">Over 100,000 km</option>
-                          <option value="No preference">No preference</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <!-- Condition Field -->
-                    <div class="col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <label class="form-label">Condition *</label>
-                        <select name="condition" class="form-control" required>
-                          <option value="">--Select Condition--</option>
-                          <option value="Brand New">Brand New</option>
-                          <option value="Used">Used</option>
-                          <option value="No preference">No preference</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <!-- Message Field -->
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label class="form-label">Additional Requirements</label>
-                        <textarea name="message" class="form-control" rows="4"
-                          placeholder="Please describe any specific requirements, budget range, or additional details..."></textarea>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-12 text-center">
-                      <button type="submit" class="btn-import-submit">
-                        <i class="fa fa-paper-plane"></i> Submit Import Inquiry
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Client logos -->
-      <section class="logo-slider-section">
-        <div class="logo-slider-title">
-          <h2>Global Automotive Leaders</h2>
-          <p>Building the future of mobility together</p>
-        </div>
-
-        <div class="swiper logo-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide logo-slide">
-              <img src="assets/img/brands/bmw.png" alt="Porsche Logo" class="logo-img">
-            </div>
-
-            <div class="swiper-slide logo-slide">
-              <img src="assets/img/brands/mbenz.png" alt="Tesla Logo" class="logo-img">
-            </div>
-
-            <div class="swiper-slide logo-slide">
-              <img src="assets/img/brands/toyota.png" alt="Nissan Logo" class="logo-img">
-            </div>
-
-            <div class="swiper-slide logo-slide">
-              <img src="assets/img/brands/mitsubishi.png" alt="Hyundai Logo" class="logo-img">
-            </div>
-
-            <div class="swiper-slide logo-slide">
-              <img src="assets/img/brands/btd.png" alt="BMW Logo" class="logo-img">
-            </div>
-
-            <div class="swiper-slide logo-slide">
-              <img src="assets/img/brands/tesla.png" alt="Mercedes Logo" class="logo-img">
-            </div>
-
-            <div class="swiper-slide logo-slide">
-              <img src="assets/img/brands/hyundai.png" alt="Mercedes Logo" class="logo-img">
-            </div>
-
-            <div class="swiper-slide logo-slide">
-              <img src="assets/img/brands/porsche.png" alt="Mercedes Logo" class="logo-img">
-            </div>
-
-            <div class="swiper-slide logo-slide">
-              <img src="assets/img/brands/maserati.png" alt="Mercedes Logo" class="logo-img">
-            </div>
-
-            <div class="swiper-slide logo-slide">
-              <img src="assets/img/brands/ferrari.png" alt="Mercedes Logo" class="logo-img">
-            </div>
-
-            <div class="swiper-slide logo-slide">
-              <img src="assets/img/brands/land-rover.png" alt="Mercedes Logo" class="logo-img">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--numbers-->
-      <section class="section_default wow bounceInUp" data-wow-duration="2s">
-        <div class="container">
-          <div class="text-center">
-            <h2 class="section-title">
-              We are known for trend-setting styles and<br>customization.
-            </h2>
-            <p class="section-description">
-              For 15 years, we raising the standard of used car retailing with one of the most innovative and reliable
-              used vehicle programmes ever created.
-            </p>
-          </div>
-
-          <div class="stats-container">
-            <div class="stat-card">
-              <div class="stat-icon">
-                <i class="fas fa-warehouse"></i>
-              </div>
-              <div class="stat-number">1200+</div>
-              <div class="stat-label">Vehicles in stock</div>
-            </div>
-
-            <div class="stat-card">
-              <div class="stat-icon">
-                <i class="fas fa-user-tie"></i>
-              </div>
-              <div class="stat-number">20k</div>
-              <div class="stat-label">Happy Customers</div>
-            </div>
-
-            <div class="stat-card">
-              <div class="stat-icon">
-                <i class="fas fa-car"></i>
-              </div>
-              <div class="stat-number">15</div>
-              <div class="stat-label">Showrooms</div>
-            </div>
-
-            <div class="stat-card">
-              <div class="stat-icon">
-                <i class="fas fa-award"></i>
-              </div>
-              <div class="stat-number">30</div>
-              <div class="stat-label">Awards</div>
-            </div>
-          </div>
-
-          <div class="text-center">
-            <button class="cta-button">Call us today!</button>
-          </div>
-        </div>
-      </section>
-
-      <!--footer new-->
-      <footer class="footer">
-        <div class="container">
-          <div class="footer-top">
-            <div class="row">
-              <div class="col-lg-3 col-md-6 mb-4">
-                <div class="footer-column">
-                  <h4>INVENTORY</h4>
-                  <ul>
-                    <li><a href="#">NEW VEHICLES</a></li>
-                    <li><a href="#">USED VEHICLES</a></li>
-                    <li><a href="#">PRE-OWNED VEHICLE SPECIALS</a></li>
-                    <li><a href="#">PRICED UNDER 15K</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 mb-4">
-                <div class="footer-column">
-                  <h4>FINANCING</h4>
-                  <ul>
-                    <li><a href="#">GET FINANCING</a></li>
-                    <li><a href="#">PAYMENT CALCULATOR</a></li>
-                    <li><a href="#">VALUE YOUR TRADE</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 mb-4">
-                <div class="footer-column">
-                  <h4>QUICK LINKS</h4>
-                  <ul>
-                    <li><a href="#">FAQS</a></li>
-                    <li><a href="#">WHY BUY FROM ALM</a></li>
-                    <li><a href="#">FIVE QUESTIONS TO ASK</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 mb-4">
-                <div class="footer-column">
-                  <h4>CONTACT</h4>
-                  <ul>
-                    <li><a href="tel:94769057272">076 905 7272</a></li>
-                    <li><a href="mailto:villoauto@gmail.com">villoauto@gmail.com</a></li>
-                    <li><a href="#">No. 614, Colombo road, Nanuoya, Pilimathalawa</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="footer-bottom">
-            <div>
-              <img src="assets/img/logo-footer.png" alt="logo" class="footer-logo">
-            </div>
-            <!-- <ul class="footer-links">
+              <!-- <ul class="footer-links">
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Contact us</a></li>
               <li><a href="#">Sitemap</a></li>
             </ul> -->
-            <div class="copyright">
-              2025 © All Rights Reserved | Villo Auto Cars (Pvt) Ltd | Designed & Developed by Silicon Radon Networks
-              (Pvt) Ltd.
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      <!--Messenger and WhatsApp Floating btns-->
-      <a href="https://m.me/94769057272" class="float" style="z-index: 999999;">
-        <i class="fa-brands fa-facebook-messenger my-float"></i>
-      </a>
-      <script async
-        src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
-      <script>
-        var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "94769057272", "welcomeMessage": "Hello! How can we help you today?", "zIndex": 999999, "btnColorScheme": "light" };
-        window.onload = () => {
-          _waEmbed(wa_btnSetting);
-        };
-      </script>
-      <!-- Vehicle Details Modal -->
-      <div class="modal fade" id="vehicleModal" tabindex="-1" role="dialog" aria-labelledby="vehicleModalLabel">
-        <div class="modal-dialog modal-lg modal-center" role="document">
-          <div class="modal-content">
-
-            <!-- Modal Header -->
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <h4 class="modal-title" id="vehicleModalLabel">2019 Honda Vezel Z</h4>
-            </div>
-
-            <!-- Modal Body -->
-            <div class="modal-body">
-              <div class="row">
-                <!-- Vehicle Image -->
-                <div class="col-md-6">
-                  <img src="assets/img/from-fb/2-wide.jpg" class="img-responsive img-rounded" alt="2019 Honda Vezel Z">
-                </div>
-
-                <!-- Vehicle Info -->
-                <div class="col-md-6">
-                  <h4>Key Details</h4>
-                  <ul class="list-unstyled">
-                    <li><strong>Make:</strong> Honda</li>
-                    <li><strong>Model:</strong> Vezel Z</li>
-                    <li><strong>Year:</strong> 2019</li>
-                    <li><strong>Transmission:</strong> Automatic</li>
-                    <li><strong>Fuel Type:</strong> Hybrid (Petrol/Electric)</li>
-                    <li><strong>Mileage:</strong> 45,000 km</li>
-                    <li><strong>Color:</strong> Pearl White</li>
-                    <li><strong>Price:</strong> Rs. 8,450,000</li>
-                  </ul>
-                  <p>
-                    Well-maintained Honda Vezel Z with excellent fuel efficiency and advanced safety features.
-                    Equipped with push start, reverse camera, alloy wheels, and full service history.
-                  </p>
-                </div>
+              <div class="copyright">
+                2025 © All Rights Reserved | Villo Auto Cars (Pvt) Ltd | Designed & Developed by Silicon Radon Networks
+                (Pvt) Ltd.
               </div>
             </div>
+          </div>
+        </footer>
 
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <a href="#" class="btn btn-primary">Enquire Now</a>
+        <!--Messenger and WhatsApp Floating btns-->
+        <a href="https://m.me/94769057272" class="float" style="z-index: 999999;">
+          <i class="fa-brands fa-facebook-messenger my-float"></i>
+        </a>
+        <script async
+          src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+        <script>
+          var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "94769057272", "welcomeMessage": "Hello! How can we help you today?", "zIndex": 999999, "btnColorScheme": "light" };
+          window.onload = () => {
+            _waEmbed(wa_btnSetting);
+          };
+        </script>
+        <!-- Vehicle Details Modal -->
+        <div class="modal fade" id="vehicleModal" tabindex="-1" role="dialog" aria-labelledby="vehicleModalLabel">
+          <div class="modal-dialog modal-lg modal-center" role="document">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="vehicleModalLabel">2019 Honda Vezel Z</h4>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <div class="row">
+                  <!-- Vehicle Image -->
+                  <div class="col-md-6">
+                    <img src="assets/img/from-fb/2-wide.jpg" class="img-responsive img-rounded"
+                      alt="2019 Honda Vezel Z">
+                  </div>
+
+                  <!-- Vehicle Info -->
+                  <div class="col-md-6">
+                    <h4>Key Details</h4>
+                    <ul class="list-unstyled">
+                      <li><strong>Make:</strong> Honda</li>
+                      <li><strong>Model:</strong> Vezel Z</li>
+                      <li><strong>Year:</strong> 2019</li>
+                      <li><strong>Transmission:</strong> Automatic</li>
+                      <li><strong>Fuel Type:</strong> Hybrid (Petrol/Electric)</li>
+                      <li><strong>Mileage:</strong> 45,000 km</li>
+                      <li><strong>Color:</strong> Pearl White</li>
+                      <li><strong>Price:</strong> Rs. 8,450,000</li>
+                    </ul>
+                    <p>
+                      Well-maintained Honda Vezel Z with excellent fuel efficiency and advanced safety features.
+                      Equipped with push start, reverse camera, alloy wheels, and full service history.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal Footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <a href="#" class="btn btn-primary">Enquire Now</a>
+              </div>
+
             </div>
-
           </div>
         </div>
       </div>
+      <!-- end #wrapper -->
     </div>
-    <!-- end #wrapper -->
-  </div>
-  <!-- end layout-theme -->
+    <!-- end layout-theme -->
 
-  <div class="car-top">
-    <span><img src="assets/img/car.png" alt="car"></span>
-  </div>
+    <div class="car-top">
+      <span><img src="assets/img/car.png" alt="car"></span>
+    </div>
 
-  <!-- SCRIPTS -->
-  <script src="assets/js/jquery-migrate-1.2.1.js"></script>
-  <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/modernizr.custom.js"></script>
-  <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
-  <script src="assets/js/waypoints.min.js"></script>
-  <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
-  <script src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="assets/plugins/jelect/jquery.jelect.js"></script>
+    <!-- SCRIPTS -->
+    <script src="assets/js/jquery-migrate-1.2.1.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
+    <script src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="assets/plugins/jelect/jquery.jelect.js"></script>
 
-  <!--HOME SLIDER-->
+    <!--HOME SLIDER-->
 
-  <script src="assets/plugins/sliderpro/js/jquery.sliderPro.min.js"></script>
+    <script src="assets/plugins/sliderpro/js/jquery.sliderPro.min.js"></script>
 
-  <!--THEME-->
-  <script src="assets/js/cssua.min.js"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/custom.js"></script>
+    <!--THEME-->
+    <script src="assets/js/cssua.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/custom.js"></script>
 
-  <!--swiper-->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.mySwiper', {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
-      // pagination: {
-      //   el: '.swiper-pagination',
-      //   clickable: true,
-      // },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 3,
+    <!--swiper-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
         },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 3,
+        // pagination: {
+        //   el: '.swiper-pagination',
+        //   clickable: true,
+        // },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 3,
-        },
-      }
-    });
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const minGap = 10000;
-    const min = 6900, max = 801700;
-    const priceMin = document.getElementById('priceMin');
-    const priceMax = document.getElementById('priceMax');
-    const priceRangeDisplay = document.getElementById('priceRangeDisplay');
-    const sliderRange = document.getElementById('sliderRange');
-
-    function formatPrice(val) {
-      return 'Rs. ' + Number(val).toLocaleString();
-    }
-
-    function updateSliderRange() {
-      const minVal = parseInt(priceMin.value);
-      const maxVal = parseInt(priceMax.value);
-      const percentMin = ((minVal - min) / (max - min)) * 100;
-      const percentMax = ((maxVal - min) / (max - min)) * 100;
-      sliderRange.style.left = percentMin + '%';
-      sliderRange.style.width = (percentMax - percentMin) + '%';
-    }
-
-    function updatePriceRange(e) {
-      let minVal = parseInt(priceMin.value);
-      let maxVal = parseInt(priceMax.value);
-
-      if (maxVal - minVal < minGap) {
-        if (e && e.target === priceMin) {
-          priceMin.value = maxVal - minGap;
-          minVal = maxVal - minGap;
-        } else {
-          priceMax.value = minVal + minGap;
-          maxVal = minVal + minGap;
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 3,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 3,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 3,
+          },
         }
-      }
-
-      priceRangeDisplay.textContent = formatPrice(priceMin.value) + ' - ' + formatPrice(priceMax.value);
-      updateSliderRange();
-    }
-
-    priceMin.addEventListener('input', updatePriceRange);
-    priceMax.addEventListener('input', updatePriceRange);
-
-    // Initial update
-    updateSliderRange();
-  </script>
-  <script>
-    // Filter tab functionality
-    document.querySelectorAll(".filter-tab").forEach((tab) => {
-      tab.addEventListener("click", function () {
-        document
-          .querySelectorAll(".filter-tab")
-          .forEach((t) => t.classList.remove("active"));
-        this.classList.add("active");
       });
-    });
-  </script>
+    </script>
 
-  <script>
-    // Vehicle Import Form Handler
-    document.getElementById('vehicleImportForm').addEventListener('submit', function (e) {
-      e.preventDefault();
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const minGap = 10000;
+      const min = 6900, max = 801700;
+      const priceMin = document.getElementById('priceMin');
+      const priceMax = document.getElementById('priceMax');
+      const priceRangeDisplay = document.getElementById('priceRangeDisplay');
+      const sliderRange = document.getElementById('sliderRange');
 
-      // Get form data
-      const formData = new FormData(this);
-      const data = {};
-      for (let [key, value] of formData.entries()) {
-        data[key] = value;
+      function formatPrice(val) {
+        return 'Rs. ' + Number(val).toLocaleString();
       }
 
-      // Validate required fields
-      if (!data.name || !data.phone || !data.email || !data.brand || !data.condition) {
-        alert('Please fill in all required fields.');
-        return;
+      function updateSliderRange() {
+        const minVal = parseInt(priceMin.value);
+        const maxVal = parseInt(priceMax.value);
+        const percentMin = ((minVal - min) / (max - min)) * 100;
+        const percentMax = ((maxVal - min) / (max - min)) * 100;
+        sliderRange.style.left = percentMin + '%';
+        sliderRange.style.width = (percentMax - percentMin) + '%';
       }
 
-      // Email validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(data.email)) {
-        alert('Please enter a valid email address.');
-        return;
+      function updatePriceRange(e) {
+        let minVal = parseInt(priceMin.value);
+        let maxVal = parseInt(priceMax.value);
+
+        if (maxVal - minVal < minGap) {
+          if (e && e.target === priceMin) {
+            priceMin.value = maxVal - minGap;
+            minVal = maxVal - minGap;
+          } else {
+            priceMax.value = minVal + minGap;
+            maxVal = minVal + minGap;
+          }
+        }
+
+        priceRangeDisplay.textContent = formatPrice(priceMin.value) + ' - ' + formatPrice(priceMax.value);
+        updateSliderRange();
       }
 
-      // Create email subject and body
-      const subject = `Vehicle Import Inquiry - ${data.brand} ${data.model || ''}`.trim();
-      const body = `
+      priceMin.addEventListener('input', updatePriceRange);
+      priceMax.addEventListener('input', updatePriceRange);
+
+      // Initial update
+      updateSliderRange();
+    </script>
+    <script>
+      // Filter tab functionality
+      document.querySelectorAll(".filter-tab").forEach((tab) => {
+        tab.addEventListener("click", function () {
+          document
+            .querySelectorAll(".filter-tab")
+            .forEach((t) => t.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+
+    <script>
+      // Vehicle Import Form Handler
+      document.getElementById('vehicleImportForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Get form data
+        const formData = new FormData(this);
+        const data = {};
+        for (let [key, value] of formData.entries()) {
+          data[key] = value;
+        }
+
+        // Validate required fields
+        if (!data.name || !data.phone || !data.email || !data.brand || !data.condition) {
+          alert('Please fill in all required fields.');
+          return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(data.email)) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+
+        // Create email subject and body
+        const subject = `Vehicle Import Inquiry - ${data.brand} ${data.model || ''}`.trim();
+        const body = `
         Dear Villo Auto Cars Team,
 
         I am interested in importing a vehicle with the following specifications:
@@ -1491,116 +1566,116 @@
         ${data.name}
       `.trim();
 
-      // Create mailto link
-      const mailtoLink = `mailto:villoauto@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        // Create mailto link
+        const mailtoLink = `mailto:villoauto@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-      // Open email client
-      window.location.href = mailtoLink;
+        // Open email client
+        window.location.href = mailtoLink;
 
-      // Show success message
-      // alert('Your inquiry has been prepared! Your email client should open shortly. If it doesn\'t, please copy the details and send them to villoauto@gmail.com');
+        // Show success message
+        // alert('Your inquiry has been prepared! Your email client should open shortly. If it doesn\'t, please copy the details and send them to villoauto@gmail.com');
 
-      // Optional: Reset form
-      // this.reset();
-    });
-  </script>
-
-  <script>
-    // Hide all .image-actions by default
-    document
-      .querySelectorAll(".car-image-wrapper .image-actions")
-      .forEach((el) => {
-        el.style.display = "none";
+        // Optional: Reset form
+        // this.reset();
       });
+    </script>
 
-    // For all secondary images, show .image-actions on hover, hide on mouseout
-    document
-      .querySelectorAll(".car-image.secondary")
-      .forEach((img) => {
-        img.addEventListener("mouseenter", function () {
-          const actions =
-            this.parentElement.querySelector(".image-actions");
-          if (actions) actions.style.display = "block";
+    <script>
+      // Hide all .image-actions by default
+      document
+        .querySelectorAll(".car-image-wrapper .image-actions")
+        .forEach((el) => {
+          el.style.display = "none";
         });
-        img.addEventListener("mouseleave", function () {
+
+      // For all secondary images, show .image-actions on hover, hide on mouseout
+      document
+        .querySelectorAll(".car-image.secondary")
+        .forEach((img) => {
+          img.addEventListener("mouseenter", function () {
+            const actions =
+              this.parentElement.querySelector(".image-actions");
+            if (actions) actions.style.display = "block";
+          });
+          img.addEventListener("mouseleave", function () {
+            const actions =
+              this.parentElement.querySelector(".image-actions");
+            if (actions) actions.style.display = "none";
+          });
+        });
+
+      // For all primary images, always hide .image-actions on hover
+      document.querySelectorAll(".car-image.primary").forEach((img) => {
+        img.addEventListener("mouseenter", function () {
           const actions =
             this.parentElement.querySelector(".image-actions");
           if (actions) actions.style.display = "none";
         });
       });
+    </script>
+    <!--client logo logic-->
+    <script>
+      // Initialize all logo swipers
+      const logoSwipers = document.querySelectorAll('.logo-swiper');
 
-    // For all primary images, always hide .image-actions on hover
-    document.querySelectorAll(".car-image.primary").forEach((img) => {
-      img.addEventListener("mouseenter", function () {
-        const actions =
-          this.parentElement.querySelector(".image-actions");
-        if (actions) actions.style.display = "none";
+      logoSwipers.forEach((swiperElement, index) => {
+        new Swiper(swiperElement, {
+          // Slides settings
+          slidesPerView: 2,
+          spaceBetween: 30,
+
+          // Loop
+          loop: true,
+
+          // Autoplay with different speeds for variety
+          autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+          },
+
+          // Speed
+          speed: 3000 + (index * 1000), // Different speeds for each slider
+
+          // Continuous movement
+          freeMode: true,
+          freeModeMomentum: false,
+
+          // Responsive breakpoints
+          breakpoints: {
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            480: {
+              slidesPerView: 3,
+              spaceBetween: 25,
+            },
+            640: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 5,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 6,
+              spaceBetween: 50,
+            },
+            1200: {
+              slidesPerView: 7,
+              spaceBetween: 60,
+            }
+          },
+
+          // Disable interactions
+          allowTouchMove: false,
+
+          // CSS mode for better performance
+          cssMode: false,
+        });
       });
-    });
-  </script>
-  <!--client logo logic-->
-  <script>
-    // Initialize all logo swipers
-    const logoSwipers = document.querySelectorAll('.logo-swiper');
-
-    logoSwipers.forEach((swiperElement, index) => {
-      new Swiper(swiperElement, {
-        // Slides settings
-        slidesPerView: 2,
-        spaceBetween: 30,
-
-        // Loop
-        loop: true,
-
-        // Autoplay with different speeds for variety
-        autoplay: {
-          delay: 0,
-          disableOnInteraction: false,
-        },
-
-        // Speed
-        speed: 3000 + (index * 1000), // Different speeds for each slider
-
-        // Continuous movement
-        freeMode: true,
-        freeModeMomentum: false,
-
-        // Responsive breakpoints
-        breakpoints: {
-          320: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          480: {
-            slidesPerView: 3,
-            spaceBetween: 25,
-          },
-          640: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-          768: {
-            slidesPerView: 5,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 6,
-            spaceBetween: 50,
-          },
-          1200: {
-            slidesPerView: 7,
-            spaceBetween: 60,
-          }
-        },
-
-        // Disable interactions
-        allowTouchMove: false,
-
-        // CSS mode for better performance
-        cssMode: false,
-      });
-    });
-  </script>
+    </script>
 </body>
 
 

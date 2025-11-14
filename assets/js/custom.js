@@ -410,18 +410,18 @@ $(document).ready(function () {
 
 
         $("#slider-price").noUiSlider({
-            start: [15000, 35000],
+            start: [150000, 350000],
             step: 500,
             connect: true,
             range: {
                 'min': 0,
-                'max': 50000
+                'max': 500000
             },
 
             // Full number format support.
             format: wNumb({
                 decimals: 0,
-                prefix: '$'
+                prefix: 'Rs.'
             })
         });
         // Reading/writing + validation from an input? One line.

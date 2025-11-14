@@ -14,11 +14,7 @@
     <script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
 
     <style>
-        .row * {
-            padding-left: 3px;
-            padding-right: 3px;
-            padding-top: 3px;
-        }
+  
 
         #sliderpro1 {
             display: block;
@@ -303,348 +299,417 @@
                 font-size: 11px;
             }
         }
+
+        .header-container-padding {
+            padding-right: 90px;
+            padding-left: 90px;
+        }
+
+        @media (max-width: 768px) {
+            .header-container-padding {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
     </style>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- SWITCHER -->
+    <link href="assets/plugins/switcher/css/switcher.css" rel="stylesheet" id="switcher-css" media="all" />
+    <link href="assets/plugins/switcher/css/color1.css" rel="alternate stylesheet" title="color1" media="all" />
+    <link href="assets/plugins/switcher/css/color2.css" rel="alternate stylesheet" title="color2" media="all" />
+    <link href="assets/plugins/switcher/css/color3.css" rel="alternate stylesheet" title="color3" media="all" />
+    <link href="assets/plugins/switcher/css/color4.css" rel="alternate stylesheet" title="color4" media="all" />
+    <link href="assets/plugins/switcher/css/color5.css" rel="alternate stylesheet" title="color5" media="all" />
+
+    <script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
+    <!-- Loader -->
+    <div id="page-preloader"><span class="spinner"></span></div>
+    <!-- Loader end -->
+
     <div id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
-        <div id="wrapper">
-            <!-- HEADER -->
-            <div class="header">
-                <div class="top-header">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="header-contacts">
-                                    <span class="header-contacts__item"><i class="icon fa fa-phone"></i> 076 905
-                                        7272</span>
-                                    <a class="header-contacts__item" href="mailto:villoauto@gmail.com"><i
-                                            class="icon fa fa-envelope"></i>
-                                        villoauto@gmail.com</a>
+        <!-- Start Switcher -->
+        <div class="switcher-wrapper">
+            <div class="demo_changer">
+                <div class="demo-icon customBgColor">
+                    <i class="fa fa-cog fa-spin fa-2x"></i>
+                </div>
+                <div class="form_holder">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="predefined_styles">
+                                <div class="skin-theme-switcher">
+                                    <h4>Color</h4>
+                                    <a href="javascript:void(0);" data-switchcolor="color1" class="styleswitch"
+                                        style="background-color: #fe5656">
+                                    </a>
+                                    <a href="javascript:void(0);" data-switchcolor="color2" class="styleswitch"
+                                        style="background-color: #4fb0fd">
+                                    </a>
+                                    <a href="javascript:void(0);" data-switchcolor="color3" class="styleswitch"
+                                        style="background-color: #ffc73c">
+                                    </a>
+                                    <a href="javascript:void(0);" data-switchcolor="color4" class="styleswitch"
+                                        style="background-color: #ff8300">
+                                    </a>
+                                    <a href="javascript:void(0);" data-switchcolor="color5" class="styleswitch"
+                                        style="background-color: #02cc8b">
+                                    </a>
                                 </div>
-                                <ul class="social-links list-inline">
-                                    <li>
-                                        <a class="" href="javascript:void(0);"><i class="bi bi-facebook"></i></a>
-                                    </li>
-                                    <li>
-                                        <a class="" href="javascript:void(0);"><i class="bi bi-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a class="" href="javascript:void(0);"><i class="bi bi-whatsapp"></i></a>
-                                    </li>
-                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="assets/plugins/switcher/js/bootstrap-select.js"></script>
+            <script src="assets/plugins/switcher/js/evol.colorpicker.min.js"></script>
+            <script src="assets/plugins/switcher/js/dmss.js"></script>
+        </div>
+        <!-- End Switcher -->
+
+        
+        <div id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
+            <div id="wrapper">
+                <!-- HEADER -->
+                <div class="header">
+                    <div class="top-header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="header-contacts">
+                                        <span class="header-contacts__item"><i class="icon fa fa-phone"></i> 076 905
+                                            7272</span>
+                                        <a class="header-contacts__item" href="mailto:villoauto@gmail.com"><i
+                                                class="icon fa fa-envelope"></i>
+                                            villoauto@gmail.com</a>
+                                    </div>
+                                    <ul class="social-links list-inline">
+                                        <li>
+                                            <a class="" href="javascript:void(0);"><i class="bi bi-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="javascript:void(0);"><i class="bi bi-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="javascript:void(0);"><i class="bi bi-whatsapp"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__inner">
+                        <div class="header-container-padding">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                    <a href="index.html" class="logo d-none d-lg-block">
+                                        <img class="logo__img img-responsive" src="assets/img/logo.png"
+                                            style="height: 100px; object-fit: contain;" alt="Logo" />
+                                    </a>
+                                    <div class="navbar yamm">
+                                        <div class="navbar-header hidden-md hidden-lg hidden-sm">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#navbar-collapse-1" class="navbar-toggle">
+                                                <span class="icon-bar"></span><span class="icon-bar"></span><span
+                                                    class="icon-bar"></span>
+                                            </button>
+                                            <a href="javascript:void(0);" class="navbar-brand"></a>
+                                        </div>
+                                        <div id="navbar-collapse-1" class="navbar-collapse collapse ">
+                                            <ul class="nav navbar-nav ">
+                                                <li><a href="index.html">HOME</a></li>
+                                                <li>
+                                                <li><a href="vehicle-listings.html">VEHICLE LISTINGS</a></li>
+                                                <li>
+                                                    <a href="services.html">SERVICES</a>
+                                                </li>
+                                                <li>
+                                                    <a href="about-us.html">ABOUT US</a>
+                                                </li>
+                                                <li>
+                                                    <a href="gallery.html">GALLERY</a>
+                                                </li>
+                                                <li>
+                                                    <a href="contact-us.html">CONTACT US</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="header__inner">
+                <div class="block-title">
+                    <div class="block-title__inner section-bg section-bg_second">
+                        <div class="bg-inner">
+                            <h1 class="ui-title-page">OUR GALLERY</h1>
+                            <div class="decor-1 center-block"></div>
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">HOME</a></li>
+                                <li class="active">GALLERY</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!--footer new-->
+                <footer class="footer">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-xs-12">
-                                <a href="index.html" class="logo d-none d-lg-block">
-                                    <img class="logo__img img-responsive" src="assets/img/logo.png"
-                                        style="height: 100px; object-fit: contain;" alt="Logo" />
-                                </a>
-                                <div class="navbar yamm">
-                                    <div class="navbar-header hidden-md hidden-lg hidden-sm">
-                                        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1"
-                                            class="navbar-toggle">
-                                            <span class="icon-bar"></span><span class="icon-bar"></span><span
-                                                class="icon-bar"></span>
-                                        </button>
-                                        <a href="javascript:void(0);" class="navbar-brand"></a>
+                        <div class="footer-top">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="footer-column">
+                                        <h4>INVENTORY</h4>
+                                        <ul>
+                                            <li><a href="#">NEW VEHICLES</a></li>
+                                            <li><a href="#">USED VEHICLES</a></li>
+                                            <li><a href="#">PRE-OWNED VEHICLE SPECIALS</a></li>
+                                            <li><a href="#">PRICED UNDER 15K</a></li>
+                                        </ul>
                                     </div>
-                                    <div id="navbar-collapse-1" class="navbar-collapse collapse">
-                                        <ul class="nav navbar-nav">
-                                            <li><a href="index.html">HOME</a></li>
-                                            <li>
-                                                <a href="services.html">SERVICES</a>
-                                            </li>
-                                            <li>
-                                                <a href="about-us.html">ABOUT US</a>
-                                            </li>
-                                            <li>
-                                                <a href="gallery.html">GALLERY</a>
-                                            </li>
-                                            <li>
-                                                <a href="contact-us.html">CONTACT US</a>
-                                            </li>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="footer-column">
+                                        <h4>FINANCING</h4>
+                                        <ul>
+                                            <li><a href="#">GET FINANCING</a></li>
+                                            <li><a href="#">PAYMENT CALCULATOR</a></li>
+                                            <li><a href="#">VALUE YOUR TRADE</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="footer-column">
+                                        <h4>QUICK LINKS</h4>
+                                        <ul>
+                                            <li><a href="#">FAQS</a></li>
+                                            <li><a href="#">WHY BUY FROM ALM</a></li>
+                                            <li><a href="#">FIVE QUESTIONS TO ASK</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="footer-column">
+                                        <h4>CONTACT</h4>
+                                        <ul>
+                                            <li><a href="tel:94769057272">076 905 7272</a></li>
+                                            <li><a href="mailto:villoauto@gmail.com">villoauto@gmail.com</a></li>
+                                            <li><a href="#">No. 614, Colombo road, Nanuoya, Pilimathalawa</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="footer-bottom">
+                            <div>
+                                <img src="assets/img/logo-footer.png" alt="logo" class="footer-logo">
+                            </div>
+                            <div class="copyright">
+                                2025 © All Rights Reserved | Villo Auto Cars (Pvt) Ltd | Designed & Developed by Silicon
+                                Radon Networks
+                                (Pvt) Ltd.
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </footer>
+
+                <!--Messenger and WhatsApp Floating btns-->
+                <a href="https://m.me/94769057272" class="float" style="z-index: 999999;">
+                    <i class="fa-brands fa-facebook-messenger my-float"></i>
+                </a>
+                <script async
+                    src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+                <script>
+                    var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "94769057272", "welcomeMessage": "Hello! How can we help you today?", "zIndex": 999999, "btnColorScheme": "light" };
+                    window.onload = () => {
+                        _waEmbed(wa_btnSetting);
+                    };
+                </script>
+
             </div>
-
-            <div class="block-title">
-                <div class="block-title__inner section-bg section-bg_second">
-                    <div class="bg-inner">
-                        <h1 class="ui-title-page">OUR GALLERY</h1>
-                        <div class="decor-1 center-block"></div>
-                        <ol class="breadcrumb">
-                            <li><a href="index.html">HOME</a></li>
-                            <li class="active">GALLERY</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!--footer new-->
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer-top">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="footer-column">
-                                    <h4>INVENTORY</h4>
-                                    <ul>
-                                        <li><a href="#">NEW VEHICLES</a></li>
-                                        <li><a href="#">USED VEHICLES</a></li>
-                                        <li><a href="#">PRE-OWNED VEHICLE SPECIALS</a></li>
-                                        <li><a href="#">PRICED UNDER 15K</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="footer-column">
-                                    <h4>FINANCING</h4>
-                                    <ul>
-                                        <li><a href="#">GET FINANCING</a></li>
-                                        <li><a href="#">PAYMENT CALCULATOR</a></li>
-                                        <li><a href="#">VALUE YOUR TRADE</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="footer-column">
-                                    <h4>QUICK LINKS</h4>
-                                    <ul>
-                                        <li><a href="#">FAQS</a></li>
-                                        <li><a href="#">WHY BUY FROM ALM</a></li>
-                                        <li><a href="#">FIVE QUESTIONS TO ASK</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="footer-column">
-                                    <h4>CONTACT</h4>
-                                    <ul>
-                                        <li><a href="tel:94769057272">076 905 7272</a></li>
-                                        <li><a href="mailto:villoauto@gmail.com">villoauto@gmail.com</a></li>
-                                        <li><a href="#">No. 614, Colombo road, Nanuoya, Pilimathalawa</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="footer-bottom">
-                        <div>
-                            <img src="assets/img/logo-footer.png" alt="logo" class="footer-logo">
-                        </div>
-                        <div class="copyright">
-                            2025 © All Rights Reserved | Villo Auto Cars (Pvt) Ltd | Designed & Developed by Silicon
-                            Radon Networks
-                            (Pvt) Ltd.
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-            <!--Messenger and WhatsApp Floating btns-->
-            <a href="https://m.me/94769057272" class="float" style="z-index: 999999;">
-                <i class="fa-brands fa-facebook-messenger my-float"></i>
-            </a>
-            <script async
-                src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
-            <script>
-                var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "94769057272", "welcomeMessage": "Hello! How can we help you today?", "zIndex": 999999, "btnColorScheme": "light" };
-                window.onload = () => {
-                    _waEmbed(wa_btnSetting);
-                };
-            </script>
-
         </div>
-    </div>
 
-    <div class="car-top">
-        <span><img src="assets/img/car.png" alt="car"></span>
-    </div>
+        <div class="car-top">
+            <span><img src="assets/img/car.png" alt="car"></span>
+        </div>
 
-    <!-- SCRIPTS -->
-    <script src="assets/js/jquery-migrate-1.2.1.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
-    <script src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="assets/plugins/jelect/jquery.jelect.js"></script>
-    <script src="assets/plugins/sliderpro/js/jquery.sliderPro.min.js"></script>
-    <script src="assets/js/cssua.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- SCRIPTS -->
+        <script src="assets/js/jquery-migrate-1.2.1.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/modernizr.custom.js"></script>
+        <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
+        <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
+        <script src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="assets/plugins/jelect/jquery.jelect.js"></script>
+        <script src="assets/plugins/sliderpro/js/jquery.sliderPro.min.js"></script>
+        <script src="assets/js/cssua.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Gallery JavaScript -->
-    <script>
-        // Gallery Filter Functionality
-        const filterBtns = document.querySelectorAll('.gallery-filters ul li a');
-        const galleryItems = document.querySelectorAll('.gallery-item');
+        <!-- Gallery JavaScript -->
+        <script>
+            // Gallery Filter Functionality
+            const filterBtns = document.querySelectorAll('.gallery-filters ul li a');
+            const galleryItems = document.querySelectorAll('.gallery-item');
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', function (e) {
-                e.preventDefault();
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
 
-                // Remove active class from all li elements
-                document.querySelectorAll('.gallery-filters ul li').forEach(li => li.classList.remove('active'));
-                // Add active class to clicked button's parent li
-                this.parentElement.classList.add('active');
+                    // Remove active class from all li elements
+                    document.querySelectorAll('.gallery-filters ul li').forEach(li => li.classList.remove('active'));
+                    // Add active class to clicked button's parent li
+                    this.parentElement.classList.add('active');
 
-                const filterValue = this.getAttribute('data-filter');
+                    const filterValue = this.getAttribute('data-filter');
 
-                galleryItems.forEach(item => {
-                    if (filterValue === 'all') {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        const category = item.getAttribute('data-category');
-                        if (category === filterValue) {
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all') {
                             item.style.display = 'block';
                             setTimeout(() => {
                                 item.style.opacity = '1';
                                 item.style.transform = 'scale(1)';
                             }, 10);
                         } else {
-                            item.style.opacity = '0';
-                            item.style.transform = 'scale(0.8)';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300);
+                            const category = item.getAttribute('data-category');
+                            if (category === filterValue) {
+                                item.style.display = 'block';
+                                setTimeout(() => {
+                                    item.style.opacity = '1';
+                                    item.style.transform = 'scale(1)';
+                                }, 10);
+                            } else {
+                                item.style.opacity = '0';
+                                item.style.transform = 'scale(0.8)';
+                                setTimeout(() => {
+                                    item.style.display = 'none';
+                                }, 300);
+                            }
                         }
-                    }
+                    });
                 });
             });
-        });
 
-        // Lightbox Functionality
-        const lightboxModal = document.getElementById('lightboxModal');
-        const lightboxImg = document.getElementById('lightboxImg');
-        const lightboxCaption = document.getElementById('lightboxCaption');
-        const closeBtn = document.querySelector('.lightbox-close');
-        const prevBtn = document.querySelector('.lightbox-prev');
-        const nextBtn = document.querySelector('.lightbox-next');
+            // Lightbox Functionality
+            const lightboxModal = document.getElementById('lightboxModal');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+            const closeBtn = document.querySelector('.lightbox-close');
+            const prevBtn = document.querySelector('.lightbox-prev');
+            const nextBtn = document.querySelector('.lightbox-next');
 
-        let currentIndex = 0;
-        let visibleItems = [];
+            let currentIndex = 0;
+            let visibleItems = [];
 
-        // Function to update visible items based on current filter
-        function updateVisibleItems() {
-            visibleItems = Array.from(galleryItems).filter(item => {
-                return item.style.display !== 'none';
+            // Function to update visible items based on current filter
+            function updateVisibleItems() {
+                visibleItems = Array.from(galleryItems).filter(item => {
+                    return item.style.display !== 'none';
+                });
+            }
+
+            // Open lightbox
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', function () {
+                    updateVisibleItems();
+                    currentIndex = visibleItems.indexOf(this);
+                    showLightbox();
+                });
             });
-        }
 
-        // Open lightbox
-        galleryItems.forEach((item, index) => {
-            item.addEventListener('click', function () {
-                updateVisibleItems();
-                currentIndex = visibleItems.indexOf(this);
+            function showLightbox() {
+                const img = visibleItems[currentIndex].querySelector('img');
+                const caption = visibleItems[currentIndex].querySelector('.gallery-caption');
+
+                lightboxImg.src = img.src;
+                lightboxCaption.innerHTML = caption.innerHTML;
+                lightboxModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Close lightbox
+            closeBtn.addEventListener('click', closeLightbox);
+            lightboxModal.addEventListener('click', function (e) {
+                if (e.target === lightboxModal) {
+                    closeLightbox();
+                }
+            });
+
+            function closeLightbox() {
+                lightboxModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+
+            // Previous image
+            prevBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
                 showLightbox();
             });
-        });
 
-        function showLightbox() {
-            const img = visibleItems[currentIndex].querySelector('img');
-            const caption = visibleItems[currentIndex].querySelector('.gallery-caption');
+            // Next image
+            nextBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                currentIndex = (currentIndex + 1) % visibleItems.length;
+                showLightbox();
+            });
 
-            lightboxImg.src = img.src;
-            lightboxCaption.innerHTML = caption.innerHTML;
-            lightboxModal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        // Close lightbox
-        closeBtn.addEventListener('click', closeLightbox);
-        lightboxModal.addEventListener('click', function (e) {
-            if (e.target === lightboxModal) {
-                closeLightbox();
-            }
-        });
-
-        function closeLightbox() {
-            lightboxModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Previous image
-        prevBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
-            showLightbox();
-        });
-
-        // Next image
-        nextBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            currentIndex = (currentIndex + 1) % visibleItems.length;
-            showLightbox();
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', function (e) {
-            if (lightboxModal.style.display === 'block') {
-                if (e.key === 'Escape') {
-                    closeLightbox();
-                } else if (e.key === 'ArrowLeft') {
-                    currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
-                    showLightbox();
-                } else if (e.key === 'ArrowRight') {
-                    currentIndex = (currentIndex + 1) % visibleItems.length;
-                    showLightbox();
+            // Keyboard navigation
+            document.addEventListener('keydown', function (e) {
+                if (lightboxModal.style.display === 'block') {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    } else if (e.key === 'ArrowLeft') {
+                        currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+                        showLightbox();
+                    } else if (e.key === 'ArrowRight') {
+                        currentIndex = (currentIndex + 1) % visibleItems.length;
+                        showLightbox();
+                    }
                 }
-            }
-        });
+            });
 
-        // Initialize visible items on page load
-        updateVisibleItems();
-    </script>
+            // Initialize visible items on page load
+            updateVisibleItems();
+        </script>
 
 </body>
 
