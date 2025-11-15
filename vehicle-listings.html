@@ -534,6 +534,49 @@
                     clear: both;
                 }
             }
+        
+        /* Full Width Filter Buttons */
+        .btn-filter-primary,
+        .btn-filter-secondary {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .btn-filter-primary {
+            background: #dc2d13;
+            color: #fff;
+            border: 2px solid #dc2d13;
+        }
+
+        .btn-filter-primary:hover {
+            background: #b82410;
+            border-color: #b82410;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(220, 45, 19, 0.3);
+        }
+
+        .btn-filter-secondary {
+            background: #fff;
+            color: #666;
+            border: 2px solid #ddd;
+        }
+
+        .btn-filter-secondary:hover {
+            background: #f5f5f5;
+            border-color: #999;
+            color: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
@@ -1208,21 +1251,15 @@
                                 </span>
                             </div>
 
-                            <!-- Action Buttons -->
-                            <div class="btn" style="margin-top: -48px;">
-                                <div class="btn-filter wrap__btn-skew-r js-filter full-width">
-                                    <button class="btn-skew-r btn-effect btn-apply-filters" onclick="applyFilters()">
-                                        <span class="btn-skew-r__inner">Apply Filters</span>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="btn" style="margin-top: -58px;">
-                                <div class="btn-filter wrap__btn-skew-r js-filter full-width">
-                                    <button class="btn-skew-r btn-effect btn-reset-filters" onclick="resetFilters()">
-                                        <span class="btn-skew-r__inner">Reset All</span>
-                                    </button>
-                                </div>
+                            <!-- Action Buttons - simple full-width buttons -->
+                            <div style="margin-top: 20px;">
+                                <button class="btn-filter-primary" onclick="applyFilters()">
+                                    APPLY FILTERS
+                                </button>
+                                
+                                <button class="btn-filter-secondary" onclick="resetFilters()">
+                                    RESET ALL
+                                </button>
                             </div>
                         </aside>
                     </div>
