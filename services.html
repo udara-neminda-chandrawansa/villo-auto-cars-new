@@ -667,64 +667,6 @@
                 font-size: 28px;
             }
         }
-
-        /* Mobile: stack statistics vertically with left icon and large number */
-        @media (max-width: 480px) {
-            .statistics-section .row {
-                display: block;
-            }
-
-            .statistics-section .col-md-3,
-            .statistics-section .col-sm-6 {
-                width: 100%;
-                padding-left: 0;
-                padding-right: 0;
-            }
-
-            .stat-item {
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                gap: 20px;
-                padding: 22px 18px;
-                border-right: none;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            }
-
-            .stat-icon {
-                font-size: 30px;
-                width: 70px;
-                height: 70px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: rgba(255,255,255,0.06);
-                border-radius: 50%;
-                color: #fff;
-                flex-shrink: 0;
-            }
-
-            .stat-content {
-                text-align: left;
-            }
-
-            .stat-label {
-                font-size: 12px;
-                letter-spacing: 1px;
-                margin-bottom: 6px;
-            }
-
-            .stat-number {
-                font-size: 48px;
-                font-weight: 700;
-                line-height: 1;
-            }
-
-            .statistics-section {
-                padding: 20px 0;
-                background-position: center top;
-            }
-        }
     </style>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -1186,7 +1128,7 @@
         <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
         <script src="assets/js/waypoints.min.js"></script>
         <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
-        <script src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
         <script src="assets/plugins/jelect/jquery.jelect.js"></script>
         <script src="assets/plugins/sliderpro/js/jquery.sliderPro.min.js"></script>
         <script src="assets/js/cssua.min.js"></script>
@@ -1200,43 +1142,45 @@
             const filterBtns = document.querySelectorAll('.gallery-filters ul li a');
             const galleryItems = document.querySelectorAll('.gallery-item');
 
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function (e) {
-                    e.preventDefault();
+            if (filterBtns.length > 0) {
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', function (e) {
+                        e.preventDefault();
 
-                    // Remove active class from all li elements
-                    document.querySelectorAll('.gallery-filters ul li').forEach(li => li.classList.remove('active'));
-                    // Add active class to clicked button's parent li
-                    this.parentElement.classList.add('active');
+                        // Remove active class from all li elements
+                        document.querySelectorAll('.gallery-filters ul li').forEach(li => li.classList.remove('active'));
+                        // Add active class to clicked button's parent li
+                        this.parentElement.classList.add('active');
 
-                    const filterValue = this.getAttribute('data-filter');
+                        const filterValue = this.getAttribute('data-filter');
 
-                    galleryItems.forEach(item => {
-                        if (filterValue === 'all') {
-                            item.style.display = 'block';
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'scale(1)';
-                            }, 10);
-                        } else {
-                            const category = item.getAttribute('data-category');
-                            if (category === filterValue) {
+                        galleryItems.forEach(item => {
+                            if (filterValue === 'all') {
                                 item.style.display = 'block';
                                 setTimeout(() => {
                                     item.style.opacity = '1';
                                     item.style.transform = 'scale(1)';
                                 }, 10);
                             } else {
-                                item.style.opacity = '0';
-                                item.style.transform = 'scale(0.8)';
-                                setTimeout(() => {
-                                    item.style.display = 'none';
-                                }, 300);
+                                const category = item.getAttribute('data-category');
+                                if (category === filterValue) {
+                                    item.style.display = 'block';
+                                    setTimeout(() => {
+                                        item.style.opacity = '1';
+                                        item.style.transform = 'scale(1)';
+                                    }, 10);
+                                } else {
+                                    item.style.opacity = '0';
+                                    item.style.transform = 'scale(0.8)';
+                                    setTimeout(() => {
+                                        item.style.display = 'none';
+                                    }, 300);
+                                }
                             }
-                        }
+                        });
                     });
                 });
-            });
+            }
 
             // Lightbox Functionality
             const lightboxModal = document.getElementById('lightboxModal');
@@ -1246,79 +1190,81 @@
             const prevBtn = document.querySelector('.lightbox-prev');
             const nextBtn = document.querySelector('.lightbox-next');
 
-            let currentIndex = 0;
-            let visibleItems = [];
+            if (lightboxModal && lightboxImg && lightboxCaption && closeBtn && prevBtn && nextBtn) {
+                let currentIndex = 0;
+                let visibleItems = [];
 
-            // Function to update visible items based on current filter
-            function updateVisibleItems() {
-                visibleItems = Array.from(galleryItems).filter(item => {
-                    return item.style.display !== 'none';
+                // Function to update visible items based on current filter
+                function updateVisibleItems() {
+                    visibleItems = Array.from(galleryItems).filter(item => {
+                        return item.style.display !== 'none';
+                    });
+                }
+
+                // Open lightbox
+                galleryItems.forEach((item, index) => {
+                    item.addEventListener('click', function () {
+                        updateVisibleItems();
+                        currentIndex = visibleItems.indexOf(this);
+                        showLightbox();
+                    });
                 });
-            }
 
-            // Open lightbox
-            galleryItems.forEach((item, index) => {
-                item.addEventListener('click', function () {
-                    updateVisibleItems();
-                    currentIndex = visibleItems.indexOf(this);
+                function showLightbox() {
+                    const img = visibleItems[currentIndex].querySelector('img');
+                    const caption = visibleItems[currentIndex].querySelector('.gallery-caption');
+
+                    lightboxImg.src = img.src;
+                    lightboxCaption.innerHTML = caption.innerHTML;
+                    lightboxModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+
+                // Close lightbox
+                closeBtn.addEventListener('click', closeLightbox);
+                lightboxModal.addEventListener('click', function (e) {
+                    if (e.target === lightboxModal) {
+                        closeLightbox();
+                    }
+                });
+
+                function closeLightbox() {
+                    lightboxModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+
+                // Previous image
+                prevBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
                     showLightbox();
                 });
-            });
 
-            function showLightbox() {
-                const img = visibleItems[currentIndex].querySelector('img');
-                const caption = visibleItems[currentIndex].querySelector('.gallery-caption');
+                // Next image
+                nextBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    currentIndex = (currentIndex + 1) % visibleItems.length;
+                    showLightbox();
+                });
 
-                lightboxImg.src = img.src;
-                lightboxCaption.innerHTML = caption.innerHTML;
-                lightboxModal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            }
-
-            // Close lightbox
-            closeBtn.addEventListener('click', closeLightbox);
-            lightboxModal.addEventListener('click', function (e) {
-                if (e.target === lightboxModal) {
-                    closeLightbox();
-                }
-            });
-
-            function closeLightbox() {
-                lightboxModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-
-            // Previous image
-            prevBtn.addEventListener('click', function (e) {
-                e.stopPropagation();
-                currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
-                showLightbox();
-            });
-
-            // Next image
-            nextBtn.addEventListener('click', function (e) {
-                e.stopPropagation();
-                currentIndex = (currentIndex + 1) % visibleItems.length;
-                showLightbox();
-            });
-
-            // Keyboard navigation
-            document.addEventListener('keydown', function (e) {
-                if (lightboxModal.style.display === 'block') {
-                    if (e.key === 'Escape') {
-                        closeLightbox();
-                    } else if (e.key === 'ArrowLeft') {
-                        currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
-                        showLightbox();
-                    } else if (e.key === 'ArrowRight') {
-                        currentIndex = (currentIndex + 1) % visibleItems.length;
-                        showLightbox();
+                // Keyboard navigation
+                document.addEventListener('keydown', function (e) {
+                    if (lightboxModal.style.display === 'block') {
+                        if (e.key === 'Escape') {
+                            closeLightbox();
+                        } else if (e.key === 'ArrowLeft') {
+                            currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+                            showLightbox();
+                        } else if (e.key === 'ArrowRight') {
+                            currentIndex = (currentIndex + 1) % visibleItems.length;
+                            showLightbox();
+                        }
                     }
-                }
-            });
+                });
 
-            // Initialize visible items on page load
-            updateVisibleItems();
+                // Initialize visible items on page load
+                updateVisibleItems();
+            }
         </script>
 
         <script>
