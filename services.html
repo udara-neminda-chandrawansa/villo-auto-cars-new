@@ -14,8 +14,6 @@
     <script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
 
     <style>
-     
-
         #sliderpro1 {
             display: block;
         }
@@ -149,7 +147,7 @@
             color: #666;
         }
 
-        /* Lightbox Modal - UPDATED */
+        /* Lightbox Modal */
         .lightbox-modal {
             display: none;
             position: fixed;
@@ -172,42 +170,22 @@
             }
         }
 
-        /* UPDATED - Lightbox content container */
         .lightbox-content {
             position: relative;
-            width: 95%;
-            max-width: 1800px;
-            height: 95vh;
-            margin: 2.5vh auto;
+            width: 90%;
+            max-width: 1200px;
+            height: 90%;
+            margin: 2% auto;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        /* UPDATED - Lightbox image */
         .lightbox-content img {
             max-width: 100%;
             max-height: 100%;
-            width: auto;
-            height: auto;
-            min-width: 50vw;
-            min-height: 50vh;
             object-fit: contain;
-            box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
-            border-radius: 4px;
-        }
-
-        /* Mobile adjustments */
-        @media (max-width: 768px) {
-            .lightbox-content {
-                width: 98%;
-                height: 90vh;
-            }
-
-            .lightbox-content img {
-                min-width: 80vw;
-                min-height: 40vh;
-            }
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
         }
 
         .lightbox-close {
@@ -220,19 +198,10 @@
             cursor: pointer;
             z-index: 10000;
             transition: color 0.3s;
-            background: rgba(0, 0, 0, 0.5);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1;
         }
 
         .lightbox-close:hover {
             color: #ccc;
-            background: rgba(0, 0, 0, 0.8);
         }
 
         .lightbox-prev,
@@ -245,15 +214,12 @@
             cursor: pointer;
             padding: 20px;
             user-select: none;
-            transition: all 0.3s;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 4px;
+            transition: color 0.3s;
         }
 
         .lightbox-prev:hover,
         .lightbox-next:hover {
             color: #ccc;
-            background: rgba(0, 0, 0, 0.8);
         }
 
         .lightbox-prev {
@@ -271,23 +237,10 @@
             transform: translateX(-50%);
             color: #fff;
             text-align: center;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 15px 30px;
-            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 5px;
             max-width: 80%;
-            backdrop-filter: blur(10px);
-        }
-
-        .lightbox-caption h4 {
-            margin: 0 0 5px 0;
-            font-size: 18px;
-            color: #fff;
-        }
-
-        .lightbox-caption p {
-            margin: 0;
-            font-size: 14px;
-            color: #ddd;
         }
 
         /* Gallery Filters - Pagination Style */
@@ -343,20 +296,6 @@
                 padding: 6px 12px;
                 font-size: 11px;
             }
-
-            .lightbox-prev,
-            .lightbox-next {
-                font-size: 30px;
-                padding: 15px;
-            }
-
-            .lightbox-close {
-                width: 40px;
-                height: 40px;
-                font-size: 30px;
-                top: 10px;
-                right: 10px;
-            }
         }
 
         .header-container-padding {
@@ -368,6 +307,422 @@
             .header-container-padding {
                 padding-right: 15px;
                 padding-left: 15px;
+            }
+        }
+
+
+
+        .service-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: #fff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 60px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #d32f2f;
+            border-radius: 50%;
+            color: #d32f2f;
+            transition: all 0.3s ease;
+        }
+
+        .service-icon i {
+            font-size: 35px;
+        }
+
+        .service-card:hover .service-icon {
+            background: #d32f2f;
+            color: #fff;
+        }
+
+        .service-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .service-description {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* Statistics Section Styles */
+        .statistics-section {
+            padding: 60px 0;
+            background: url('assets/media/gridImg/6_2.webp') center center/cover no-repeat;
+            position: relative;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .statistics-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+
+        .statistics-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 767px) {
+            .stat-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .statistics-section .row .col-sm-6:last-child .stat-item {
+                border-bottom: none;
+            }
+        }
+
+        .statistics-section .row .col-md-3:last-child .stat-item {
+            border-right: none;
+        }
+
+        .stat-icon {
+            font-size: 45px;
+            color: #fff;
+        }
+
+        .stat-content {
+            text-align: left;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .stat-number {
+            font-size: 42px;
+            color: #fff;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* Force white text for all statistics elements to avoid overrides */
+        .statistics-section .stat-item,
+        .statistics-section .stat-content,
+        .statistics-section .stat-label,
+        .statistics-section .stat-number,
+        .statistics-section .stat-icon,
+        .statistics-section .stat-icon i {
+            color: #fff !important;
+        }
+
+        /* Reliable Service Section */
+        .reliable-service-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .section-heading {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .section-intro {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-features li {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .service-features li i {
+            color: #d32f2f;
+            font-size: 16px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .service-image {
+            width: 100%;
+            border-radius: 8px;
+
+        }
+
+        @media (max-width: 991px) {
+            .reliable-service-section .col-md-6:first-child {
+                margin-bottom: 40px;
+            }
+        }
+
+        /* Service Schedule Section */
+        .service-schedule-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .schedule-subtitle {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .schedule-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .title-underline {
+            width: 80px;
+            height: 3px;
+            background: #d32f2f;
+            margin: 0 auto 50px;
+        }
+
+        .service-form .form-control {
+            height: 50px;
+            border: 1px solid #e0e0e0;
+            border-radius: 3px;
+            padding: 15px;
+            font-size: 14px;
+            background: #f5f5f5;
+            transition: all 0.3s ease;
+        }
+
+        .service-form textarea.form-control {
+            height: auto;
+            resize: none;
+        }
+
+        .service-form .form-control:focus {
+            border-color: #d32f2f;
+            background: #fff;
+            box-shadow: none;
+            outline: none;
+        }
+
+        .btn-submit {
+            width: 100%;
+            height: 50px;
+            background: #d32f2f;
+            border: none;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background: #b71c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
+        }
+
+        .opening-hours-box {
+            background: #fff;
+            padding: 35px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .hours-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .hours-divider {
+            width: 50px;
+            height: 2px;
+            background: #d32f2f;
+            margin-bottom: 25px;
+        }
+
+        .hours-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 13px;
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        .hours-list .day {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .hours-list .time {
+            color: #666;
+        }
+
+        .hours-list .time.closed {
+            color: #d32f2f;
+            font-weight: 600;
+        }
+
+        @media (max-width: 991px) {
+            .service-schedule-section .col-md-8 {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .services-section {
+                padding: 30px 0;
+            }
+
+            .service-card {
+                margin-bottom: 20px;
+            }
+
+            .statistics-section {
+                padding: 40px 0;
+            }
+
+            .reliable-service-section {
+                padding: 50px 0;
+            }
+
+            .section-heading {
+                font-size: 22px;
+            }
+
+            .service-schedule-section {
+                padding: 50px 0;
+            }
+
+            .schedule-title {
+                font-size: 28px;
+            }
+        }
+
+        /* Mobile: stack statistics vertically with left icon and large number */
+        @media (max-width: 480px) {
+            .statistics-section .row {
+                display: block;
+            }
+
+            .statistics-section .col-md-3,
+            .statistics-section .col-sm-6 {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .stat-item {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 20px;
+                padding: 22px 18px;
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            }
+
+            .stat-icon {
+                font-size: 30px;
+                width: 70px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255,255,255,0.06);
+                border-radius: 50%;
+                color: #fff;
+                flex-shrink: 0;
+            }
+
+            .stat-content {
+                text-align: left;
+            }
+
+            .stat-label {
+                font-size: 12px;
+                letter-spacing: 1px;
+                margin-bottom: 6px;
+            }
+
+            .stat-number {
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 1;
+            }
+
+            .statistics-section {
+                padding: 20px 0;
+                background-position: center top;
             }
         }
     </style>
@@ -432,6 +787,7 @@
             <script src="assets/plugins/switcher/js/dmss.js"></script>
         </div>
         <!-- End Switcher -->
+
 
         <div id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
             <div id="wrapper">
@@ -510,212 +866,236 @@
                 <div class="block-title">
                     <div class="block-title__inner section-bg section-bg_second">
                         <div class="bg-inner">
-                            <h1 class="ui-title-page">OUR GALLERY</h1>
+                            <h1 class="ui-title-page">OUR Services</h1>
                             <div class="decor-1 center-block"></div>
                             <ol class="breadcrumb">
                                 <li><a href="index.html">HOME</a></li>
-                                <li class="active">GALLERY</li>
+                                <li class="active">Services</li>
                             </ol>
                         </div>
                     </div>
                 </div>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <main class="main-content">
+                <!-- Services Section -->
+                <section class="services-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 mb-4">
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fa fa-car"></i>
+                                    </div>
+                                    <h3 class="service-title">SUPER FAST</h3>
+                                    <p class="service-description">We value your time. Our team ensures lightning-fast
+                                        diagnostics, service, and delivery, getting you back on the road without delay.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mb-4">
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fa fa-credit-card"></i>
+                                    </div>
+                                    <h3 class="service-title">AFFORDABLE</h3>
+                                    <p class="service-description">Enjoy premium vehicle services and competitive
+                                        prices. At Villo Auto Cars, we ensure top value for every rupee you spend.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mb-4">
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fa fa-oil-can"></i>
+                                    </div>
+                                    <h3 class="service-title">OIL CHANGES</h3>
+                                    <p class="service-description">Regular oil changes are vital. We use top-grade oils
+                                        to extend your engine life and improve performance — quick and professional.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mb-4">
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fa fa-snowflake"></i>
+                                    </div>
+                                    <h3 class="service-title">AIR CONDITIONING</h3>
+                                    <p class="service-description">Beat the heat with our expert A/C repairs and
+                                        servicing. We'll keep your vehicle's climate cool, comfortable, and running
+                                        efficiently.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mb-4">
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fa fa-cogs"></i>
+                                    </div>
+                                    <h3 class="service-title">TRANSMISSION</h3>
+                                    <p class="service-description">From maintenance to complete overhauls, our
+                                        technicians handle manual and automatic transmissions with precision and care.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mb-4">
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fa fa-handshake"></i>
+                                    </div>
+                                    <h3 class="service-title">DEALERSHIP</h3>
+                                    <p class="service-description">Find your dream car at Villo Auto Cars. Our trusted
+                                        dealership offers a wide selection of quality pre-owned and new vehicles.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                                <!-- Gallery Filters - Pagination Style -->
-                                <div class="gallery-filters">
-                                    <ul class="pagination">
-                                        <li><a href="index.html">HOME</a></li>
+                <!-- Statistics Section -->
+                <section class="statistics-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-car"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="stat-label">VEHICLES IN STOCK</div>
+                                        <div class="stat-number">561</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-comments"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="stat-label">DEALER REVIEWS</div>
+                                        <div class="stat-number">856</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-smile"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="stat-label">HAPPY CUSTOMER</div>
+                                        <div class="stat-number">789</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-trophy"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="stat-label">AWARDS</div>
+                                        <div class="stat-number">356</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reliable Service Section -->
+                <section class="reliable-service-section">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h2 class="section-heading">WE PROVIDE RELIABLE AUTO CARE SERVICES TO KEEP YOU
+                                    CONFIDENTLY ON THE ROAD.</h2>
+                                <p class="section-intro">At Villo Auto Cars, we combine experience, precision, and
+                                    passion to deliver outstanding automotive solutions. Whether it's routine
+                                    maintenance or complex repairs, our certified technicians are committed to providing
+                                    exceptional service tailored to your vehicle's needs.</p>
+                                <ul class="service-features">
+                                    <li><i class="fa fa-check"></i> Comprehensive diagnostics and inspections for all
+                                        vehicle models.</li>
+                                    <li><i class="fa fa-check"></i> Quality-assured repairs using genuine parts and
+                                        modern tools.</li>
+                                    <li><i class="fa fa-check"></i> Transparent service process and competitive pricing.
+                                    </li>
+                                    <li><i class="fa fa-check"></i> Friendly, knowledgeable staff dedicated to your
+                                        satisfaction.</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="assets/media/gridImg/2_1.webp" alt="Auto Service" class="service-image">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Service Schedule Section -->
+                <section class="service-schedule-section">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <p class="schedule-subtitle">This is what we do and we do it perfectly</p>
+                            <h2 class="schedule-title">SERVICE SCHEDULE</h2>
+                            <div class="title-underline"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form class="service-form">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <input type="text" class="form-control" placeholder="Name*" required>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <input type="email" class="form-control" placeholder="Email*" required>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <input type="tel" class="form-control" placeholder="Phone*" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control" rows="5" placeholder="Comment*"
+                                            required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-submit">Send Your Message</button>
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="opening-hours-box">
+                                    <h3 class="hours-title">OPENING HOURS</h3>
+                                    <div class="hours-divider"></div>
+                                    <ul class="hours-list">
                                         <li>
-                                        <li><a href="vehicle-listings.html">VEHICLE LISTINGS</a></li>
-                                        <li>
-                                            <a href="services.html">SERVICES</a>
+                                            <span class="day">Sunday</span>
+                                            <span class="time closed">closed</span>
                                         </li>
                                         <li>
-                                            <a href="about-us.html">ABOUT US</a>
+                                            <span class="day">Monday</span>
+                                            <span class="time">9:00 AM to 9:00 PM</span>
                                         </li>
                                         <li>
-                                            <a href="gallery.html">GALLERY</a>
+                                            <span class="day">Tuesday</span>
+                                            <span class="time">9:00 AM to 9:00 PM</span>
                                         </li>
                                         <li>
-                                            <a href="contact-us.html">CONTACT US</a>
+                                            <span class="day">Wednesday</span>
+                                            <span class="time">9:00 AM to 9:00 PM</span>
+                                        </li>
+                                        <li>
+                                            <span class="day">Thursday</span>
+                                            <span class="time">9:00 AM to 9:00 PM</span>
+                                        </li>
+                                        <li>
+                                            <span class="day">Friday</span>
+                                            <span class="time">9:00 AM to 9:00 PM</span>
+                                        </li>
+                                        <li>
+                                            <span class="day">Saturday</span>
+                                            <span class="time">9:00 AM to 9:00 PM</span>
                                         </li>
                                     </ul>
                                 </div>
-
-                                <!-- Gallery Grid -->
-                                <div class="gallery-grid">
-
-                                    <!-- Gallery Item 1 -->
-                                    <div class="gallery-item" data-category="luxury">
-                                        <img src="assets/media/posts/370x250/1.jpg" alt="Luxury Car 1" />
-                                        <div class="gallery-overlay">
-                                            <i class="fa fa-search-plus"></i>
-                                        </div>
-                                        <div class="gallery-caption">
-                                            <h4>Mercedes-Benz S-Class</h4>
-                                            <p>2023 Model</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Gallery Item 2 -->
-                                    <div class="gallery-item" data-category="suv">
-                                        <img src="assets/media/posts/370x250/2.jpg" alt="SUV 1" />
-                                        <div class="gallery-overlay">
-                                            <i class="fa fa-search-plus"></i>
-                                        </div>
-                                        <div class="gallery-caption">
-                                            <h4>Toyota Land Cruiser</h4>
-                                            <p>2022 Model</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Gallery Item 3 -->
-                                    <div class="gallery-item" data-category="sedan">
-                                        <img src="assets/media/posts/370x250/3.jpg" alt="Sedan 1" />
-                                        <div class="gallery-overlay">
-                                            <i class="fa fa-search-plus"></i>
-                                        </div>
-                                        <div class="gallery-caption">
-                                            <h4>Honda Accord</h4>
-                                            <p>2023 Model</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Gallery Item 4 -->
-                                    <div class="gallery-item" data-category="hybrid">
-                                        <img src="assets/media/posts/370x250/4.jpg" alt="Hybrid 1" />
-                                        <div class="gallery-overlay">
-                                            <i class="fa fa-search-plus"></i>
-                                        </div>
-                                        <div class="gallery-caption">
-                                            <h4>Toyota Prius</h4>
-                                            <p>Hybrid 2023</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Gallery Item 5 -->
-                                    <div class="gallery-item" data-category="luxury">
-                                        <img src="assets/media/posts/370x250/5.jpg" alt="Luxury Car 2" />
-                                        <div class="gallery-overlay">
-                                            <i class="fa fa-search-plus"></i>
-                                        </div>
-                                        <div class="gallery-caption">
-                                            <h4>BMW 7 Series</h4>
-                                            <p>2023 Model</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Gallery Item 6 -->
-                                    <div class="gallery-item" data-category="suv">
-                                        <img src="assets/media/posts/370x250/6.jpg" alt="SUV 2" />
-                                        <div class="gallery-overlay">
-                                            <i class="fa fa-search-plus"></i>
-                                        </div>
-                                        <div class="gallery-caption">
-                                            <h4>Range Rover Sport</h4>
-                                            <p>2022 Model</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Gallery Item 7 -->
-                                    <div class="gallery-item" data-category="sedan">
-                                        <img src="assets/media/posts/370x250/7.jpg" alt="Sedan 2" />
-                                        <div class="gallery-overlay">
-                                            <i class="fa fa-search-plus"></i>
-                                        </div>
-                                        <div class="gallery-caption">
-                                            <h4>Audi A6</h4>
-                                            <p>2023 Model</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Gallery Item 8 -->
-                                    <div class="gallery-item" data-category="hybrid">
-                                        <img src="assets/media/posts/370x250/8.jpg" alt="Hybrid 2" />
-                                        <div class="gallery-overlay">
-                                            <i class="fa fa-search-plus"></i>
-                                        </div>
-                                        <div class="gallery-caption">
-                                            <h4>Honda Vezel</h4>
-                                            <p>Hybrid 2023</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Gallery Item 9 -->
-                                    <div class="gallery-item" data-category="luxury">
-                                        <img src="assets/media/posts/370x250/9.jpg" alt="Luxury Car 3" />
-                                        <div class="gallery-overlay">
-                                            <i class="fa fa-search-plus"></i>
-                                        </div>
-                                        <div class="gallery-caption">
-                                            <h4>Lexus LS</h4>
-                                            <p>2023 Model</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Gallery Item 10 -->
-                                    <div class="gallery-item" data-category="suv">
-                                        <img src="assets/media/posts/370x250/1.jpg" alt="SUV 3" />
-                                        <div class="gallery-overlay">
-                                            <i class="fa fa-search-plus"></i>
-                                        </div>
-                                        <div class="gallery-caption">
-                                            <h4>Nissan Patrol</h4>
-                                            <p>2022 Model</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Gallery Item 11 -->
-                                    <div class="gallery-item" data-category="sedan">
-                                        <img src="assets/media/posts/370x250/2.jpg" alt="Sedan 3" />
-                                        <div class="gallery-overlay">
-                                            <i class="fa fa-search-plus"></i>
-                                        </div>
-                                        <div class="gallery-caption">
-                                            <h4>Toyota Camry</h4>
-                                            <p>2023 Model</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Gallery Item 12 -->
-                                    <div class="gallery-item" data-category="hybrid">
-                                        <img src="assets/media/posts/370x250/3.jpg" alt="Hybrid 3" />
-                                        <div class="gallery-overlay">
-                                            <i class="fa fa-search-plus"></i>
-                                        </div>
-                                        <div class="gallery-caption">
-                                            <h4>Lexus NX Hybrid</h4>
-                                            <p>Hybrid 2023</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- end gallery-grid -->
-
-                                <div class="text-center" style="margin-top: 40px;">
-                                    <a class="btn btn-success btn-effect" href="javascript:void(0);"><span
-                                            class="btn-inner">LOAD MORE</span></a>
-                                </div>
-
-                            </main>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Lightbox Modal -->
-                <div id="lightboxModal" class="lightbox-modal">
-                    <span class="lightbox-close">&times;</span>
-                    <span class="lightbox-prev">&#10094;</span>
-                    <span class="lightbox-next">&#10095;</span>
-                    <div class="lightbox-content">
-                        <img id="lightboxImg" src="" alt="Lightbox Image" />
-                    </div>
-                    <div class="lightbox-caption" id="lightboxCaption"></div>
-                </div>
+                </section>
 
                 <!--footer new-->
                 <footer class="footer">
@@ -889,12 +1269,7 @@
                 const img = visibleItems[currentIndex].querySelector('img');
                 const caption = visibleItems[currentIndex].querySelector('.gallery-caption');
 
-                // Get the image source and replace with high-res version if available
-                let imgSrc = img.src;
-                // You can modify this to load full-size images instead of thumbnails
-                // imgSrc = imgSrc.replace('/370x250/', '/full/');
-
-                lightboxImg.src = imgSrc;
+                lightboxImg.src = img.src;
                 lightboxCaption.innerHTML = caption.innerHTML;
                 lightboxModal.style.display = 'block';
                 document.body.style.overflow = 'hidden';
@@ -944,6 +1319,56 @@
 
             // Initialize visible items on page load
             updateVisibleItems();
+        </script>
+
+        <script>
+            // Animated counters for statistics-section
+            document.addEventListener('DOMContentLoaded', function () {
+                const statsSection = document.querySelector('.statistics-section');
+                const counters = document.querySelectorAll('.stat-number');
+                let started = false;
+
+                function animateCounters() {
+                    counters.forEach(counter => {
+                        const raw = counter.getAttribute('data-target') || counter.textContent;
+                        const target = parseInt(String(raw).replace(/,/g, '').replace(/[^0-9]/g, ''), 10) || 0;
+                        let frame = 0;
+                        const duration = 2000; // ms
+                        const fps = 60;
+                        const totalFrames = Math.round((duration / 1000) * fps);
+                        const easeOutQuad = t => t * (2 - t);
+
+                        const ticker = setInterval(() => {
+                            frame++;
+                            const progress = easeOutQuad(frame / totalFrames);
+                            const value = Math.round(target * progress);
+                            counter.textContent = value;
+                            if (frame >= totalFrames) {
+                                counter.textContent = target;
+                                clearInterval(ticker);
+                            }
+                        }, Math.round(1000 / fps));
+                    });
+                }
+
+                if (!statsSection || counters.length === 0) return;
+
+                if ('IntersectionObserver' in window) {
+                    const io = new IntersectionObserver((entries, obs) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !started) {
+                                started = true;
+                                animateCounters();
+                                obs.disconnect();
+                            }
+                        });
+                    }, { threshold: 0.3 });
+                    io.observe(statsSection);
+                } else {
+                    // fallback
+                    animateCounters();
+                }
+            });
         </script>
 
 </body>

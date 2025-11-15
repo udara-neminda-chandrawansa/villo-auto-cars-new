@@ -1,922 +1,1055 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui"
-    />
-    <title>Autozone, Car details</title>
-    <link href="favicon.png" type="image/x-icon" rel="shortcut icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+    <title>Villo Auto Cars - Gallery</title>
+    <link href="assets/img/favicon.png" type="image/x-icon" rel="shortcut icon" />
     <link href="assets/css/master.css" rel="stylesheet" />
+    <link href="assets/css/index.css" rel="stylesheet" />
     <link href="assets/plugins/iview/css/iview.css" rel="stylesheet" />
     <link href="assets/plugins/iview/css/skin/style.css" rel="stylesheet" />
 
+    <script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+
     <!-- SWITCHER -->
-    <link
-      href="assets/plugins/switcher/css/switcher.css"
-      rel="stylesheet"
-      id="switcher-css"
-      media="all"
-    />
-    <link
-      href="assets/plugins/switcher/css/color1.css"
-      rel="alternate stylesheet"
-      title="color1"
-      media="all"
-    />
-    <link
-      href="assets/plugins/switcher/css/color2.css"
-      rel="alternate stylesheet"
-      title="color2"
-      media="all"
-    />
-    <link
-      href="assets/plugins/switcher/css/color3.css"
-      rel="alternate stylesheet"
-      title="color3"
-      media="all"
-    />
-    <link
-      href="assets/plugins/switcher/css/color4.css"
-      rel="alternate stylesheet"
-      title="color4"
-      media="all"
-    />
-    <link
-      href="assets/plugins/switcher/css/color5.css"
-      rel="alternate stylesheet"
-      title="color5"
-      media="all"
-    />
+    <link href="assets/plugins/switcher/css/switcher.css" rel="stylesheet" id="switcher-css" media="all" />
+    <link href="assets/plugins/switcher/css/color1.css" rel="alternate stylesheet" title="color1" media="all" />
+    <link href="assets/plugins/switcher/css/color2.css" rel="alternate stylesheet" title="color2" media="all" />
+    <link href="assets/plugins/switcher/css/color3.css" rel="alternate stylesheet" title="color3" media="all" />
+    <link href="assets/plugins/switcher/css/color4.css" rel="alternate stylesheet" title="color4" media="all" />
+    <link href="assets/plugins/switcher/css/color5.css" rel="alternate stylesheet" title="color5" media="all" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- SWITCHER -->
+    <link href="assets/plugins/switcher/css/switcher.css" rel="stylesheet" id="switcher-css" media="all" />
+    <link href="assets/plugins/switcher/css/color1.css" rel="alternate stylesheet" title="color1" media="all" />
+    <link href="assets/plugins/switcher/css/color2.css" rel="alternate stylesheet" title="color2" media="all" />
+    <link href="assets/plugins/switcher/css/color3.css" rel="alternate stylesheet" title="color3" media="all" />
+    <link href="assets/plugins/switcher/css/color4.css" rel="alternate stylesheet" title="color4" media="all" />
+    <link href="assets/plugins/switcher/css/color5.css" rel="alternate stylesheet" title="color5" media="all" />
 
     <script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
-  </head>
+    <style>
+        .header-container-padding {
+            padding-right: 90px;
+            padding-left: 90px;
+        }
 
-  <body>
-    <div
-      id="this-top"
-      class="layout-theme animated-css"
-      data-header="sticky"
-      data-header-top="200"
-    >
-      <!-- Start Switcher -->
-      <div class="switcher-wrapper">
-        <div class="demo_changer">
-          <div class="demo-icon customBgColor">
-            <i class="fa fa-cog fa-spin fa-2x"></i>
+        @media (max-width: 768px) {
+            .header-container-padding {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
+
+        /* Top Filter Bar Styles */
+        .top-filter-bar {
+            background: #fff;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .filter-controls-wrapper {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-group-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        /* Model Search */
+        .model-search-wrapper {
+            position: relative;
+        }
+
+        .model-search-input {
+            width: 100%;
+            padding: 12px 45px 12px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #555;
+            transition: all 0.3s ease;
+        }
+
+        .model-search-input:focus {
+            outline: none;
+            border-color: #dc2d13;
+            box-shadow: 0 0 0 3px rgba(220, 45, 19, 0.1);
+        }
+
+        .model-search-input::placeholder {
+            color: #999;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 16px;
+            pointer-events: none;
+        }
+
+        /* Sort Dropdown */
+        .sort-dropdown-wrapper {
+            position: relative;
+        }
+
+        .sort-dropdown {
+            width: 100%;
+            padding: 12px 35px 12px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #555;
+            background: #fff;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            transition: all 0.3s ease;
+        }
+
+        .sort-dropdown:focus {
+            outline: none;
+            border-color: #dc2d13;
+            box-shadow: 0 0 0 3px rgba(220, 45, 19, 0.1);
+        }
+
+        .dropdown-arrow {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 12px;
+            pointer-events: none;
+        }
+
+        /* View Toggle Buttons */
+        .view-toggle-group {
+            display: flex;
+            gap: 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .view-toggle-btn {
+            padding: 11px 18px;
+            background: #fff;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #666;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .view-toggle-btn:not(:last-child) {
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .view-toggle-btn:hover {
+            background: #f9f9f9;
+            color: #dc2d13;
+        }
+
+        .view-toggle-btn.active {
+            background: #dc2d13;
+            color: #fff;
+        }
+
+        /* Filter Button */
+        .filter-action-btn {
+            background: #dc2d13;
+            color: #fff;
+            border: none;
+            padding: 13px 40px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .filter-action-btn:hover {
+            background: #b82410;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(220, 45, 19, 0.3);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .filter-controls-wrapper {
+                flex-direction: column;
+            }
+
+            .filter-group {
+                width: 100%;
+            }
+
+            .view-toggle-group {
+                justify-content: center;
+            }
+        }
+
+        /* Enhanced Filter Styles */
+        .filter-dropdown {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .filter-dropdown:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-header {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            transition: background 0.3s ease;
+        }
+
+        .filter-header:hover {
+            background: #f9f9f9;
+        }
+
+        .filter-header h4 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: capitalize;
+            color: #333;
+        }
+
+        .filter-arrow {
+            font-size: 12px;
+            color: #666;
+            transition: transform 0.3s ease;
+        }
+
+        .filter-dropdown.active .filter-arrow {
+            transform: rotate(180deg);
+        }
+
+        .filter-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #fff;
+        }
+
+        .filter-dropdown.active .filter-content {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .filter-options {
+            padding: 10px 20px 20px;
+        }
+
+        .filter-option {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .filter-option:hover {
+            color: #fe5656;
+        }
+
+        .filter-option input[type="checkbox"],
+        .filter-option input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .filter-option label {
+            cursor: pointer;
+            margin: 0;
+            font-size: 13px;
+            color: #555;
+            flex: 1;
+        }
+
+        .filter-option:hover label {
+            color: #fe5656;
+        }
+
+        .filter-count {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .sidebar-enhanced {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .filter-section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Skewed Filter Buttons Styling */
+        .btn-apply-filters {
+            background: #dc2d13 !important;
+            border-color: #dc2d13 !important;
+        }
+
+        .btn-apply-filters:hover {
+            background: #b82410 !important;
+            border-color: #b82410 !important;
+        }
+
+        .btn-reset-filters {
+            background: transparent !important;
+            border: 2px solid #cccccc !important;
+            color: #666666 !important;
+        }
+
+        .btn-reset-filters:hover {
+            background: #f5f5f5 !important;
+            border-color: #999999 !important;
+            color: #333333 !important;
+        }
+
+        .btn-reset-filters .btn-skew-r__inner {
+            color: #666666 !important;
+        }
+
+        .btn-reset-filters:hover .btn-skew-r__inner {
+            color: #333333 !important;
+        }
+
+        /* Custom Scrollbar for filter content */
+        .filter-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .filter-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .filter-content::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+
+        .filter-content::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Price Range Slider Enhancement */
+        .price-filter-wrapper {
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 15px;
+        }
+
+        .price-filter-wrapper h4 {
+            margin: 0 0 15px 0;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: capitalize;
+            color: #333;
+        }
+
+        /* Grid Icons */
+        .grid-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+        }
+
+        .grid-icon::before {
+            content: '▦';
+            font-size: 16px;
+        }
+
+        .list-icon::before {
+            content: '☰';
+            font-size: 16px;
+        }
+    </style>
+
+<body>
+    <!-- Loader -->
+    <div id="page-preloader"><span class="spinner"></span></div>
+    <!-- Loader end -->
+
+    <div id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
+        <!-- Start Switcher -->
+        <div class="switcher-wrapper">
+            <div class="demo_changer">
+                <div class="demo-icon customBgColor">
+                    <i class="fa fa-cog fa-spin fa-2x"></i>
+                </div>
+                <div class="form_holder">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="predefined_styles">
+                                <div class="skin-theme-switcher">
+                                    <h4>Color</h4>
+                                    <a href="javascript:void(0);" data-switchcolor="color1" class="styleswitch"
+                                        style="background-color: #fe5656">
+                                    </a>
+                                    <a href="javascript:void(0);" data-switchcolor="color2" class="styleswitch"
+                                        style="background-color: #4fb0fd">
+                                    </a>
+                                    <a href="javascript:void(0);" data-switchcolor="color3" class="styleswitch"
+                                        style="background-color: #ffc73c">
+                                    </a>
+                                    <a href="javascript:void(0);" data-switchcolor="color4" class="styleswitch"
+                                        style="background-color: #ff8300">
+                                    </a>
+                                    <a href="javascript:void(0);" data-switchcolor="color5" class="styleswitch"
+                                        style="background-color: #02cc8b">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="assets/plugins/switcher/js/bootstrap-select.js"></script>
+            <script src="assets/plugins/switcher/js/evol.colorpicker.min.js"></script>
+            <script src="assets/plugins/switcher/js/dmss.js"></script>
+        </div>
+        <!-- End Switcher -->
+
+        <div id="wrapper">
+            <!-- HEADER -->
+            <div class="header">
+                <div class="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="header-contacts">
+                                    <span class="header-contacts__item"><i class="icon fa fa-phone"></i> 076 905
+                                        7272</span>
+                                    <a class="header-contacts__item" href="mailto:villoauto@gmail.com"><i
+                                            class="icon fa fa-envelope"></i>
+                                        villoauto@gmail.com</a>
+                                </div>
+                                <ul class="social-links list-inline">
+                                    <li>
+                                        <a class="" href="javascript:void(0);"><i class="bi bi-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0);"><i class="bi bi-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0);"><i class="bi bi-whatsapp"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header__inner">
+                    <div class="header-container-padding">
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12">
+                                <a href="index.html" class="logo d-none d-lg-block">
+                                    <img class="logo__img img-responsive" src="assets/img/logo.png"
+                                        style="height: 100px; object-fit: contain;" alt="Logo" />
+                                </a>
+                                <div class="navbar yamm">
+                                    <div class="navbar-header hidden-md hidden-lg hidden-sm">
+                                        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1"
+                                            class="navbar-toggle">
+                                            <span class="icon-bar"></span><span class="icon-bar"></span><span
+                                                class="icon-bar"></span>
+                                        </button>
+                                        <a href="javascript:void(0);" class="navbar-brand"></a>
+                                    </div>
+                                    <div id="navbar-collapse-1" class="navbar-collapse collapse ">
+                                        <ul class="nav navbar-nav ">
+                                            <li><a href="index.html">HOME</a></li>
+                                            <li><a href="vehicle-listings.html">VEHICLE LISTINGS</a></li>
+                                            <li><a href="services.html">SERVICES</a></li>
+                                            <li><a href="about-us.html">ABOUT US</a></li>
+                                            <li><a href="gallery.html">GALLERY</a></li>
+                                            <li><a href="contact-us.html">CONTACT US</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+      <div class="block-title">
+        <div class="block-title__inner section-bg section-bg_second">
+          <div class="bg-inner">
+            <h1 class="ui-title-page">car details</h1>
+            <div class="decor-1 center-block"></div>
+            <ol class="breadcrumb">
+              <li><a href="#">HOME</a></li>
+              <li class="active">car details</li>
+            </ol>
           </div>
-          <div class="form_holder">
-            <div class="row">
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="predefined_styles">
-                  <div class="skin-theme-switcher">
-                    <h4>Color</h4>
-                    <a
-                      href="javascript:void(0);"
-                      data-switchcolor="color1"
-                      class="styleswitch"
-                      style="background-color: #fe5656"
-                    >
-                    </a>
-                    <a
-                      href="javascript:void(0);"
-                      data-switchcolor="color2"
-                      class="styleswitch"
-                      style="background-color: #4fb0fd"
-                    >
-                    </a>
-                    <a
-                      href="javascript:void(0);"
-                      data-switchcolor="color3"
-                      class="styleswitch"
-                      style="background-color: #ffc73c"
-                    >
-                    </a>
-                    <a
-                      href="javascript:void(0);"
-                      data-switchcolor="color4"
-                      class="styleswitch"
-                      style="background-color: #ff8300"
-                    >
-                    </a>
-                    <a
-                      href="javascript:void(0);"
-                      data-switchcolor="color5"
-                      class="styleswitch"
-                      style="background-color: #02cc8b"
-                    >
-                    </a>
+          <!-- end bg-inner -->
+        </div>
+        <!-- end block-title__inner -->
+      </div>
+      <!-- end block-title -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <main class="main-content">
+              <article class="car-details">
+                <div class="car-details__wrap-title clearfix">
+                  <h2 class="car-details__title">Chevrolet Impala</h2>
+                  <div class="car-details__wrap-price">
+                    <span class="car-details__price"><span class="car-details__price-inner">Rs. 27,920</span></span>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <script src="assets/plugins/switcher/js/bootstrap-select.js"></script>
-        <script src="assets/plugins/switcher/js/evol.colorpicker.min.js"></script>
-        <script src="assets/plugins/switcher/js/dmss.js"></script>
-      </div>
-      <!-- End Switcher -->
-
-      <div id="wrapper">
-        <!-- HEADER -->
-        <div class="header">
-          <div class="top-header">
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="header-contacts">
-                    <span class="header-contacts__item"
-                      ><i class="icon fa fa-phone"></i>+ 987 654 3210</span
-                    >
-                    <a
-                      class="header-contacts__item"
-                      href="mailto:autoz@zone.com"
-                      ><i class="icon fa fa-envelope"></i>autoz (at) zone.com</a
-                    >
-                  </div>
-                  <ul class="social-links list-inline">
+                <div id="slider-product" class="flexslider slider-product">
+                  <ul class="slides">
                     <li>
-                      <a
-                        class="icon fa fa-facebook"
-                        href="javascript:void(0);"
-                      ></a>
+                      <a href="assets/media/slider_product/large/1.jpg">
+                        <img class="img-responsive" src="assets/media/slider_product/large/1.jpg" height="430"
+                          width="770" alt="Foto" />
+                      </a>
                     </li>
                     <li>
-                      <a
-                        class="icon fa fa-twitter"
-                        href="javascript:void(0);"
-                      ></a>
+                      <a href="assets/media/slider_product/large/1.jpg">
+                        <img class="img-responsive" src="assets/media/slider_product/large/1.jpg" height="430"
+                          width="770" alt="Foto" />
+                      </a>
                     </li>
                     <li>
-                      <a
-                        class="icon fa fa-youtube-play"
-                        href="javascript:void(0);"
-                      ></a>
+                      <a href="assets/media/slider_product/large/1.jpg">
+                        <img class="img-responsive" src="assets/media/slider_product/large/1.jpg" height="430"
+                          width="770" alt="Foto" />
+                      </a>
                     </li>
                     <li>
-                      <a
-                        class="icon fa fa-instagram"
-                        href="javascript:void(0);"
-                      ></a>
+                      <a href="assets/media/slider_product/large/1.jpg">
+                        <img class="img-responsive" src="assets/media/slider_product/large/1.jpg" height="430"
+                          width="770" alt="Foto" />
+                      </a>
                     </li>
                     <li>
-                      <a
-                        class="icon fa fa-google-plus"
-                        href="javascript:void(0);"
-                      ></a>
+                      <a href="assets/media/slider_product/large/1.jpg">
+                        <img class="img-responsive" src="assets/media/slider_product/large/1.jpg" height="430"
+                          width="770" alt="Foto" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="assets/media/slider_product/large/1.jpg">
+                        <img class="img-responsive" src="assets/media/slider_product/large/1.jpg" height="430"
+                          width="770" alt="Foto" />
+                      </a>
                     </li>
                   </ul>
                 </div>
-                <!-- end col -->
-              </div>
-              <!-- end row -->
-            </div>
-            <!-- end container -->
-          </div>
-          <!-- end top-header -->
+                <div id="carousel-product" class="flexslider carousel-product">
+                  <ul class="slides">
+                    <li>
+                      <img src="assets/media/slider_product/small/1.jpg" height="75" width="95" alt="foto" />
+                    </li>
+                    <li>
+                      <img src="assets/media/slider_product/small/2.jpg" height="75" width="95" alt="foto" />
+                    </li>
+                    <li>
+                      <img src="assets/media/slider_product/small/3.jpg" height="75" width="95" alt="foto" />
+                    </li>
+                    <li>
+                      <img src="assets/media/slider_product/small/4.jpg" height="75" width="95" alt="foto" />
+                    </li>
+                    <li>
+                      <img src="assets/media/slider_product/small/5.jpg" height="75" width="95" alt="foto" />
+                    </li>
+                    <li>
+                      <img src="assets/media/slider_product/small/6.jpg" height="75" width="95" alt="foto" />
+                    </li>
+                  </ul>
+                </div>
 
-          <div class="header__inner">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12 col-xs-12">
-                  <a href="index.html" class="logo">
-                    <img
-                      class="logo__img img-responsive"
-                      src="assets/img/logo.png"
-                      height="50"
-                      width="111"
-                      alt="Logo"
-                    />
-                  </a>
-                  <div class="navbar yamm">
-                    <div class="navbar-header hidden-md hidden-lg hidden-sm">
-                      <button
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navbar-collapse-1"
-                        class="navbar-toggle"
-                      >
-                        <span class="icon-bar"></span
-                        ><span class="icon-bar"></span
-                        ><span class="icon-bar"></span>
-                      </button>
-                      <a href="javascript:void(0);" class="navbar-brand"></a>
-                    </div>
-                    <div
-                      id="navbar-collapse-1"
-                      class="navbar-collapse collapse"
-                    >
-                      <ul class="nav navbar-nav">
-                        <li><a href="home.html">HOME</a></li>
-                        <li>
-                          <a href="vehicle-listings.html">VEHICLE LISTINGS</a>
-                        </li>
-                        <li><a href="car-details.html">CAR DETAILS</a></li>
-                        <li class="dropdown">
-                          <a href="news.html">NEWS</a>
-                          <ul role="menu" class="dropdown-menu">
-                            <li><a href="news-grid.html">DROPDOWN</a></li>
-                            <li><a href="news-details.html">DROPDOWN</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="news-grid.html">NEWS GRID</a></li>
-                        <li><a href="news-details.html">NEWS DETAILS</a></li>
-                      </ul>
-                    </div>
+                <!-- Nav tabs -->
+                <div class="wrap-nav-tabs">
+                  <ul class="nav nav-tabs">
+                    <li class="active">
+                      <a href="#tab1" data-toggle="tab">vehicle DESCRIPTION</a>
+                    </li>
+                    <li><a href="#tab2" data-toggle="tab">features</a></li>
+                    <li><a href="#tab3" data-toggle="tab">inquiry</a></li>
+                  </ul>
+                </div>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="tab1">
+                    <h3 class="ui-title-inner">
+                      Lorem ipsum dolor sit amet consectetur
+                    </h3>
+                    <div class="decor-1"></div>
+                    <p>
+                      Perspiciatis unde omnis iste natus error sit voluptatem
+                      accusantium doloremque laudantium, totam rem aperiam,
+                      eaque ipsa quae ab illo inventore veritatis et quasi
+                      architecto beatae vitae dicta sunt explicabo. Nemo enim
+                      ipsam voluptatem quia voluptas sit aspernatur aut odit
+                      aut fugit.
+                    </p>
+                    <p>
+                      Wliquam sit amet urna sed vel nullam semper aiber
+                      vestiblum fringilla orem ipsum dolor sit amet
+                      consectetur adipisc ing elit sed don eiusmod tempor
+                      incididunt ut labore et dolore magna aliquaa enimd ads
+                      minim veniam quis nostrud Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit sed do eiusmod tempor.
+                      Lorem ipsum dolor sit amet consec tetur adipisicing elit
+                      sed do eiusmod tempor incididunt ut labore et dolore
+                      magna aliqua.
+                    </p>
+                    <p>
+                      Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <p>
+                      Aiber vestiblum fringilla orem ipsum dolor sit amet
+                      consectetur adipisc ing elit sed don eiusmod tempor
+                      incididunt ut labore et dolore magna aliquaa enimd ads
+                      minim veniam quis nostrud Lorem ipsum dolor sit amet
+                      consectetur adipis cing elit sed do eiusmod tempor.
+                      Lorem ipsum dolor sit amet consectetur adipisicing.
+                    </p>
+                    <p>
+                      Elit sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam quis nostru
+                      dare exercitation ullamco laboris nisi aliquip ex ea
+                      commodo consequat. Duis aute irue dolor in reprehenderit
+                      in voluptate velit esse cillum dolore eu fugiat nulla
+                      pariatur.
+                    </p>
+                  </div>
+                  <div class="tab-pane" id="tab2">
+                    <h3 class="ui-title-inner">Lorem ipsum dolor</h3>
+                    <div class="decor-1"></div>
+                    <p>
+                      Perspiciatis unde omnis iste natus error sit voluptatem
+                      accusantium doloremque laudantium, totam rem aperiam,
+                      eaque ipsa quae ab illo inventore veritatis et quasi
+                      architecto beatae vitae dicta sunt explicabo. Nemo enim
+                      ipsam voluptatem quia voluptas sit aspernatur aut odit
+                      aut fugit.
+                    </p>
+                  </div>
+                  <div class="tab-pane" id="tab3">
+                    <h3 class="ui-title-inner">Sit amet consectetur</h3>
+                    <div class="decor-1"></div>
+                    <p>
+                      Aiber vestiblum fringilla orem ipsum dolor sit amet
+                      consectetur adipisc ing elit sed don eiusmod tempor
+                      incididunt ut labore et dolore magna aliquaa enimd ads
+                      minim veniam quis nostrud Lorem ipsum dolor sit amet
+                      consectetur adipis cing elit sed do eiusmod tempor.
+                      Lorem ipsum dolor sit amet consectetur adipisicing.
+                    </p>
+                    <p>
+                      Elit sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam quis nostru
+                      dare exercitation ullamco laboris nisi aliquip ex ea
+                      commodo consequat. Duis aute irue dolor in reprehenderit
+                      in voluptate velit esse cillum dolore eu fugiat nulla
+                      pariatur.
+                    </p>
                   </div>
                 </div>
-              </div>
-            </div>
-            <!-- end container -->
-          </div>
-          <!-- end header__inner -->
-        </div>
-        <!-- end header -->
 
-        <div class="block-title">
-          <div class="block-title__inner section-bg section-bg_second">
-            <div class="bg-inner">
-              <h1 class="ui-title-page">car details</h1>
-              <div class="decor-1 center-block"></div>
-              <ol class="breadcrumb">
-                <li><a href="#">HOME</a></li>
-                <li class="active">car details</li>
-              </ol>
-            </div>
-            <!-- end bg-inner -->
-          </div>
-          <!-- end block-title__inner -->
-        </div>
-        <!-- end block-title -->
-
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8">
-              <main class="main-content">
-                <article class="car-details">
-                  <div class="car-details__wrap-title clearfix">
-                    <h2 class="car-details__title">Chevrolet Impala</h2>
-                    <div class="car-details__wrap-price">
-                      <span class="car-details__price"
-                        ><span class="car-details__price-inner"
-                          >$27,920</span
-                        ></span
-                      >
+                <div class="panel-group accordion" id="accordion-1">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <a class="btn-collapse" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-1"><i
+                          class="icon"></i></a>
+                      <h3 class="panel-title">exterior & interior</h3>
+                    </div>
+                    <div id="collapse-1" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        <p>
+                          Perspiciatis unde omnis iste natus error sit
+                          voluptatem accusantium doloremque laudantium, totam
+                          rem aperia eaque ipsa quae ab illo inventore
+                          veritatis et quasi architecto beatae vitae dicta
+                          sunt explicabo.
+                        </p>
+                      </div>
                     </div>
                   </div>
+                  <!-- end panel -->
 
-                  <div id="slider-product" class="flexslider slider-product">
-                    <ul class="slides">
-                      <li>
-                        <a href="assets/media/slider_product/large/1.jpg">
-                          <img
-                            class="img-responsive"
-                            src="assets/media/slider_product/large/1.jpg"
-                            height="430"
-                            width="770"
-                            alt="Foto"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/media/slider_product/large/1.jpg">
-                          <img
-                            class="img-responsive"
-                            src="assets/media/slider_product/large/1.jpg"
-                            height="430"
-                            width="770"
-                            alt="Foto"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/media/slider_product/large/1.jpg">
-                          <img
-                            class="img-responsive"
-                            src="assets/media/slider_product/large/1.jpg"
-                            height="430"
-                            width="770"
-                            alt="Foto"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/media/slider_product/large/1.jpg">
-                          <img
-                            class="img-responsive"
-                            src="assets/media/slider_product/large/1.jpg"
-                            height="430"
-                            width="770"
-                            alt="Foto"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/media/slider_product/large/1.jpg">
-                          <img
-                            class="img-responsive"
-                            src="assets/media/slider_product/large/1.jpg"
-                            height="430"
-                            width="770"
-                            alt="Foto"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/media/slider_product/large/1.jpg">
-                          <img
-                            class="img-responsive"
-                            src="assets/media/slider_product/large/1.jpg"
-                            height="430"
-                            width="770"
-                            alt="Foto"
-                          />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div
-                    id="carousel-product"
-                    class="flexslider carousel-product"
-                  >
-                    <ul class="slides">
-                      <li>
-                        <img
-                          src="assets/media/slider_product/small/1.jpg"
-                          height="75"
-                          width="95"
-                          alt="foto"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/media/slider_product/small/2.jpg"
-                          height="75"
-                          width="95"
-                          alt="foto"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/media/slider_product/small/3.jpg"
-                          height="75"
-                          width="95"
-                          alt="foto"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/media/slider_product/small/4.jpg"
-                          height="75"
-                          width="95"
-                          alt="foto"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/media/slider_product/small/5.jpg"
-                          height="75"
-                          width="95"
-                          alt="foto"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/media/slider_product/small/6.jpg"
-                          height="75"
-                          width="95"
-                          alt="foto"
-                        />
-                      </li>
-                    </ul>
-                  </div>
-
-                  <!-- Nav tabs -->
-                  <div class="wrap-nav-tabs">
-                    <ul class="nav nav-tabs">
-                      <li class="active">
-                        <a href="#tab1" data-toggle="tab"
-                          >vehicle DESCRIPTION</a
-                        >
-                      </li>
-                      <li><a href="#tab2" data-toggle="tab">features</a></li>
-                      <li><a href="#tab3" data-toggle="tab">inquiry</a></li>
-                    </ul>
-                  </div>
-
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                    <div class="tab-pane active" id="tab1">
-                      <h3 class="ui-title-inner">
-                        Lorem ipsum dolor sit amet consectetur
-                      </h3>
-                      <div class="decor-1"></div>
-                      <p>
-                        Perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam,
-                        eaque ipsa quae ab illo inventore veritatis et quasi
-                        architecto beatae vitae dicta sunt explicabo. Nemo enim
-                        ipsam voluptatem quia voluptas sit aspernatur aut odit
-                        aut fugit.
-                      </p>
-                      <p>
-                        Wliquam sit amet urna sed vel nullam semper aiber
-                        vestiblum fringilla orem ipsum dolor sit amet
-                        consectetur adipisc ing elit sed don eiusmod tempor
-                        incididunt ut labore et dolore magna aliquaa enimd ads
-                        minim veniam quis nostrud Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit sed do eiusmod tempor.
-                        Lorem ipsum dolor sit amet consec tetur adipisicing elit
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </p>
-                      <p>
-                        Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur.
-                      </p>
-                      <p>
-                        Aiber vestiblum fringilla orem ipsum dolor sit amet
-                        consectetur adipisc ing elit sed don eiusmod tempor
-                        incididunt ut labore et dolore magna aliquaa enimd ads
-                        minim veniam quis nostrud Lorem ipsum dolor sit amet
-                        consectetur adipis cing elit sed do eiusmod tempor.
-                        Lorem ipsum dolor sit amet consectetur adipisicing.
-                      </p>
-                      <p>
-                        Elit sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam quis nostru
-                        dare exercitation ullamco laboris nisi aliquip ex ea
-                        commodo consequat. Duis aute irue dolor in reprehenderit
-                        in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.
-                      </p>
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <a class="btn-collapse collapsed" data-toggle="collapse" data-parent="#accordion-1"
+                        href="#collapse-2"><i class="icon"></i></a>
+                      <h3 class="panel-title">safety features</h3>
                     </div>
-                    <div class="tab-pane" id="tab2">
-                      <h3 class="ui-title-inner">Lorem ipsum dolor</h3>
-                      <div class="decor-1"></div>
-                      <p>
-                        Perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam,
-                        eaque ipsa quae ab illo inventore veritatis et quasi
-                        architecto beatae vitae dicta sunt explicabo. Nemo enim
-                        ipsam voluptatem quia voluptas sit aspernatur aut odit
-                        aut fugit.
-                      </p>
-                    </div>
-                    <div class="tab-pane" id="tab3">
-                      <h3 class="ui-title-inner">Sit amet consectetur</h3>
-                      <div class="decor-1"></div>
-                      <p>
-                        Aiber vestiblum fringilla orem ipsum dolor sit amet
-                        consectetur adipisc ing elit sed don eiusmod tempor
-                        incididunt ut labore et dolore magna aliquaa enimd ads
-                        minim veniam quis nostrud Lorem ipsum dolor sit amet
-                        consectetur adipis cing elit sed do eiusmod tempor.
-                        Lorem ipsum dolor sit amet consectetur adipisicing.
-                      </p>
-                      <p>
-                        Elit sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam quis nostru
-                        dare exercitation ullamco laboris nisi aliquip ex ea
-                        commodo consequat. Duis aute irue dolor in reprehenderit
-                        in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.
-                      </p>
+                    <div id="collapse-2" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>
+                          Perspiciatis unde omnis iste natus error sit
+                          voluptatem accusantium doloremque laudantium, totam
+                          rem aperia eaque ipsa quae ab illo inventore
+                          veritatis et quasi architecto beatae vitae dicta
+                          sunt explicabo.
+                        </p>
+                      </div>
                     </div>
                   </div>
+                  <!-- end panel -->
 
-                  <div class="panel-group accordion" id="accordion-1">
-                    <div class="panel panel-default">
-                      <div class="panel-heading">
-                        <a
-                          class="btn-collapse"
-                          data-toggle="collapse"
-                          data-parent="#accordion-1"
-                          href="#collapse-1"
-                          ><i class="icon"></i
-                        ></a>
-                        <h3 class="panel-title">exterior & interior</h3>
-                      </div>
-                      <div id="collapse-1" class="panel-collapse collapse in">
-                        <div class="panel-body">
-                          <p>
-                            Perspiciatis unde omnis iste natus error sit
-                            voluptatem accusantium doloremque laudantium, totam
-                            rem aperia eaque ipsa quae ab illo inventore
-                            veritatis et quasi architecto beatae vitae dicta
-                            sunt explicabo.
-                          </p>
-                        </div>
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <a class="btn-collapse collapsed" data-toggle="collapse" data-parent="#accordion-1"
+                        href="#collapse-3"><i class="icon"></i></a>
+                      <h3 class="panel-title">Entertainment</h3>
+                    </div>
+                    <div id="collapse-3" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>
+                          Perspiciatis unde omnis iste natus error sit
+                          voluptatem accusantium doloremque laudantium, totam
+                          rem aperia eaque ipsa quae ab illo inventore
+                          veritatis et quasi architecto beatae vitae dicta
+                          sunt explicabo.
+                        </p>
                       </div>
                     </div>
-                    <!-- end panel -->
-
-                    <div class="panel">
-                      <div class="panel-heading">
-                        <a
-                          class="btn-collapse collapsed"
-                          data-toggle="collapse"
-                          data-parent="#accordion-1"
-                          href="#collapse-2"
-                          ><i class="icon"></i
-                        ></a>
-                        <h3 class="panel-title">safety features</h3>
-                      </div>
-                      <div id="collapse-2" class="panel-collapse collapse">
-                        <div class="panel-body">
-                          <p>
-                            Perspiciatis unde omnis iste natus error sit
-                            voluptatem accusantium doloremque laudantium, totam
-                            rem aperia eaque ipsa quae ab illo inventore
-                            veritatis et quasi architecto beatae vitae dicta
-                            sunt explicabo.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end panel -->
-
-                    <div class="panel">
-                      <div class="panel-heading">
-                        <a
-                          class="btn-collapse collapsed"
-                          data-toggle="collapse"
-                          data-parent="#accordion-1"
-                          href="#collapse-3"
-                          ><i class="icon"></i
-                        ></a>
-                        <h3 class="panel-title">Entertainment</h3>
-                      </div>
-                      <div id="collapse-3" class="panel-collapse collapse">
-                        <div class="panel-body">
-                          <p>
-                            Perspiciatis unde omnis iste natus error sit
-                            voluptatem accusantium doloremque laudantium, totam
-                            rem aperia eaque ipsa quae ab illo inventore
-                            veritatis et quasi architecto beatae vitae dicta
-                            sunt explicabo.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end panel -->
                   </div>
-                  <!-- end accordion -->
-                </article>
-
-                <div class="wrap-section-border">
-                  <section class="section_letter section-bg section-bg_primary">
-                    <div class="letter bg-inner">
-                      <div class="letter__inner">
-                        <h2 class="letter__title">
-                          Do you want some modifications or need a custom build
-                          vehicle ?
-                        </h2>
-                        <div class="letter__info">
-                          Integer tor bibendum estnu faucibus gravida aliquam nu
-                          lectus lacina lorem ipsum dolor sit amet consectetur
-                          adipisicing.
-                        </div>
-                      </div>
-                      <div
-                        class="letter__btn wrap-social-block wrap-social-block_mod-a"
-                      >
-                        <a
-                          class="social-block social-block_mod-a btn-effect"
-                          href="#"
-                        >
-                          <div class="social-block__inner">send details</div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- end bg-inner -->
-                    <div
-                      class="border-section-bottom border-section-bottom_mod-a"
-                    ></div>
-                  </section>
-                  <!-- end section_mod-b -->
+                  <!-- end panel -->
                 </div>
-                <!-- end wrap-section-border -->
-              </main>
-              <!-- end main-content -->
-            </div>
-            <!-- end col -->
+                <!-- end accordion -->
+              </article>
 
-            <div class="col-md-4">
-              <aside class="sidebar">
-                <section class="widget">
-                  <h3 class="widget-title">Specifications</h3>
-                  <div class="decor-1"></div>
-                  <div class="widget-content">
-                    <dl class="list-descriptions list-unstyled">
-                      <dt>MAke / model:</dt>
-                      <dd>Chevrolet Impala</dd>
-                      <dt>MAke year:</dt>
-                      <dd>January 2016</dd>
-                      <dt>vehicle type:</dt>
-                      <dd>
-                        Front-engine, front-wheel-drive, 5-passenger, 4-door
-                        sedan
-                      </dd>
-                      <dt>ENGINE TYPE:</dt>
-                      <dd>
-                        DOHC 16-valve inline-4, aluminum block and head, direct
-                        fuel injection
-                      </dd>
-                      <dt>DIMENSIONS:</dt>
-                      <dd>
-                        Wheelbase: 111.7 in<br />
-                        Length: 201.3 in<br />
-                        Width: 73.0 in Height: 58.9 in<br />
-                        Curb weight: 3700 lb
-                      </dd>
-                      <dt>TRANSMISSION:</dt>
-                      <dd>6-speed automatic with manual shifting mode</dd>
-                      <dt>fuel economy:</dt>
-                      <dd>EPA city/highway: 21/31 mpg</dd>
-                      <dt>Passenger Capacity:</dt>
-                      <dd>5 Seats</dd>
-                    </dl>
-                  </div>
-                </section>
-
-                <section class="widget widget-banner">
-                  <h3 class="widget-title">car video</h3>
-                  <div class="decor-1"></div>
-                  <div class="widget-content">
-                    <div
-                      class="widget-slider owl-carousel owl-theme owl-theme_mod-d enable-owl-carousel"
-                      data-pagination="true"
-                      data-single-item="true"
-                      data-auto-play="7000"
-                      data-transition-style="fade"
-                      data-main-text-animation="true"
-                      data-after-init-delay="3000"
-                      data-after-move-delay="1000"
-                      data-stop-on-hover="true"
-                    >
-                      <div class="widget-slider__item">
-                        <a
-                          href="https://www.youtube.com/watch?v=neS5h_VSvb8"
-                          rel="prettyPhoto"
-                          ><img
-                            class="img-responsive"
-                            src="assets/media/banners/1.jpg"
-                            height="250"
-                            width="306"
-                            alt="banner"
-                        /></a>
-                      </div>
-                      <div class="widget-slider__item">
-                        <a
-                          href="https://www.youtube.com/watch?v=neS5h_VSvb8"
-                          rel="prettyPhoto"
-                          ><img
-                            class="img-responsive"
-                            src="assets/media/banners/1.jpg"
-                            height="250"
-                            width="306"
-                            alt="banner"
-                        /></a>
-                      </div>
-                      <div class="widget-slider__item">
-                        <a
-                          href="https://www.youtube.com/watch?v=neS5h_VSvb8"
-                          rel="prettyPhoto"
-                          ><img
-                            class="img-responsive"
-                            src="assets/media/banners/1.jpg"
-                            height="250"
-                            width="306"
-                            alt="banner"
-                        /></a>
-                      </div>
-                      <div class="widget-slider__item">
-                        <a
-                          href="https://www.youtube.com/watch?v=neS5h_VSvb8"
-                          rel="prettyPhoto"
-                          ><img
-                            class="img-responsive"
-                            src="assets/media/banners/1.jpg"
-                            height="250"
-                            width="306"
-                            alt="banner"
-                        /></a>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-
-                <section class="widget">
-                  <h3 class="widget-title">relates cars</h3>
-                  <div class="decor-1"></div>
-                  <div class="widget-content">
-                    <section class="widget-post1 clearfix">
-                      <div class="widget-post1__img">
-                        <img
-                          class="img-responsive"
-                          src="assets/media/widget-post/1.jpg"
-                          height="75"
-                          width="75"
-                          alt="foto"
-                        />
-                      </div>
-                      <div class="widget-post1__inner">
-                        <h3 class="widget-post1__title">Toyota Avalon</h3>
-                        <div class="widget-post1__price">Price: $33,120</div>
-                        <div class="widget-post1__description">
-                          Cullam semper aibe vestibulum
-                        </div>
-                      </div>
-                    </section>
-                    <section class="widget-post1 clearfix">
-                      <div class="widget-post1__img">
-                        <img
-                          class="img-responsive"
-                          src="assets/media/widget-post/2.jpg"
-                          height="75"
-                          width="75"
-                          alt="foto"
-                        />
-                      </div>
-                      <div class="widget-post1__inner">
-                        <h3 class="widget-post1__title">Nissan Maxima</h3>
-                        <div class="widget-post1__price">Price: $40,685</div>
-                        <div class="widget-post1__description">
-                          Cullam semper aibe vestibulum
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </section>
-
-                <div class="widget widget_mod-b">
-                  <div class="wrap-social-block wrap-social-block_mod-a">
-                    <div class="social-block">
-                      <div class="social-block__inner">
-                        <span class="social-block__title">SHARE THIS</span>
-                        <ul class="social-block__list list-inline">
-                          <li>
-                            <a
-                              class="icon fa fa-facebook"
-                              href="javascript:void(0);"
-                            ></a>
-                          </li>
-                          <li>
-                            <a
-                              class="icon fa fa-twitter"
-                              href="javascript:void(0);"
-                            ></a>
-                          </li>
-                          <li>
-                            <a
-                              class="icon fa fa-google-plus"
-                              href="javascript:void(0);"
-                            ></a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </aside>
-            </div>
-            <!-- end col -->
-          </div>
-          <!-- end row -->
-        </div>
-        <!-- end container -->
-
-        <footer class="footer">
-          <div class="wrap-section-border">
-            <section class="section_mod-h section-bg section-bg_second">
-              <div class="bg-inner border-section-top border-section-top_mod-b">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <h2 class="footer-title">
-                        auto <span class="footer-title__inner">ZONE</span>
+              <div class="wrap-section-border">
+                <section class="section_letter section-bg section-bg_primary">
+                  <div class="letter bg-inner">
+                    <div class="letter__inner">
+                      <h2 class="letter__title">
+                        Do you want some modifications or need a custom build
+                        vehicle ?
                       </h2>
-                      <div class="decor-1 decor-1_mod-b"></div>
+                      <div class="letter__info">
+                        Integer tor bibendum estnu faucibus gravida aliquam nu
+                        lectus lacina lorem ipsum dolor sit amet consectetur
+                        adipisicing.
+                      </div>
                     </div>
-                    <!-- end col -->
+                    <div class="letter__btn wrap-social-block wrap-social-block_mod-a">
+                      <a class="social-block social-block_mod-a btn-effect" href="#">
+                        <div class="social-block__inner">send details</div>
+                      </a>
+                    </div>
                   </div>
-                  <!-- end row -->
+                  <!-- end bg-inner -->
+                  <div class="border-section-bottom border-section-bottom_mod-a"></div>
+                </section>
+                <!-- end section_mod-b -->
+              </div>
+              <!-- end wrap-section-border -->
+            </main>
+            <!-- end main-content -->
+          </div>
+          <!-- end col -->
 
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <div class="footer__name">: SHOWROOM LOCATION :</div>
-                      <div class="footer__text">
-                        32 Market St.128, Deeja Town, Florida, CA 12345
+          <div class="col-md-4">
+            <aside class="sidebar">
+              <section class="widget">
+                <h3 class="widget-title">Specifications</h3>
+                <div class="decor-1"></div>
+                <div class="widget-content">
+                  <dl class="list-descriptions list-unstyled">
+                    <dt>MAke / model:</dt>
+                    <dd>Chevrolet Impala</dd>
+                    <dt>MAke year:</dt>
+                    <dd>January 2016</dd>
+                    <dt>vehicle type:</dt>
+                    <dd>
+                      Front-engine, front-wheel-drive, 5-passenger, 4-door
+                      sedan
+                    </dd>
+                    <dt>ENGINE TYPE:</dt>
+                    <dd>
+                      DOHC 16-valve inline-4, aluminum block and head, direct
+                      fuel injection
+                    </dd>
+                    <dt>DIMENSIONS:</dt>
+                    <dd>
+                      Wheelbase: 111.7 in<br />
+                      Length: 201.3 in<br />
+                      Width: 73.0 in Height: 58.9 in<br />
+                      Curb weight: 3700 lb
+                    </dd>
+                    <dt>TRANSMISSION:</dt>
+                    <dd>6-speed automatic with manual shifting mode</dd>
+                    <dt>fuel economy:</dt>
+                    <dd>EPA city/highway: 21/31 mpg</dd>
+                    <dt>Passenger Capacity:</dt>
+                    <dd>5 Seats</dd>
+                  </dl>
+                </div>
+              </section>
+
+              <section class="widget widget-banner">
+                <h3 class="widget-title">car video</h3>
+                <div class="decor-1"></div>
+                <div class="widget-content">
+                  <div class="widget-slider owl-carousel owl-theme owl-theme_mod-d enable-owl-carousel"
+                    data-pagination="true" data-single-item="true" data-auto-play="7000" data-transition-style="fade"
+                    data-main-text-animation="true" data-after-init-delay="3000" data-after-move-delay="1000"
+                    data-stop-on-hover="true">
+                    <div class="widget-slider__item">
+                      <a href="https://www.youtube.com/watch?v=neS5h_VSvb8" rel="prettyPhoto"><img
+                          class="img-responsive" src="assets/media/banners/1.jpg" height="250" width="306"
+                          alt="banner" /></a>
+                    </div>
+                    <div class="widget-slider__item">
+                      <a href="https://www.youtube.com/watch?v=neS5h_VSvb8" rel="prettyPhoto"><img
+                          class="img-responsive" src="assets/media/banners/1.jpg" height="250" width="306"
+                          alt="banner" /></a>
+                    </div>
+                    <div class="widget-slider__item">
+                      <a href="https://www.youtube.com/watch?v=neS5h_VSvb8" rel="prettyPhoto"><img
+                          class="img-responsive" src="assets/media/banners/1.jpg" height="250" width="306"
+                          alt="banner" /></a>
+                    </div>
+                    <div class="widget-slider__item">
+                      <a href="https://www.youtube.com/watch?v=neS5h_VSvb8" rel="prettyPhoto"><img
+                          class="img-responsive" src="assets/media/banners/1.jpg" height="250" width="306"
+                          alt="banner" /></a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="widget">
+                <h3 class="widget-title">relates cars</h3>
+                <div class="decor-1"></div>
+                <div class="widget-content">
+                  <section class="widget-post1 clearfix">
+                    <div class="widget-post1__img">
+                      <img class="img-responsive" src="assets/media/widget-post/1.jpg" height="75" width="75"
+                        alt="foto" />
+                    </div>
+                    <div class="widget-post1__inner">
+                      <h3 class="widget-post1__title">Toyota Avalon</h3>
+                      <div class="widget-post1__price">Price: Rs. 33,120</div>
+                      <div class="widget-post1__description">
+                        Cullam semper aibe vestibulum
                       </div>
                     </div>
-                    <!-- end col -->
-                  </div>
-                  <!-- end row -->
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <div class="footer__item">
-                        <span class="footer__name">Phone:</span>
-                        <span class="footer__text">+1 (234) 567 8900</span>
-                      </div>
-                      <div class="footer__item">
-                        <span class="footer__name">Fax:</span>
-                        <span class="footer__text">+1 (234) 567 8998</span>
-                      </div>
-                      <div class="footer__item">
-                        <span class="footer__name">email:</span>
-                        <span class="footer__text">info@autozone.com</span>
-                      </div>
-                      <div class="footer__item">
-                        <span class="footer__name">Hours:</span>
-                        <span class="footer__text">Mon - Fri :: 9am - 6pm</span>
+                  </section>
+                  <section class="widget-post1 clearfix">
+                    <div class="widget-post1__img">
+                      <img class="img-responsive" src="assets/media/widget-post/2.jpg" height="75" width="75"
+                        alt="foto" />
+                    </div>
+                    <div class="widget-post1__inner">
+                      <h3 class="widget-post1__title">Nissan Maxima</h3>
+                      <div class="widget-post1__price">Price: Rs. 40,685</div>
+                      <div class="widget-post1__description">
+                        Cullam semper aibe vestibulum
                       </div>
                     </div>
-                    <!-- end col -->
-                  </div>
-                  <!-- end row -->
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <ul class="social-links list-inline">
+                  </section>
+                </div>
+              </section>
+
+              <div class="widget widget_mod-b">
+                <div class="wrap-social-block wrap-social-block_mod-a">
+                  <div class="social-block">
+                    <div class="social-block__inner">
+                      <span class="social-block__title">SHARE THIS</span>
+                      <ul class="social-block__list list-inline">
                         <li>
-                          <a
-                            class="icon fa fa-facebook"
-                            href="javascript:void(0);"
-                          ></a>
+                          <a class="icon fa fa-facebook" href="javascript:void(0);"></a>
                         </li>
                         <li>
-                          <a
-                            class="icon fa fa-twitter"
-                            href="javascript:void(0);"
-                          ></a>
+                          <a class="icon fa fa-twitter" href="javascript:void(0);"></a>
                         </li>
                         <li>
-                          <a
-                            class="icon fa fa-youtube-play"
-                            href="javascript:void(0);"
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            class="icon fa fa-instagram"
-                            href="javascript:void(0);"
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            class="icon fa fa-google-plus"
-                            href="javascript:void(0);"
-                          ></a>
+                          <a class="icon fa fa-google-plus" href="javascript:void(0);"></a>
                         </li>
                       </ul>
                     </div>
-                    <!-- end col -->
                   </div>
-                  <!-- end row -->
                 </div>
-                <!-- end container -->
               </div>
-              <!-- end bg-inner -->
-            </section>
-            <!-- end section_mod-b -->
+            </aside>
           </div>
-          <!-- end wrap-section-border -->
-          <div class="footer__wrap-btn">
-            <a class="footer__btn scroll" href="#this-top">top</a>
-          </div>
-
-          <div class="copyright">
-            Copyrights 2015 <a class="copyright__link" href="#">AutoZONE</a> : :
-            All rights reserved
-          </div>
-        </footer>
+          <!-- end col -->
+        </div>
+        <!-- end row -->
       </div>
-      <!-- end #wrapper -->
+      <!-- end container -->
+
+
+      <!--footer new-->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-top">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 mb-4">
+                <div class="footer-column">
+                  <h4>INVENTORY</h4>
+                  <ul>
+                    <li><a href="#">NEW VEHICLES</a></li>
+                    <li><a href="#">USED VEHICLES</a></li>
+                    <li><a href="#">PRE-OWNED VEHICLE SPECIALS</a></li>
+                    <li><a href="#">PRICED UNDER 15K</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4">
+                <div class="footer-column">
+                  <h4>FINANCING</h4>
+                  <ul>
+                    <li><a href="#">GET FINANCING</a></li>
+                    <li><a href="#">PAYMENT CALCULATOR</a></li>
+                    <li><a href="#">VALUE YOUR TRADE</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4">
+                <div class="footer-column">
+                  <h4>QUICK LINKS</h4>
+                  <ul>
+                    <li><a href="#">FAQS</a></li>
+                    <li><a href="#">WHY BUY FROM ALM</a></li>
+                    <li><a href="#">FIVE QUESTIONS TO ASK</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4">
+                <div class="footer-column">
+                  <h4>CONTACT</h4>
+                  <ul>
+                    <li><a href="tel:94769057272">076 905 7272</a></li>
+                    <li><a href="mailto:villoauto@gmail.com">villoauto@gmail.com</a></li>
+                    <li><a href="#">No. 614, Colombo road, Nanuoya, Pilimathalawa</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div>
+              <img src="assets/img/logo-footer.png" alt="logo" class="footer-logo">
+            </div>
+            <div class="copyright">
+              2025 © All Rights Reserved | Villo Auto Cars (Pvt) Ltd | Designed & Developed by Silicon
+              Radon Networks
+              (Pvt) Ltd.
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!--Messenger and WhatsApp Floating btns-->
+      <a href="https://m.me/94769057272" class="float" style="z-index: 999999;">
+        <i class="fa-brands fa-facebook-messenger my-float"></i>
+      </a>
+      <script async
+        src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+      <script>
+        var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "94769057272", "welcomeMessage": "Hello! How can we help you today?", "zIndex": 999999, "btnColorScheme": "light" };
+        window.onload = () => {
+          _waEmbed(wa_btnSetting);
+        };
+      </script>
+
     </div>
-    <!-- end layout-theme -->
+  </div>
 
-    <span class="scroll-top"> <i class="fa fa-angle-up"> </i></span>
+  <div class="car-top">
+    <span><img src="assets/img/car.png" alt="car"></span>
+  </div>
 
-    <!-- SCRIPTS -->
-    <script src="assets/js/jquery-migrate-1.2.1.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
-    <script src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="assets/plugins/jelect/jquery.jelect.js"></script>
-    <script src="assets/plugins/nouislider/jquery.nouislider.all.min.js"></script>
-    <script src="assets/plugins/flexslider/jquery.flexslider.js"></script>
+  <!-- SCRIPTS -->
+  <script src="assets/js/jquery-migrate-1.2.1.js"></script>
+  <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/modernizr.custom.js"></script>
+  <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
+  <script src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="assets/plugins/jelect/jquery.jelect.js"></script>
+  <script src="assets/plugins/sliderpro/js/jquery.sliderPro.min.js"></script>
+  <script src="assets/js/cssua.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!--THEME-->
-    <script src="assets/js/cssua.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/custom.js"></script>
-  </body>
+  <!-- SCRIPTS -->
+  <script src="assets/js/jquery-migrate-1.2.1.js"></script>
+  <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/modernizr.custom.js"></script>
+  <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
+  <script src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="assets/plugins/jelect/jquery.jelect.js"></script>
+  <script src="assets/plugins/nouislider/jquery.nouislider.all.min.js"></script>
+  <script src="assets/plugins/flexslider/jquery.flexslider.js"></script>
+
+  <!--THEME-->
+  <script src="assets/js/cssua.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
 </html>

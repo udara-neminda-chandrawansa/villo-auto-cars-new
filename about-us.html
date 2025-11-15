@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
-    <title>Villo Auto Cars - Gallery</title>
+    <title>Villo Auto Cars - About Us</title>
     <link href="assets/img/favicon.png" type="image/x-icon" rel="shortcut icon" />
     <link href="assets/css/master.css" rel="stylesheet" />
     <link href="assets/css/index.css" rel="stylesheet" />
@@ -14,12 +14,7 @@
     <script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
 
     <style>
-        .row * {
-            padding-left: 3px;
-            padding-right: 3px;
-            padding-top: 3px;
-        }
-
+        
         #sliderpro1 {
             display: block;
         }
@@ -62,589 +57,2036 @@
             justify-content: end;
         }
 
-        /* Gallery Specific Styles */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px 0;
+        .header-container-padding {
+            padding-right: 90px;
+            padding-left: 90px;
         }
 
         @media (max-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 15px;
+            .header-container-padding {
+                padding-right: 15px;
+                padding-left: 15px;
             }
         }
 
-        @media (max-width: 480px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
+        /* Customer Reviews Section Styles */
+        .customer-reviews-section {
+            background: #f9f9f9;
+            padding: 80px 0;
         }
 
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
+        .review-card {
+            background: #ffffff;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+            text-align: center;
+            padding: 30px;
+            padding-top: 70px;
+            margin-top: 130px;
             transition: all 0.3s ease;
-            cursor: pointer;
-            background: #fff;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
 
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
+        .review-image {
             position: absolute;
-            top: 0;
+            top: -130px;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            width: 100%;
+            height: 180px;
+            padding: 0 15px;
+            box-sizing: border-box;
         }
 
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay i {
-            color: #fff;
-            font-size: 40px;
-        }
-
-        .gallery-caption {
-            padding: 15px;
-            text-align: center;
-            background: #fff;
-        }
-
-        .gallery-caption h4 {
-            margin: 0 0 5px 0;
-            font-size: 16px;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .gallery-caption p {
-            margin: 0;
-            font-size: 13px;
-            color: #666;
-        }
-
-        /* Lightbox Modal */
-        .lightbox-modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
+        .review-image img {
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
-            animation: fadeIn 0.3s ease;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .lightbox-content {
-            position: relative;
-            width: 90%;
-            max-width: 1200px;
-            height: 90%;
-            margin: 2% auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .lightbox-content img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-        }
-
-        .lightbox-close {
+        .reviewer-avatar {
             position: absolute;
-            top: 20px;
-            right: 40px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 10000;
-            transition: color 0.3s;
-        }
-
-        .lightbox-close:hover {
-            color: #ccc;
-        }
-
-        .lightbox-prev,
-        .lightbox-next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #fff;
-            font-size: 40px;
-            cursor: pointer;
-            padding: 20px;
-            user-select: none;
-            transition: color 0.3s;
-        }
-
-        .lightbox-prev:hover,
-        .lightbox-next:hover {
-            color: #ccc;
-        }
-
-        .lightbox-prev {
-            left: 20px;
-        }
-
-        .lightbox-next {
-            right: 20px;
-        }
-
-        .lightbox-caption {
-            position: absolute;
-            bottom: 20px;
+            top: -50px;
             left: 50%;
             transform: translateX(-50%);
-            color: #fff;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px 20px;
-            border-radius: 5px;
-            max-width: 80%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            object-fit: cover;
         }
 
-        /* Gallery Filters - Pagination Style */
-        .gallery-filters {
-            text-align: center;
-            margin-bottom: 30px;
+        .review-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
-        .gallery-filters ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: inline-block;
+        .reviewer-name {
+            font-size: 19px;
+            font-weight: 700;
+            color: #d32f2f;
+            margin-top: 0;
+            margin-bottom: 5px;
         }
 
-        .gallery-filters ul li {
-            display: inline-block;
-            margin: 0 3px;
-        }
-
-        .gallery-filters ul li a {
-            display: block;
-            padding: 8px 18px;
-            border: 1px solid #ddd;
-            color: #333;
-            text-decoration: none;
+        .reviewer-title {
             font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            border-radius: 3px;
-            background: #fff;
+            color: #777;
+            margin-bottom: 20px;
+            display: block;
+            font-style: italic;
         }
 
-        .gallery-filters ul li a:hover {
-            background: #f5f5f5;
-            border-color: #ccc;
-            color: #000;
+        .review-text {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+            min-height: 120px;
         }
 
-        .gallery-filters ul li.active a {
-            background: #d32f2f;
-            border-color: #d32f2f;
-            color: #fff;
+        .quote-icon {
+            font-size: 60px;
+            color: #d32f2f;
+            opacity: 0.3;
+            line-height: 1;
+            font-family: Georgia, serif;
+            margin-top: auto;
         }
 
-        @media (max-width: 768px) {
-            .gallery-filters ul li {
-                margin: 3px;
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .review-text {
+                min-height: 140px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .customer-reviews-section {
+                padding: 60px 0;
             }
 
-            .gallery-filters ul li a {
-                padding: 6px 12px;
-                font-size: 11px;
+            .review-card {
+                margin-left: 15px;
+                margin-right: 15px;
+                min-height: auto;
+            }
+
+            .review-text {
+                min-height: auto;
+            }
+
+            .col-lg-4.col-md-6.review-col {
+                margin-bottom: 180px !important;
+            }
+
+            .col-lg-4.col-md-6.review-col:last-child {
+                margin-bottom: 30px !important;
             }
         }
+
+
+/* Welcome Section Container */
+
+.welcome-4 .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.welcome-4 .section-title span {
+    font-size: 14px;
+    color: #999;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.welcome-4 .section-title h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.welcome-4 .section-title .separator {
+    width: 60px;
+    height: 3px;
+    background: #d32f2f;
+    margin: 20px auto;
+    position: relative;
+}
+
+.welcome-4 .section-title .separator::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #d32f2f;
+    left: 50%;
+    top: -2.5px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.welcome-4 .section-title p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 20px auto 0;
+}
+
+/* Carousel Section */
+.welcome-4 .owl-carousel {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-4 .owl-carousel .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Carousel Navigation Arrows */
+.welcome-4 .owl-carousel .owl-nav button.owl-prev,
+.welcome-4 .owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #d32f2f !important;
+    border-radius: 50%;
+    color: #fff !important;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.welcome-4 .owl-carousel .owl-nav button.owl-prev:hover,
+.welcome-4 .owl-carousel .owl-nav button.owl-next:hover {
+    opacity: 1;
+    background: #b71c1c !important;
+}
+
+.welcome-4 .owl-carousel .owl-nav button.owl-prev {
+    left: 20px;
+}
+
+.welcome-4 .owl-carousel .owl-nav button.owl-next {
+    right: 20px;
+}
+
+/* Content Text Section */
+.welcome-4 .col-md-6 p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Feature Boxes Row */
+.welcome-4 .row:last-child {
+    margin-top: 60px;
+}
+
+/* Feature Box Styles */
+.feature-box-3 {
+    text-align: center;
+    padding: 30px 20px;
+    transition: all 0.3s ease;
+    background: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.feature-box-3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-box-3 .icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.feature-box-3:hover .icon {
+    background: #d32f2f;
+}
+
+.feature-box-3 .icon i {
+    font-size: 40px;
+    color: #d32f2f;
+    transition: all 0.3s ease;
+}
+
+.feature-box-3:hover .icon i {
+    color: #ffffff;
+}
+
+.feature-box-3 .content {
+    flex: 1;
+}
+
+.feature-box-3 .content h6 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.feature-box-3 .content p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* Featured style for first box: white outer ring with red inner circle */
+.feature-box-3.featured .icon {
+    background: #ffffff;
+    border: 4px solid #d32f2f;
+    position: relative;
+}
+
+.feature-box-3.featured .icon::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: #d32f2f;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.feature-box-3.featured .icon i {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 28px;
+}
+
+/* Lighter gray icons for non-featured boxes */
+.feature-box-3 .icon {
+    background: #f7f7f7;
+}
+.feature-box-3 .icon i {
+    color: #bdbdbd;
+    font-size: 28px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .welcome-4 .section-title h2 {
+        font-size: 36px;
+    }
+    
+    .welcome-4 .owl-carousel {
+        margin-bottom: 30px;
+    }
+    
+    .welcome-4 .owl-carousel .owl-nav button.owl-prev,
+    .welcome-4 .owl-carousel .owl-nav button.owl-next {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    
+    .welcome-4 .owl-carousel .owl-nav button.owl-prev {
+        left: 10px;
+    }
+    
+    .welcome-4 .owl-carousel .owl-nav button.owl-next {
+        right: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .welcome-4 {
+        padding: 60px 0;
+    }
+    
+    .welcome-4 .section-title h2 {
+        font-size: 28px;
+    }
+    
+    .welcome-4 .section-title span {
+        font-size: 12px;
+    }
+    
+    .welcome-4 .section-title p {
+        font-size: 14px;
+    }
+    
+    .feature-box-3 {
+        padding: 25px 15px;
+    }
+    
+    .feature-box-3 .icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .feature-box-3 .icon i {
+        font-size: 35px;
+    }
+    
+    .feature-box-3 .content h6 {
+        font-size: 16px;
+    }
+    
+    .feature-box-3 .content p {
+        font-size: 13px;
+    }
+}
+
+/* Additional styling for better visual hierarchy */
+.welcome-4 .container {
+    position: relative;
+}
+
+/* Ensure equal height for feature boxes */
+.welcome-4 .row:last-child > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* History Section Container */
+.our-history {
+    background: #ffffff;
+    padding: 80px 0;
+    position: relative;
+}
+
+.our-history .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.our-history .section-title span {
+    font-size: 14px;
+    color: #999;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.our-history .section-title h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.our-history .section-title .separator {
+    width: 60px;
+    height: 3px;
+    background: #d32f2f;
+    margin: 20px auto;
+    position: relative;
+}
+
+.our-history .section-title .separator::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #d32f2f;
+    left: 50%;
+    top: -2.5px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Timeline Container */
+.timeline {
+    position: relative;
+    padding: 40px 0;
+    list-style: none;
+    margin: 0;
+}
+
+/* Center Vertical Line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e0e0e0;
+    transform: translateX(-50%);
+}
+
+/* Timeline Items */
+.timeline > li {
+    position: relative;
+    width: 50%;
+    padding: 0 60px;
+    margin-bottom: 80px;
+    box-sizing: border-box;
+}
+
+.timeline > li:last-child {
+    margin-bottom: 0;
+}
+
+/* Left Items */
+.timeline > li:nth-child(odd) {
+    left: 0;
+    text-align: right;
+    padding-right: 80px;
+    padding-left: 0;
+}
+
+/* Right Items */
+.timeline > li:nth-child(even) {
+    left: 50%;
+    text-align: left;
+    padding-left: 80px;
+    padding-right: 0;
+}
+
+/* Timeline Badge (Circle Numbers) */
+.timeline-badge {
+    position: absolute;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    background: #ffffff;
+    border: 4px solid #d32f2f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline > li:nth-child(odd) .timeline-badge {
+    right: -35px;
+}
+
+.timeline > li:nth-child(even) .timeline-badge {
+    left: -35px;
+}
+
+.timeline-badge h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #d32f2f;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Timeline Panel (Content Box) */
+.timeline-panel {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 35px;
+    position: relative;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.timeline-panel:hover {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+/* Remove permanent red background for items 1 & 2 — use neutral panel */
+.timeline > li:nth-child(1) .timeline-panel,
+.timeline > li:nth-child(2) .timeline-panel {
+    background: #ffffff;
+    border-color: #e0e0e0;
+}
+
+.timeline > li:nth-child(1) .timeline-panel *,
+.timeline > li:nth-child(2) .timeline-panel * {
+    color: inherit !important;
+}
+
+/* Arrow Pointers */
+.timeline > li:nth-child(odd) .timeline-panel::before {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #e0e0e0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+.timeline > li:nth-child(odd) .timeline-panel::after {
+    content: '';
+    position: absolute;
+    right: -18px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-left: 18px solid #ffffff;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+/* Arrow pointers for item 1: neutral colors */
+.timeline > li:nth-child(1) .timeline-panel::before {
+    border-left-color: #e0e0e0;
+}
+
+.timeline > li:nth-child(1) .timeline-panel::after {
+    border-left-color: #ffffff;
+}
+
+/* Right side arrows */
+.timeline > li:nth-child(even) .timeline-panel::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-right: 20px solid #e0e0e0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+.timeline > li:nth-child(even) .timeline-panel::after {
+    content: '';
+    position: absolute;
+    left: -18px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-right: 18px solid #ffffff;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+/* Arrow pointers for item 2: neutral colors */
+.timeline > li:nth-child(2) .timeline-panel::before {
+    border-right-color: #e0e0e0;
+}
+
+.timeline > li:nth-child(2) .timeline-panel::after {
+    border-right-color: #ffffff;
+}
+
+/* Timeline Heading */
+.timeline-heading h5 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.timeline-heading h5::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background: #d32f2f;
+}
+
+/* Right aligned heading underline */
+.timeline > li:nth-child(odd) .timeline-heading h5::after {
+    left: auto;
+    right: 0;
+}
+
+/* White underline for red boxes */
+.timeline > li:nth-child(1) .timeline-heading h5::after,
+.timeline > li:nth-child(2) .timeline-heading h5::after {
+    background: #ffffff;
+}
+
+/* Timeline Body */
+.timeline-body p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Do not force white here; use inherit so hover can control contrast */
+.timeline > li:nth-child(1) .timeline-body p,
+.timeline > li:nth-child(2) .timeline-body p {
+    color: inherit;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    /* Mobile Timeline - Single Column */
+    .timeline::before {
+        left: 40px;
+    }
+
+    .timeline > li {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 100px !important;
+        padding-right: 20px !important;
+        margin-bottom: 60px;
+    }
+
+    .timeline-badge {
+        left: 5px !important;
+        right: auto !important;
+    }
+
+    .timeline-panel::before,
+    .timeline-panel::after {
+        left: -20px !important;
+        right: auto !important;
+        border-left: none !important;
+        border-right: 20px solid #e0e0e0 !important;
+    }
+
+    .timeline-panel::after {
+        left: -18px !important;
+        border-right: 18px solid #ffffff !important;
+    }
+
+    .timeline > li:nth-child(1) .timeline-panel::before,
+    .timeline > li:nth-child(2) .timeline-panel::before {
+        border-right-color: #e0e0e0 !important;
+    }
+
+    .timeline > li:nth-child(1) .timeline-panel::after,
+    .timeline > li:nth-child(2) .timeline-panel::after {
+        border-right-color: #ffffff !important;
+    }
+
+    .timeline-heading h5::after {
+        left: 0 !important;
+        right: auto !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .our-history {
+        padding: 60px 0;
+    }
+
+    .our-history .section-title h2 {
+        font-size: 32px;
+    }
+
+    .timeline > li {
+        padding-left: 80px !important;
+        margin-bottom: 50px;
+    }
+
+    .timeline-badge {
+        width: 60px;
+        height: 60px;
+        left: 0 !important;
+    }
+
+    .timeline-badge h4 {
+        font-size: 20px;
+    }
+
+    .timeline-panel {
+        padding: 25px;
+    }
+
+    .timeline-heading h5 {
+        font-size: 18px;
+    }
+
+    .timeline-body p {
+        font-size: 14px;
+    }
+}
+
+/* Animation on Scroll (Optional) */
+.timeline > li {
+    opacity: 0;
+    animation: fadeInTimeline 0.6s ease forwards;
+}
+
+.timeline > li:nth-child(1) { animation-delay: 0.1s; }
+.timeline > li:nth-child(2) { animation-delay: 0.2s; }
+.timeline > li:nth-child(3) { animation-delay: 0.3s; }
+.timeline > li:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInTimeline {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover: make timeline panel and badge red and readable */
+.timeline > li:hover .timeline-panel {
+    background: #d32f2f;
+    border-color: #d32f2f;
+    transform: translateY(-3px);
+}
+
+.timeline > li:hover .timeline-panel,
+.timeline > li:hover .timeline-panel * {
+    color: #ffffff !important;
+}
+
+.timeline > li:hover .timeline-badge {
+    border-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* Keep the badge number visible on white background; if you'd like the
+   badge filled on hover, change background to #d32f2f and h4 color to white. */
+.timeline > li:hover .timeline-badge h4 {
+    color: #d32f2f;
+}
+
+.timeline-panel,
+.timeline-badge {
+    transition: all 0.25s ease-in-out;
+}
+
+/* Default timeline panel text color: black */
+.timeline-panel,
+.timeline-panel * {
+    color: #000000;
+}
+
+/* Override more specific per-item white rule so body paragraphs are black by default */
+.timeline > li:nth-child(1) .timeline-body p,
+.timeline > li:nth-child(2) .timeline-body p {
+    color: #000000;
+}
+
+
+/* List Style Reset */
+.list-style-none {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/* Counter Section Container */
+.counter-section-enhanced {
+    position: relative;
+    background-image: url('assets/media/bg/2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+/* Dark Overlay */
+.counter-section-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+}
+
+/* Counter Container */
+.counter-section-enhanced .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Counter Row */
+.counter-section-enhanced .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Individual Counter Item */
+.counter-item-enhanced {
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+
+/* Vertical Divider Lines */
+.counter-item-enhanced:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Counter Icon */
+.counter-item-enhanced .counter-icon {
+    margin-bottom: 20px;
+}
+
+.counter-item-enhanced .counter-icon i,
+.counter-item-enhanced .counter-icon svg {
+    font-size: 50px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Icon Hover Effect */
+.counter-item-enhanced:hover .counter-icon i,
+.counter-item-enhanced:hover .counter-icon svg {
+    transform: scale(1.1);
+    color: #d32f2f;
+}
+
+/* Counter Label (Text Above Number) */
+.counter-item-enhanced .counter-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Counter Number */
+.counter-item-enhanced .counter-number {
+    font-size: 64px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Counter Animation */
+.counter-item-enhanced .counter-number.counting {
+    animation: countPulse 0.3s ease;
+}
+
+@keyframes countPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Hover Effect on Entire Item */
+.counter-item-enhanced {
+    transition: all 0.3s ease;
+}
+
+.counter-item-enhanced:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .counter-section-enhanced {
+        padding: 60px 0;
+    }
+    
+    .counter-item-enhanced .counter-number {
+        font-size: 52px;
+    }
+    
+    .counter-item-enhanced .counter-label {
+        font-size: 14px;
+    }
+    
+    .counter-item-enhanced .counter-icon i,
+    .counter-item-enhanced .counter-icon svg {
+        font-size: 45px;
+    }
+    
+    .counter-item-enhanced:not(:last-child)::after {
+        height: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .counter-section-enhanced {
+        padding: 50px 0;
+        background-attachment: scroll;
+    }
+    
+    .counter-item-enhanced {
+        padding: 25px 15px;
+        margin-bottom: 20px;
+    }
+    
+    /* Remove vertical dividers on mobile */
+    .counter-item-enhanced:not(:last-child)::after {
+        display: none;
+    }
+    
+    /* Add horizontal dividers instead */
+    .counter-item-enhanced:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 30px;
+    }
+    
+    .counter-item-enhanced .counter-number {
+        font-size: 48px;
+    }
+    
+    .counter-item-enhanced .counter-label {
+        font-size: 13px;
+    }
+    
+    .counter-item-enhanced .counter-icon i,
+    .counter-item-enhanced .counter-icon svg {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-item-enhanced .counter-number {
+        font-size: 42px;
+    }
+    
+    .counter-item-enhanced .counter-label {
+        font-size: 12px;
+    }
+}
+
+/* Alternative Layout - Icons on Left */
+.counter-horizontal-layout .counter-item-enhanced {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.counter-horizontal-layout .counter-icon {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.counter-horizontal-layout .counter-content {
+    flex: 1;
+}
+
+/* Loading State */
+.counter-item-enhanced.loading .counter-number {
+    opacity: 0.5;
+}
+
+/* Parallax Effect Enhancement */
+@media (min-width: 992px) {
+    .counter-section-enhanced {
+        background-attachment: fixed;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .counter-section-enhanced::before {
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* New Welcome Section Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-subtitle {
+    font-size: 14px;
+    color: #999;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.section-separator {
+    width: 60px;
+    height: 3px;
+    background: #d32f2f;
+    margin: 20px auto;
+    position: relative;
+}
+
+.section-separator::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #d32f2f;
+    left: 50%;
+    top: -2.5px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.section-description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 20px auto 0;
+}
+
+/* Content Row */
+.content-row {
+    margin-bottom: 50px;
+}
+
+/* Carousel Styling */
+.car-carousel {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.car-carousel img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Owl Carousel Navigation */
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #d32f2f !important;
+    border-radius: 50%;
+    color: #fff !important;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+    opacity: 1;
+    background: #b71c1c !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: 20px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: 20px;
+}
+
+.owl-carousel .owl-nav button span {
+    font-size: 30px;
+    line-height: 50px;
+}
+
+/* Text Content */
+.text-content p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Feature Boxes */
+.features-row {
+    margin-top: 60px;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 30px 20px;
+    transition: all 0.3s ease;
+    background: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    height: 100%;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.feature-box:hover .feature-icon-wrapper {
+    background: #d32f2f;
+}
+
+.feature-icon {
+    font-size: 40px;
+    color: #d32f2f;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover .feature-icon {
+    color: #ffffff;
+}
+
+/* Featured/Highlighted Icon Style */
+.feature-box.featured .feature-icon-wrapper {
+    background: #d32f2f;
+    border: 4px solid #d32f2f;
+    box-shadow: 0 0 0 8px rgba(211, 47, 47, 0.1);
+    animation: pulseRing 2s infinite;
+}
+
+.feature-box.featured .feature-icon {
+    color: #ffffff;
+}
+
+@keyframes pulseRing {
+    0% {
+        box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(211, 47, 47, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(211, 47, 47, 0);
+    }
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.feature-description {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .section-title {
+        font-size: 36px;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev {
+        left: 10px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+        right: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .welcome-section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-subtitle {
+        font-size: 12px;
+    }
+
+    .section-description {
+        font-size: 14px;
+    }
+
+    .feature-box {
+        padding: 25px 15px;
+    }
+
+    .feature-icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+
+    .feature-icon {
+        font-size: 35px;
+    }
+
+    .feature-title {
+        font-size: 16px;
+    }
+
+    .feature-description {
+        font-size: 13px;
+    }
+}
+
     </style>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- SWITCHER -->
+    <link href="assets/plugins/switcher/css/switcher.css" rel="stylesheet" id="switcher-css" media="all" />
+    <link href="assets/plugins/switcher/css/color1.css" rel="alternate stylesheet" title="color1" media="all" />
+    <link href="assets/plugins/switcher/css/color2.css" rel="alternate stylesheet" title="color2" media="all" />
+    <link href="assets/plugins/switcher/css/color3.css" rel="alternate stylesheet" title="color3" media="all" />
+    <link href="assets/plugins/switcher/css/color4.css" rel="alternate stylesheet" title="color4" media="all" />
+    <link href="assets/plugins/switcher/css/color5.css" rel="alternate stylesheet" title="color5" media="all" />
+
+    <script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
+    <!-- Loader -->
+    <div id="page-preloader"><span class="spinner"></span></div>
+    <!-- Loader end -->
+
     <div id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
-        <div id="wrapper">
-            <!-- HEADER -->
-            <div class="header">
-                <div class="top-header">
+        <!-- Start Switcher -->
+        <div class="switcher-wrapper">
+            <div class="demo_changer">
+                <div class="demo-icon customBgColor">
+                    <i class="fa fa-cog fa-spin fa-2x"></i>
+                </div>
+                <div class="form_holder">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="predefined_styles">
+                                <div class="skin-theme-switcher">
+                                    <h4>Color</h4>
+                                    <a href="javascript:void(0);" data-switchcolor="color1" class="styleswitch"
+                                        style="background-color: #fe5656">
+                                    </a>
+                                    <a href="javascript:void(0);" data-switchcolor="color2" class="styleswitch"
+                                        style="background-color: #4fb0fd">
+                                    </a>
+                                    <a href="javascript:void(0);" data-switchcolor="color3" class="styleswitch"
+                                        style="background-color: #ffc73c">
+                                    </a>
+                                    <a href="javascript:void(0);" data-switchcolor="color4" class="styleswitch"
+                                        style="background-color: #ff8300">
+                                    </a>
+                                    <a href="javascript:void(0);" data-switchcolor="color5" class="styleswitch"
+                                        style="background-color: #02cc8b">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="assets/plugins/switcher/js/bootstrap-select.js"></script>
+            <script src="assets/plugins/switcher/js/evol.colorpicker.min.js"></script>
+            <script src="assets/plugins/switcher/js/dmss.js"></script>
+        </div>
+        <!-- End Switcher -->
+
+
+        <div id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
+            <div id="wrapper">
+                <!-- HEADER -->
+                <div class="header">
+                    <div class="top-header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="header-contacts">
+                                        <span class="header-contacts__item"><i class="icon fa fa-phone"></i> 076 905
+                                            7272</span>
+                                        <a class="header-contacts__item" href="mailto:villoauto@gmail.com"><i
+                                                class="icon fa fa-envelope"></i>
+                                            villoauto@gmail.com</a>
+                                    </div>
+                                    <ul class="social-links list-inline">
+                                        <li>
+                                            <a class="" href="javascript:void(0);"><i class="bi bi-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="javascript:void(0);"><i class="bi bi-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="javascript:void(0);"><i class="bi bi-whatsapp"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__inner">
+                        <div class="header-container-padding">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                    <a href="index.html" class="logo d-none d-lg-block">
+                                        <img class="logo__img img-responsive" src="assets/img/logo.png"
+                                            style="height: 100px; object-fit: contain;" alt="Logo" />
+                                    </a>
+                                    <div class="navbar yamm">
+                                        <div class="navbar-header hidden-md hidden-lg hidden-sm">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#navbar-collapse-1" class="navbar-toggle">
+                                                <span class="icon-bar"></span><span class="icon-bar"></span><span
+                                                    class="icon-bar"></span>
+                                            </button>
+                                            <a href="javascript:void(0);" class="navbar-brand"></a>
+                                        </div>
+                                        <div id="navbar-collapse-1" class="navbar-collapse collapse ">
+                                            <ul class="nav navbar-nav ">
+                                                <li><a href="index.html">HOME</a></li>
+                                                <li>
+                                                <li><a href="vehicle-listings.html">VEHICLE LISTINGS</a></li>
+                                                <li>
+                                                    <a href="services.html">SERVICES</a>
+                                                </li>
+                                                <li>
+                                                    <a href="about-us.html">ABOUT US</a>
+                                                </li>
+                                                <li>
+                                                    <a href="gallery.html">GALLERY</a>
+                                                </li>
+                                                <li>
+                                                    <a href="contact-us.html">CONTACT US</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block-title">
+                    <div class="block-title__inner section-bg section-bg_second">
+                        <div class="bg-inner">
+                            <h1 class="ui-title-page">ABOUT US</h1>
+                            <div class="decor-1 center-block"></div>
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">HOME</a></li>
+                                <li class="active">About Us</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--================================= inner-intro -->
+
+
+                <section class="welcome-4 page-section-ptb white-bg my-section-padding welcome-section">
+                    <div class="container">
+                        <!-- Section Header -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-header">
+                                    <span class="section-subtitle">Welcome to</span>
+                                    <h2 class="section-title">VILLO AUTO CARS</h2>
+                                    <div class="section-separator"></div>
+                                    <p class="section-description">
+                                        At Villo Auto Cars, we bring you the best selection of reconditioned and brand-new vehicles
+                                        at competitive prices. Whether you're looking for your first car, an upgrade, or a reliable
+                                        vehicle for your business, we've got you covered with flexible finance options and trusted
+                                        service.
+                                   
+                                        Our goal is to make car ownership smooth and hassle-free. From hand-picked vehicles to
+                                        expert guidance, we ensure quality and trust at every step.
+                                        We provide full documentation assistance, flexible leasing plans, and ongoing customer
+                                        support long after your purchase.
+                                        Located in the heart of Nugegoda, we've served thousands of happy customers islandwide—delivering
+                                        excellence, every time.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Feature Boxes Row -->
+                        <div class="row features-row">
+                            <!-- Feature 1: All Brands -->
+                            <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+                                <div class="feature-box feature-item" data-index="0">
+                                    <div class="feature-icon-wrapper">
+                                        <i class="fas fa-car feature-icon"></i>
+                                    </div>
+                                    <h6 class="feature-title">ALL BRANDS</h6>
+                                    <p class="feature-description">
+                                        Choose from Toyota, Honda, Nissan, Suzuki, and more top-tier brands.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2: Customer Support -->
+                            <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+                                <div class="feature-box feature-item" data-index="1">
+                                    <div class="feature-icon-wrapper">
+                                        <i class="fas fa-headset feature-icon"></i>
+                                    </div>
+                                    <h6 class="feature-title">CUSTOMER SUPPORT</h6>
+                                    <p class="feature-description">
+                                        Friendly, expert support throughout your car-buying journey.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 3: Trusted Dealership -->
+                            <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-sm-0">
+                                <div class="feature-box feature-item" data-index="2">
+                                    <div class="feature-icon-wrapper">
+                                        <i class="fas fa-shield-alt feature-icon"></i>
+                                    </div>
+                                    <h6 class="feature-title">TRUSTED DEALERSHIP</h6>
+                                    <p class="feature-description">
+                                        Reputation built on honesty, service quality, and satisfied customers.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 4: Affordable Options -->
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="feature-box feature-item" data-index="3">
+                                    <div class="feature-icon-wrapper">
+                                        <i class="fas fa-wallet feature-icon"></i>
+                                    </div>
+                                    <h6 class="feature-title">AFFORDABLE OPTIONS</h6>
+                                    <p class="feature-description">
+                                        Finance plans to suit every budget. Drive away with confidence.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+                <!--history section-->
+                <section class="our-history white-bg page-section-ptb my-section-padding-bottom">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xs-12">
-                                <div class="header-contacts">
-                                    <span class="header-contacts__item"><i class="icon fa fa-phone"></i> 076 905
-                                        7272</span>
-                                    <a class="header-contacts__item" href="mailto:villoauto@gmail.com"><i
-                                            class="icon fa fa-envelope"></i>
-                                        villoauto@gmail.com</a>
+                            <div class="col-md-12">
+                                <div class="section-title">
+                                    <span>Villo Auto Cars: From humble beginnings to a trusted name</span>
+                                    <h2>Our History</h2>
+                                    <div class="separator"></div>
                                 </div>
-                                <ul class="social-links list-inline">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="timeline list-style-none">
                                     <li>
-                                        <a class="" href="javascript:void(0);"><i class="bi bi-facebook"></i></a>
+                                        <div class="timeline-badge">
+                                            <h4>01</h4>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h5>Founded in 2010</h5>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Villo Auto Cars opened its doors in Nugegoda with a mission to
+                                                    deliver quality vehicles at fair prices. Our early days were built
+                                                    on passion and dedication.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-inverted">
+                                        <div class="timeline-badge">
+                                            <h4>02</h4>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h5>Expanding Our Services</h5>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>We expanded into offering full vehicle documentation, after-sales
+                                                    services, and leasing assistance, making the buying experience
+                                                    seamless.</p>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li>
-                                        <a class="" href="javascript:void(0);"><i class="bi bi-instagram"></i></a>
+                                        <div class="timeline-badge">
+                                            <h4>03</h4>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h5>New Showroom Opening</h5>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Our spacious new showroom opened, allowing us to display a wide range
+                                                    of vehicles and welcome more customers in comfort and style.</p>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <a class="" href="javascript:void(0);"><i class="bi bi-whatsapp"></i></a>
+                                    <li class="timeline-inverted">
+                                        <div class="timeline-badge">
+                                            <h4>04</h4>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h5>Going Digital</h5>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>We launched our website and social platforms, enabling customers
+                                                    across Sri Lanka to view our inventory and connect with us online
+                                                    with ease.</p>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="header__inner">
+
+
+                <!--=================================Counter -->
+
+<section class="counter-section-enhanced">
+    <div class="container">
+        <div class="row">
+            
+            <!-- Counter 1: Vehicles in Stock -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+                <div class="counter-item-enhanced">
+                    <div class="counter-icon">
+                        <i class="glyph-icon flaticon-beetle"></i>
+                    </div>
+                    <span class="counter-label">VEHICLES IN STOCK</span>
+                    <span class="counter-number" data-count="561">0</span>
+                </div>
+            </div>
+
+            <!-- Counter 2: Dealer Reviews -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+                <div class="counter-item-enhanced">
+                    <div class="counter-icon">
+                        <i class="glyph-icon flaticon-interface"></i>
+                    </div>
+                    <span class="counter-label">DEALER REVIEWS</span>
+                    <span class="counter-number" data-count="856">0</span>
+                </div>
+            </div>
+
+            <!-- Counter 3: Happy Customer -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-sm-0">
+                <div class="counter-item-enhanced">
+                    <div class="counter-icon">
+                        <i class="glyph-icon flaticon-circle"></i>
+                    </div>
+                    <span class="counter-label">HAPPY CUSTOMER</span>
+                    <span class="counter-number" data-count="789">0</span>
+                </div>
+            </div>
+
+            <!-- Counter 4: Awards -->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="counter-item-enhanced">
+                    <div class="counter-icon">
+                        <i class="glyph-icon flaticon-cup"></i>
+                    </div>
+                    <span class="counter-label">AWARDS</span>
+                    <span class="counter-number" data-count="356">0</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Counter Animation JavaScript -->
+<script>
+// Counter Animation Function
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+    
+    const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+            element.textContent = target;
+            element.classList.remove('counting');
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(start);
+            element.classList.add('counting');
+        }
+    }, 16);
+}
+
+// Intersection Observer for triggering animation when section is visible
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counters = entry.target.querySelectorAll('.counter-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                animateCounter(counter, target, 2000);
+            });
+            // Stop observing after animation triggers once
+            counterObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Start observing when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    const counterSection = document.querySelector('.counter-section-enhanced');
+    if (counterSection) {
+        counterObserver.observe(counterSection);
+    }
+});
+</script>
+
+
+
+
+
+                <!--=================================
+Customer Reviews Section -->
+
+                <section class="customer-reviews-section">
                     <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <div class="section-title">
+                                    <span>What Our Kandy Customers Say About Us</span>
+                                    <h2>CUSTOMER REVIEWS</h2>
+                                    <div class="separator"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
-                            <div class="col-md-12 col-xs-12">
-                                <a href="index.html" class="logo d-none d-lg-block">
-                                    <img class="logo__img img-responsive" src="assets/img/logo.png"
-                                        style="height: 100px; object-fit: contain;" alt="Logo" />
-                                </a>
-                                <div class="navbar yamm">
-                                    <div class="navbar-header hidden-md hidden-lg hidden-sm">
-                                        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1"
-                                            class="navbar-toggle">
-                                            <span class="icon-bar"></span><span class="icon-bar"></span><span
-                                                class="icon-bar"></span>
-                                        </button>
-                                        <a href="javascript:void(0);" class="navbar-brand"></a>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 review-col">
+                                <div class="review-card">
+                                    <div class="review-image">
+                                        <img src="assets/media/gridImg/1_1.webp" alt="Car Review">
                                     </div>
-                                    <div id="navbar-collapse-1" class="navbar-collapse collapse">
-                                        <ul class="nav navbar-nav">
-                                            <li><a href="index.html">HOME</a></li>
-                                            <li>
-                                                <a href="services.html">SERVICES</a>
-                                            </li>
-                                            <li>
-                                                <a href="about-us.html">ABOUT US</a>
-                                            </li>
-                                            <li>
-                                                <a href="gallery.html">GALLERY</a>
-                                            </li>
-                                            <li>
-                                                <a href="contact-us.html">CONTACT US</a>
-                                            </li>
+                                    <img src="assets/media/avatar_reviews/1.jpg" alt="Nishani Rathnayake"
+                                        class="reviewer-avatar">
+                                    <div class="review-content">
+                                        <h5 class="reviewer-name">Nishani Rathnayake</h5>
+                                        <span class="reviewer-title">Doctor, Kandy General Hospital</span>
+                                        <p class="review-text">
+                                            "Excellent service and genuine spare parts availability.
+                                            I've been a loyal customer for 5 years and wouldn't go
+                                            anywhere else for my automotive needs."
+                                        </p>
+                                        <div class="quote-icon">"</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 review-col">
+                                <div class="review-card">
+                                    <div class="review-image">
+                                        <img src="assets/media/gridImg/1_2.webp" alt="Car Review">
+                                    </div>
+                                    <img src="assets/media/avatar_reviews/2.jpg" alt="Pradeep Jayasuriya"
+                                        class="reviewer-avatar">
+                                    <div class="review-content">
+                                        <h5 class="reviewer-name">Pradeep Jayasuriya</h5>
+                                        <span class="reviewer-title">Business Owner, Kandy</span>
+                                        <p class="review-text">
+                                            "Villo Auto Cars helped me find the perfect Toyota
+                                            Corolla for my family. Their service was exceptional, and
+                                            the financing was very competitive. Highly recommended!"
+                                        </p>
+                                        <div class="quote-icon">"</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 review-col">
+                                <div class="review-card">
+                                    <div class="review-image">
+                                        <img src="assets/media/gridImg/2_1.webp" alt="Car Review">
+                                    </div>
+                                    <img src="assets/media/avatar_reviews/3.jpg" alt="Samantha De Silva"
+                                        class="reviewer-avatar">
+                                    <div class="review-content">
+                                        <h5 class="reviewer-name">Samantha De Silva</h5>
+                                        <span class="reviewer-title">Teacher, Peradeniya</span>
+                                        <p class="review-text">
+                                            "I purchased my Honda Vezel from Villo Auto Cars last
+                                            year. The entire process was smooth and transparent.
+                                            Their after-sales service is outstanding!"
+                                        </p>
+                                        <div class="quote-icon">"</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--=================================
+End Customer Reviews -->
+
+                <!--footer new-->
+                <footer class="footer">
+                    <div class="container">
+                        <div class="footer-top">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="footer-column">
+                                        <h4>INVENTORY</h4>
+                                        <ul>
+                                            <li><a href="#">NEW VEHICLES</a></li>
+                                            <li><a href="#">USED VEHICLES</a></li>
+                                            <li><a href="#">PRE-OWNED VEHICLE SPECIALS</a></li>
+                                            <li><a href="#">PRICED UNDER 15K</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="footer-column">
+                                        <h4>FINANCING</h4>
+                                        <ul>
+                                            <li><a href="#">GET FINANCING</a></li>
+                                            <li><a href="#">PAYMENT CALCULATOR</a></li>
+                                            <li><a href="#">VALUE YOUR TRADE</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="footer-column">
+                                        <h4>QUICK LINKS</h4>
+                                        <ul>
+                                            <li><a href="#">FAQS</a></li>
+                                            <li><a href="#">WHY BUY FROM ALM</a></li>
+                                            <li><a href="#">FIVE QUESTIONS TO ASK</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="footer-column">
+                                        <h4>CONTACT</h4>
+                                        <ul>
+                                            <li><a href="tel:94769057272">076 905 7272</a></li>
+                                            <li><a href="mailto:villoauto@gmail.com">villoauto@gmail.com</a></li>
+                                            <li><a href="#">No. 614, Colombo road, Nanuoya, Pilimathalawa</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="footer-bottom">
+                            <div>
+                                <img src="assets/img/logo-footer.png" alt="logo" class="footer-logo">
+                            </div>
+                            <div class="copyright">
+                                2025 © All Rights Reserved | Villo Auto Cars (Pvt) Ltd | Designed & Developed by Silicon
+                                Radon Networks
+                                (Pvt) Ltd.
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </footer>
+
+                <!--Messenger and WhatsApp Floating btns-->
+                <a href="https://m.me/94769057272" class="float" style="z-index: 999999;">
+                    <i class="fa-brands fa-facebook-messenger my-float"></i>
+                </a>
+                <script async
+                    src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+                <script>
+                    var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "94769057272", "welcomeMessage": "Hello! How can we help you today?", "zIndex": 999999, "btnColorScheme": "light" };
+                    window.onload = () => {
+                        _waEmbed(wa_btnSetting);
+                    };
+                </script>
+
             </div>
-
-            <div class="block-title">
-                <div class="block-title__inner section-bg section-bg_second">
-                    <div class="bg-inner">
-                        <h1 class="ui-title-page">OUR GALLERY</h1>
-                        <div class="decor-1 center-block"></div>
-                        <ol class="breadcrumb">
-                            <li><a href="index.html">HOME</a></li>
-                            <li class="active">GALLERY</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!--footer new-->
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer-top">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="footer-column">
-                                    <h4>INVENTORY</h4>
-                                    <ul>
-                                        <li><a href="#">NEW VEHICLES</a></li>
-                                        <li><a href="#">USED VEHICLES</a></li>
-                                        <li><a href="#">PRE-OWNED VEHICLE SPECIALS</a></li>
-                                        <li><a href="#">PRICED UNDER 15K</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="footer-column">
-                                    <h4>FINANCING</h4>
-                                    <ul>
-                                        <li><a href="#">GET FINANCING</a></li>
-                                        <li><a href="#">PAYMENT CALCULATOR</a></li>
-                                        <li><a href="#">VALUE YOUR TRADE</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="footer-column">
-                                    <h4>QUICK LINKS</h4>
-                                    <ul>
-                                        <li><a href="#">FAQS</a></li>
-                                        <li><a href="#">WHY BUY FROM ALM</a></li>
-                                        <li><a href="#">FIVE QUESTIONS TO ASK</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="footer-column">
-                                    <h4>CONTACT</h4>
-                                    <ul>
-                                        <li><a href="tel:94769057272">076 905 7272</a></li>
-                                        <li><a href="mailto:villoauto@gmail.com">villoauto@gmail.com</a></li>
-                                        <li><a href="#">No. 614, Colombo road, Nanuoya, Pilimathalawa</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="footer-bottom">
-                        <div>
-                            <img src="assets/img/logo-footer.png" alt="logo" class="footer-logo">
-                        </div>
-                        <div class="copyright">
-                            2025 © All Rights Reserved | Villo Auto Cars (Pvt) Ltd | Designed & Developed by Silicon
-                            Radon Networks
-                            (Pvt) Ltd.
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-            <!--Messenger and WhatsApp Floating btns-->
-            <a href="https://m.me/94769057272" class="float" style="z-index: 999999;">
-                <i class="fa-brands fa-facebook-messenger my-float"></i>
-            </a>
-            <script async
-                src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
-            <script>
-                var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "94769057272", "welcomeMessage": "Hello! How can we help you today?", "zIndex": 999999, "btnColorScheme": "light" };
-                window.onload = () => {
-                    _waEmbed(wa_btnSetting);
-                };
-            </script>
-
         </div>
-    </div>
 
-    <div class="car-top">
-        <span><img src="assets/img/car.png" alt="car"></span>
-    </div>
+        <div class="car-top">
+            <span><img src="assets/img/car.png" alt="car"></span>
+        </div>
 
-    <!-- SCRIPTS -->
-    <script src="assets/js/jquery-migrate-1.2.1.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
-    <script src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="assets/plugins/jelect/jquery.jelect.js"></script>
-    <script src="assets/plugins/sliderpro/js/jquery.sliderPro.min.js"></script>
-    <script src="assets/js/cssua.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- SCRIPTS -->
+        <script src="assets/js/jquery-migrate-1.2.1.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/modernizr.custom.js"></script>
+        <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
+        <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
+        <script src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="assets/plugins/jelect/jquery.jelect.js"></script>
+        <script src="assets/plugins/sliderpro/js/jquery.sliderPro.min.js"></script>
+        <script src="assets/js/cssua.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Gallery JavaScript -->
-    <script>
-        // Gallery Filter Functionality
-        const filterBtns = document.querySelectorAll('.gallery-filters ul li a');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                // Remove active class from all li elements
-                document.querySelectorAll('.gallery-filters ul li').forEach(li => li.classList.remove('active'));
-                // Add active class to clicked button's parent li
-                this.parentElement.classList.add('active');
-
-                const filterValue = this.getAttribute('data-filter');
-
-                galleryItems.forEach(item => {
-                    if (filterValue === 'all') {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        const category = item.getAttribute('data-category');
-                        if (category === filterValue) {
-                            item.style.display = 'block';
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'scale(1)';
-                            }, 10);
-                        } else {
-                            item.style.opacity = '0';
-                            item.style.transform = 'scale(0.8)';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300);
-                        }
-                    }
-                });
+        <script>
+        $(document).ready(function() {
+            // Initialize Owl Carousel
+            $('.car-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                nav: true,
+                navText: ['<span>‹</span>', '<span>›</span>'],
+                dots: false,
+                animateOut: 'fadeOut',
+                smartSpeed: 450
             });
-        });
 
-        // Lightbox Functionality
-        const lightboxModal = document.getElementById('lightboxModal');
-        const lightboxImg = document.getElementById('lightboxImg');
-        const lightboxCaption = document.getElementById('lightboxCaption');
-        const closeBtn = document.querySelector('.lightbox-close');
-        const prevBtn = document.querySelector('.lightbox-prev');
-        const nextBtn = document.querySelector('.lightbox-next');
+            // Rotating Feature Highlight
+            let currentFeatureIndex = 0;
+            const featureBoxes = $('.feature-item');
+            const totalFeatures = featureBoxes.length;
 
-        let currentIndex = 0;
-        let visibleItems = [];
-
-        // Function to update visible items based on current filter
-        function updateVisibleItems() {
-            visibleItems = Array.from(galleryItems).filter(item => {
-                return item.style.display !== 'none';
-            });
-        }
-
-        // Open lightbox
-        galleryItems.forEach((item, index) => {
-            item.addEventListener('click', function () {
-                updateVisibleItems();
-                currentIndex = visibleItems.indexOf(this);
-                showLightbox();
-            });
-        });
-
-        function showLightbox() {
-            const img = visibleItems[currentIndex].querySelector('img');
-            const caption = visibleItems[currentIndex].querySelector('.gallery-caption');
-
-            lightboxImg.src = img.src;
-            lightboxCaption.innerHTML = caption.innerHTML;
-            lightboxModal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        // Close lightbox
-        closeBtn.addEventListener('click', closeLightbox);
-        lightboxModal.addEventListener('click', function (e) {
-            if (e.target === lightboxModal) {
-                closeLightbox();
+            function rotateFeature() {
+                // Remove 'featured' class from all boxes
+                featureBoxes.removeClass('featured');
+                
+                // Add 'featured' class to current box
+                featureBoxes.eq(currentFeatureIndex).addClass('featured');
+                
+                // Move to next box
+                currentFeatureIndex = (currentFeatureIndex + 1) % totalFeatures;
             }
-        });
 
-        function closeLightbox() {
-            lightboxModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
+            // Initial highlight
+            rotateFeature();
 
-        // Previous image
-        prevBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
-            showLightbox();
-        });
+            // Rotate every 3 seconds (synchronized with carousel)
+            setInterval(rotateFeature, 3000);
 
-        // Next image
-        nextBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            currentIndex = (currentIndex + 1) % visibleItems.length;
-            showLightbox();
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', function (e) {
-            if (lightboxModal.style.display === 'block') {
-                if (e.key === 'Escape') {
-                    closeLightbox();
-                } else if (e.key === 'ArrowLeft') {
-                    currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
-                    showLightbox();
-                } else if (e.key === 'ArrowRight') {
-                    currentIndex = (currentIndex + 1) % visibleItems.length;
-                    showLightbox();
+            // Optional: Sync with carousel slide change
+            $('.car-carousel').on('changed.owl.carousel', function(event) {
+                if (event.item.index !== undefined) {
+                    const slideIndex = event.item.index % totalFeatures;
+                    currentFeatureIndex = slideIndex;
+                    featureBoxes.removeClass('featured');
+                    featureBoxes.eq(slideIndex).addClass('featured');
                 }
-            }
+            });
         });
-
-        // Initialize visible items on page load
-        updateVisibleItems();
-    </script>
+        </script>
 
 </body>
 
