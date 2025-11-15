@@ -401,15 +401,72 @@
             .stat-item {
                 border-right: none;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 20px;
+                padding: 30px 20px;
             }
 
             .statistics-section .row .col-sm-6:last-child .stat-item {
                 border-bottom: none;
             }
+            
+            .stat-icon {
+                font-size: 50px !important;
+                flex-shrink: 0;
+                min-width: 60px;
+            }
+            
+            .stat-content {
+                text-align: left;
+                flex-grow: 1;
+            }
+            
+            .stat-label {
+                font-size: 12px !important;
+                margin-bottom: 8px !important;
+            }
+            
+            .stat-number {
+                font-size: 42px !important;
+                line-height: 1;
+            }
         }
 
         .statistics-section .row .col-md-3:last-child .stat-item {
             border-right: none;
+        }
+
+        /* Push the last stat-item in the last column to the bottom-right on desktop */
+        @media (min-width: 768px) {
+            .statistics-section .row .col-md-3:last-child {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .statistics-section .row .col-md-3:last-child .stat-item:last-child {
+                margin-top: auto;
+                align-self: flex-end;
+                text-align: right;
+                padding-right: 0px; /* small offset from edge */
+            }
+        }
+
+        /* Mobile fallback: keep original flow */
+        @media (max-width: 767px) {
+            .statistics-section .row .col-md-3:last-child {
+                display: block;
+                flex-direction: initial;
+            }
+
+            .statistics-section .row .col-md-3:last-child .stat-item:last-child {
+                margin-top: 0;
+                align-self: initial;
+                text-align: left;
+                padding-right: 90px;
+            }
         }
 
         .stat-icon {

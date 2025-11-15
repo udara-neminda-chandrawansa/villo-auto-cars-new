@@ -363,6 +363,41 @@
             color: #333333 !important;
         }
 
+        /* Wider skewed filter buttons on desktop and centered in sidebar */
+        @media (min-width: 769px) {
+            #sidebarFilters .btn {
+                display: flex;
+                justify-content: center;
+            }
+
+            /* Set a comfortable width for the skewed buttons (adjust px as needed) */
+            .wrap__btn-skew-r .btn-skew-r {
+                width: 260px !important;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        /* Full-width variant for skewed buttons (makes them span the sidebar) */
+        @media (min-width: 769px) {
+            .wrap__btn-skew-r.full-width {
+                width: 100%;
+                display: block;
+            }
+
+            .wrap__btn-skew-r.full-width .btn-skew-r {
+                width: 100% !important;
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            /* Ensure the inner text aligns nicely when full width */
+            .wrap__btn-skew-r.full-width .btn-skew-r__inner {
+                display: inline-block;
+                width: auto;
+            }
+        }
+
         /* Custom Scrollbar for filter content */
         .filter-content::-webkit-scrollbar {
             width: 6px;
@@ -412,6 +447,42 @@
         .list-icon::before {
             content: '☰';
             font-size: 16px;
+        }
+        
+        /* Reduce large gap under pagination on small screens */
+        @media (max-width: 768px) {
+            /* tighten pagination spacing */
+            ul.pagination {
+                margin: 8px 0 6px !important;
+                padding: 0;
+                display: flex;
+                gap: 6px;
+                justify-content: center;
+            }
+
+            ul.pagination li {
+                margin: 0 !important;
+                padding: 0 !important;
+                display: inline-block;
+            }
+
+            /* reduce vertical spacing around main content blocks that can create extra gap */
+            main.main-content { margin-bottom: 8px; }
+
+            /* if individual cards have large bottom margin, reduce it on mobile */
+            article.card { margin-bottom: 14px; }
+
+            /* Make filter action buttons full-width on mobile */
+            .btn-apply-filters, .btn-reset-filters {
+                display: block !important;
+                width: 100% !important;
+                box-sizing: border-box;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            /* add spacing between stacked buttons */
+            .btn-reset-filters { margin-bottom: 8px !important; }
         }
     </style>
 </head>
@@ -1089,7 +1160,7 @@
 
                             <!-- Action Buttons -->
                             <div class="btn" style="margin-top: -48px;">
-                                <div class="btn-filter wrap__btn-skew-r js-filter">
+                                <div class="btn-filter wrap__btn-skew-r js-filter full-width">
                                     <button class="btn-skew-r btn-effect btn-apply-filters" onclick="applyFilters()">
                                         <span class="btn-skew-r__inner">Apply Filters</span>
                                     </button>
@@ -1097,7 +1168,7 @@
                             </div>
 
                             <div class="btn" style="margin-top: -58px;">
-                                <div class="btn-filter wrap__btn-skew-r js-filter">
+                                <div class="btn-filter wrap__btn-skew-r js-filter full-width">
                                     <button class="btn-skew-r btn-effect btn-reset-filters" onclick="resetFilters()">
                                         <span class="btn-skew-r__inner">Reset All</span>
                                     </button>
