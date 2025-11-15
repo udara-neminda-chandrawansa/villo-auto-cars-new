@@ -14,7 +14,6 @@
     <script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
 
     <style>
-
         #sliderpro1 {
             display: block;
         }
@@ -311,11 +310,7 @@
             }
         }
 
-        /* Services Section Styles */
-        .services-section {
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
+
 
         .service-card {
             text-align: center;
@@ -324,6 +319,7 @@
             border-radius: 5px;
             transition: all 0.3s ease;
             height: 100%;
+            margin-bottom: 60px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
@@ -441,6 +437,16 @@
             line-height: 1;
         }
 
+        /* Force white text for all statistics elements to avoid overrides */
+        .statistics-section .stat-item,
+        .statistics-section .stat-content,
+        .statistics-section .stat-label,
+        .statistics-section .stat-number,
+        .statistics-section .stat-icon,
+        .statistics-section .stat-icon i {
+            color: #fff !important;
+        }
+
         /* Reliable Service Section */
         .reliable-service-section {
             padding: 80px 0;
@@ -489,7 +495,7 @@
         .service-image {
             width: 100%;
             border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
         }
 
         @media (max-width: 991px) {
@@ -634,7 +640,7 @@
 
         @media (max-width: 767px) {
             .services-section {
-                padding: 50px 0;
+                padding: 30px 0;
             }
 
             .service-card {
@@ -659,6 +665,64 @@
 
             .schedule-title {
                 font-size: 28px;
+            }
+        }
+
+        /* Mobile: stack statistics vertically with left icon and large number */
+        @media (max-width: 480px) {
+            .statistics-section .row {
+                display: block;
+            }
+
+            .statistics-section .col-md-3,
+            .statistics-section .col-sm-6 {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .stat-item {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 20px;
+                padding: 22px 18px;
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            }
+
+            .stat-icon {
+                font-size: 30px;
+                width: 70px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255,255,255,0.06);
+                border-radius: 50%;
+                color: #fff;
+                flex-shrink: 0;
+            }
+
+            .stat-content {
+                text-align: left;
+            }
+
+            .stat-label {
+                font-size: 12px;
+                letter-spacing: 1px;
+                margin-bottom: 6px;
+            }
+
+            .stat-number {
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 1;
+            }
+
+            .statistics-section {
+                padding: 20px 0;
+                background-position: center top;
             }
         }
     </style>
@@ -822,7 +886,9 @@
                                         <i class="fa fa-car"></i>
                                     </div>
                                     <h3 class="service-title">SUPER FAST</h3>
-                                    <p class="service-description">We value your time. Our team ensures lightning-fast diagnostics, service, and delivery, getting you back on the road without delay.</p>
+                                    <p class="service-description">We value your time. Our team ensures lightning-fast
+                                        diagnostics, service, and delivery, getting you back on the road without delay.
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 mb-4">
@@ -831,7 +897,8 @@
                                         <i class="fa fa-credit-card"></i>
                                     </div>
                                     <h3 class="service-title">AFFORDABLE</h3>
-                                    <p class="service-description">Enjoy premium vehicle services and competitive prices. At Villo Auto Cars, we ensure top value for every rupee you spend.</p>
+                                    <p class="service-description">Enjoy premium vehicle services and competitive
+                                        prices. At Villo Auto Cars, we ensure top value for every rupee you spend.</p>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 mb-4">
@@ -840,7 +907,8 @@
                                         <i class="fa fa-oil-can"></i>
                                     </div>
                                     <h3 class="service-title">OIL CHANGES</h3>
-                                    <p class="service-description">Regular oil changes are vital. We use top-grade oils to extend your engine life and improve performance — quick and professional.</p>
+                                    <p class="service-description">Regular oil changes are vital. We use top-grade oils
+                                        to extend your engine life and improve performance — quick and professional.</p>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 mb-4">
@@ -849,7 +917,9 @@
                                         <i class="fa fa-snowflake"></i>
                                     </div>
                                     <h3 class="service-title">AIR CONDITIONING</h3>
-                                    <p class="service-description">Beat the heat with our expert A/C repairs and servicing. We'll keep your vehicle's climate cool, comfortable, and running efficiently.</p>
+                                    <p class="service-description">Beat the heat with our expert A/C repairs and
+                                        servicing. We'll keep your vehicle's climate cool, comfortable, and running
+                                        efficiently.</p>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 mb-4">
@@ -858,7 +928,9 @@
                                         <i class="fa fa-cogs"></i>
                                     </div>
                                     <h3 class="service-title">TRANSMISSION</h3>
-                                    <p class="service-description">From maintenance to complete overhauls, our technicians handle manual and automatic transmissions with precision and care.</p>
+                                    <p class="service-description">From maintenance to complete overhauls, our
+                                        technicians handle manual and automatic transmissions with precision and care.
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 mb-4">
@@ -867,7 +939,8 @@
                                         <i class="fa fa-handshake"></i>
                                     </div>
                                     <h3 class="service-title">DEALERSHIP</h3>
-                                    <p class="service-description">Find your dream car at Villo Auto Cars. Our trusted dealership offers a wide selection of quality pre-owned and new vehicles.</p>
+                                    <p class="service-description">Find your dream car at Villo Auto Cars. Our trusted
+                                        dealership offers a wide selection of quality pre-owned and new vehicles.</p>
                                 </div>
                             </div>
                         </div>
@@ -931,13 +1004,21 @@
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-md-6">
-                                <h2 class="section-heading">WE PROVIDE RELIABLE AUTO CARE SERVICES TO KEEP YOU CONFIDENTLY ON THE ROAD.</h2>
-                                <p class="section-intro">At Villo Auto Cars, we combine experience, precision, and passion to deliver outstanding automotive solutions. Whether it's routine maintenance or complex repairs, our certified technicians are committed to providing exceptional service tailored to your vehicle's needs.</p>
+                                <h2 class="section-heading">WE PROVIDE RELIABLE AUTO CARE SERVICES TO KEEP YOU
+                                    CONFIDENTLY ON THE ROAD.</h2>
+                                <p class="section-intro">At Villo Auto Cars, we combine experience, precision, and
+                                    passion to deliver outstanding automotive solutions. Whether it's routine
+                                    maintenance or complex repairs, our certified technicians are committed to providing
+                                    exceptional service tailored to your vehicle's needs.</p>
                                 <ul class="service-features">
-                                    <li><i class="fa fa-check"></i> Comprehensive diagnostics and inspections for all vehicle models.</li>
-                                    <li><i class="fa fa-check"></i> Quality-assured repairs using genuine parts and modern tools.</li>
-                                    <li><i class="fa fa-check"></i> Transparent service process and competitive pricing.</li>
-                                    <li><i class="fa fa-check"></i> Friendly, knowledgeable staff dedicated to your satisfaction.</li>
+                                    <li><i class="fa fa-check"></i> Comprehensive diagnostics and inspections for all
+                                        vehicle models.</li>
+                                    <li><i class="fa fa-check"></i> Quality-assured repairs using genuine parts and
+                                        modern tools.</li>
+                                    <li><i class="fa fa-check"></i> Transparent service process and competitive pricing.
+                                    </li>
+                                    <li><i class="fa fa-check"></i> Friendly, knowledgeable staff dedicated to your
+                                        satisfaction.</li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
@@ -970,7 +1051,8 @@
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <textarea class="form-control" rows="5" placeholder="Comment*" required></textarea>
+                                        <textarea class="form-control" rows="5" placeholder="Comment*"
+                                            required></textarea>
                                     </div>
                                     <button type="submit" class="btn btn-submit">Send Your Message</button>
                                 </form>
@@ -1236,59 +1318,59 @@
             });
 
             // Initialize visible items on page load
-                updateVisibleItems();
-            </script>
+            updateVisibleItems();
+        </script>
 
-            <script>
-                // Animated counters for statistics-section
-                document.addEventListener('DOMContentLoaded', function () {
-                    const statsSection = document.querySelector('.statistics-section');
-                    const counters = document.querySelectorAll('.stat-number');
-                    let started = false;
+        <script>
+            // Animated counters for statistics-section
+            document.addEventListener('DOMContentLoaded', function () {
+                const statsSection = document.querySelector('.statistics-section');
+                const counters = document.querySelectorAll('.stat-number');
+                let started = false;
 
-                    function animateCounters() {
-                        counters.forEach(counter => {
-                            const raw = counter.getAttribute('data-target') || counter.textContent;
-                            const target = parseInt(String(raw).replace(/,/g, '').replace(/[^0-9]/g, ''), 10) || 0;
-                            let frame = 0;
-                            const duration = 2000; // ms
-                            const fps = 60;
-                            const totalFrames = Math.round((duration / 1000) * fps);
-                            const easeOutQuad = t => t * (2 - t);
+                function animateCounters() {
+                    counters.forEach(counter => {
+                        const raw = counter.getAttribute('data-target') || counter.textContent;
+                        const target = parseInt(String(raw).replace(/,/g, '').replace(/[^0-9]/g, ''), 10) || 0;
+                        let frame = 0;
+                        const duration = 2000; // ms
+                        const fps = 60;
+                        const totalFrames = Math.round((duration / 1000) * fps);
+                        const easeOutQuad = t => t * (2 - t);
 
-                            const ticker = setInterval(() => {
-                                frame++;
-                                const progress = easeOutQuad(frame / totalFrames);
-                                const value = Math.round(target * progress);
-                                counter.textContent = value;
-                                if (frame >= totalFrames) {
-                                    counter.textContent = target;
-                                    clearInterval(ticker);
-                                }
-                            }, Math.round(1000 / fps));
+                        const ticker = setInterval(() => {
+                            frame++;
+                            const progress = easeOutQuad(frame / totalFrames);
+                            const value = Math.round(target * progress);
+                            counter.textContent = value;
+                            if (frame >= totalFrames) {
+                                counter.textContent = target;
+                                clearInterval(ticker);
+                            }
+                        }, Math.round(1000 / fps));
+                    });
+                }
+
+                if (!statsSection || counters.length === 0) return;
+
+                if ('IntersectionObserver' in window) {
+                    const io = new IntersectionObserver((entries, obs) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !started) {
+                                started = true;
+                                animateCounters();
+                                obs.disconnect();
+                            }
                         });
-                    }
+                    }, { threshold: 0.3 });
+                    io.observe(statsSection);
+                } else {
+                    // fallback
+                    animateCounters();
+                }
+            });
+        </script>
 
-                    if (!statsSection || counters.length === 0) return;
-
-                    if ('IntersectionObserver' in window) {
-                        const io = new IntersectionObserver((entries, obs) => {
-                            entries.forEach(entry => {
-                                if (entry.isIntersecting && !started) {
-                                    started = true;
-                                    animateCounters();
-                                    obs.disconnect();
-                                }
-                            });
-                        }, { threshold: 0.3 });
-                        io.observe(statsSection);
-                    } else {
-                        // fallback
-                        animateCounters();
-                    }
-                });
-            </script>
-
-    </body>
+</body>
 
 </html>
