@@ -484,6 +484,56 @@
             /* add spacing between stacked buttons */
             .btn-reset-filters { margin-bottom: 8px !important; }
         }
+
+        /* Hide the 'View' toggle on smaller screens */
+        @media (max-width: 768px) {
+            .view-filter { display: none !important; }
+        }
+            /* Mobile Vehicle Card Image Fixes */
+            @media (max-width: 768px) {
+                /* Fix card image container */
+                .card__img {
+                    width: 100% !important;
+                    height: auto !important;
+                    overflow: hidden;
+                    margin-bottom: 15px;
+                }
+                
+                /* Make images fully responsive */
+                .card__img img {
+                    width: 100% !important;
+                    height: auto !important;
+                    max-width: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+                
+                /* Fix card layout on mobile */
+                article.card {
+                    display: block !important;
+                    margin-bottom: 20px;
+                    padding: 15px;
+                }
+                
+                /* Remove any float that might break layout */
+                .card__img,
+                .card__inner {
+                    float: none !important;
+                    width: 100% !important;
+                }
+                
+                /* Ensure card inner content stacks properly */
+                .card__inner {
+                    padding: 15px 0 0 0 !important;
+                }
+                
+                /* Fix clearfix if needed */
+                article.card::after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+            }
     </style>
 </head>
 
@@ -642,7 +692,7 @@
                         </div>
 
                         <!-- View Toggle -->
-                        <div class="filter-group" style="flex: 0;">
+                        <div class="filter-group view-filter" style="flex: 0;">
                             <label class="filter-group-label">View</label>
                             <div class="view-toggle-group">
                                 <button class="view-toggle-btn active" onclick="setView('grid')" data-view="grid">
@@ -733,7 +783,7 @@
                                         </li>
                                     </ul>
                                     <div class="card__price">
-                                        PRICE:<span class="card__price-number">Rs. 33,905</span>
+                                        PRICE:<span class="card__price-number">Rs. 33,90500</span>
                                     </div>
                                 </div>
                             </article>
@@ -781,7 +831,7 @@
                                         </li>
                                     </ul>
                                     <div class="card__price">
-                                        PRICE:<span class="card__price-number">Rs. 29,415</span>
+                                        PRICE:<span class="card__price-number">Rs. 29,41500</span>
                                     </div>
                                 </div>
                             </article>
@@ -828,7 +878,7 @@
                                         </li>
                                     </ul>
                                     <div class="card__price">
-                                        PRICE:<span class="card__price-number">Rs. 14,495</span>
+                                        PRICE:<span class="card__price-number">Rs. 14,49500</span>
                                     </div>
                                 </div>
                             </article>
