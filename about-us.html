@@ -932,232 +932,6 @@
 
 
 
-/* Counter Section Container */
-.counter-section-enhanced {
-    position: relative;
-    background-image: url('assets/media/bg/2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 80px 0;
-    overflow: hidden;
-}
-
-/* Dark Overlay */
-.counter-section-enhanced::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.85);
-    z-index: 1;
-}
-
-/* Counter Container */
-.counter-section-enhanced .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* Counter Row */
-.counter-section-enhanced .row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Individual Counter Item */
-.counter-item-enhanced {
-    text-align: center;
-    padding: 30px 20px;
-    position: relative;
-}
-
-/* Vertical Divider Lines */
-.counter-item-enhanced:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 2px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* Counter Icon */
-.counter-item-enhanced .counter-icon {
-    margin-bottom: 20px;
-}
-
-.counter-item-enhanced .counter-icon i,
-.counter-item-enhanced .counter-icon svg {
-    font-size: 50px;
-    color: #ffffff;
-    transition: all 0.3s ease;
-}
-
-/* Icon Hover Effect */
-.counter-item-enhanced:hover .counter-icon i,
-.counter-item-enhanced:hover .counter-icon svg {
-    transform: scale(1.1);
-    color: #d32f2f;
-}
-
-/* Counter Label (Text Above Number) */
-.counter-item-enhanced .counter-label {
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-    display: block;
-}
-
-/* Counter Number */
-.counter-item-enhanced .counter-number {
-    font-size: 64px;
-    font-weight: 700;
-    color: #ffffff;
-    line-height: 1;
-    display: block;
-    margin-bottom: 0;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Counter Animation */
-.counter-item-enhanced .counter-number.counting {
-    animation: countPulse 0.3s ease;
-}
-
-@keyframes countPulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-/* Hover Effect on Entire Item */
-.counter-item-enhanced {
-    transition: all 0.3s ease;
-}
-
-.counter-item-enhanced:hover {
-    transform: translateY(-5px);
-}
-
-/* Responsive Styles */
-@media (max-width: 991px) {
-    .counter-section-enhanced {
-        padding: 60px 0;
-    }
-    
-    .counter-item-enhanced .counter-number {
-        font-size: 52px;
-    }
-    
-    .counter-item-enhanced .counter-label {
-        font-size: 14px;
-    }
-    
-    .counter-item-enhanced .counter-icon i,
-    .counter-item-enhanced .counter-icon svg {
-        font-size: 45px;
-    }
-    
-    .counter-item-enhanced:not(:last-child)::after {
-        height: 60px;
-    }
-}
-
-@media (max-width: 767px) {
-    .counter-section-enhanced {
-        padding: 50px 0;
-        background-attachment: scroll;
-    }
-    
-    .counter-item-enhanced {
-        padding: 25px 15px;
-        margin-bottom: 20px;
-    }
-    
-    /* Remove vertical dividers on mobile */
-    .counter-item-enhanced:not(:last-child)::after {
-        display: none;
-    }
-    
-    /* Add horizontal dividers instead */
-    .counter-item-enhanced:not(:last-child) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        padding-bottom: 30px;
-    }
-    
-    .counter-item-enhanced .counter-number {
-        font-size: 48px;
-    }
-    
-    .counter-item-enhanced .counter-label {
-        font-size: 13px;
-    }
-    
-    .counter-item-enhanced .counter-icon i,
-    .counter-item-enhanced .counter-icon svg {
-        font-size: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    .counter-item-enhanced .counter-number {
-        font-size: 42px;
-    }
-    
-    .counter-item-enhanced .counter-label {
-        font-size: 12px;
-    }
-}
-
-/* Alternative Layout - Icons on Left */
-.counter-horizontal-layout .counter-item-enhanced {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-align: left;
-}
-
-.counter-horizontal-layout .counter-icon {
-    margin-bottom: 0;
-    flex-shrink: 0;
-}
-
-.counter-horizontal-layout .counter-content {
-    flex: 1;
-}
-
-/* Loading State */
-.counter-item-enhanced.loading .counter-number {
-    opacity: 0.5;
-}
-
-/* Parallax Effect Enhancement */
-@media (min-width: 992px) {
-    .counter-section-enhanced {
-        background-attachment: fixed;
-    }
-}
-
-/* Print Styles */
-@media print {
-    .counter-section-enhanced::before {
-        background: rgba(0, 0, 0, 0.7);
-    }
-}
-
 /* New Welcome Section Styles */
 * {
     margin: 0;
@@ -1428,6 +1202,144 @@
         font-size: 13px;
     }
 }
+
+        /* Statistics Section Styles (copied from services design) */
+        .statistics-section {
+            padding: 60px 0;
+            background: url('assets/media/gridImg/6_2.webp') center center/cover no-repeat;
+            position: relative;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .statistics-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+
+        .statistics-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 767px) {
+            .stat-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 20px;
+                padding: 30px 20px;
+            }
+
+            .statistics-section .row .col-sm-6:last-child .stat-item {
+                border-bottom: none;
+            }
+            
+            .stat-icon {
+                font-size: 50px !important;
+                flex-shrink: 0;
+                min-width: 60px;
+            }
+            
+            .stat-content {
+                text-align: left;
+                flex-grow: 1;
+            }
+            
+            .stat-label {
+                font-size: 12px !important;
+                margin-bottom: 8px !important;
+            }
+            
+            .stat-number {
+                font-size: 42px !important;
+                line-height: 1;
+            }
+        }
+
+        .statistics-section .row .col-md-3:last-child .stat-item {
+            border-right: none;
+        }
+
+        /* Push the last stat-item in the last column to the bottom-right on desktop */
+        @media (min-width: 768px) {
+            .statistics-section .row .col-md-3:last-child {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .statistics-section .row .col-md-3:last-child .stat-item:last-child {
+                margin-top: auto;
+                align-self: flex-end;
+                text-align: right;
+                padding-right: 0px; /* small offset from edge */
+            }
+        }
+
+        /* Mobile fallback: keep original flow */
+        @media (max-width: 767px) {
+            .statistics-section .row .col-md-3:last-child {
+                display: block;
+                flex-direction: initial;
+            }
+
+            .statistics-section .row .col-md-3:last-child .stat-item:last-child {
+                margin-top: 0;
+                align-self: initial;
+                text-align: left;
+                padding-right: 90px;
+            }
+        }
+
+        .stat-icon {
+            font-size: 45px;
+            color: #fff;
+        }
+
+        .stat-content {
+            text-align: left;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .stat-number {
+            font-size: 42px;
+            color: #fff;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* Force white text for all statistics elements to avoid overrides */
+        .statistics-section .stat-item,
+        .statistics-section .stat-content,
+        .statistics-section .stat-label,
+        .statistics-section .stat-number,
+        .statistics-section .stat-icon,
+        .statistics-section .stat-icon i {
+            color: #fff !important;
+        }
 
     </style>
 
@@ -1753,108 +1665,108 @@
 
 
 
-                <!--=================================Counter -->
-
-<section class="counter-section-enhanced">
-    <div class="container">
-        <div class="row">
-            
-            <!-- Counter 1: Vehicles in Stock -->
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
-                <div class="counter-item-enhanced">
-                    <div class="counter-icon">
-                        <i class="glyph-icon flaticon-beetle"></i>
+                <!--=================================Statistics -->
+ඇ
+                <section class="statistics-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-car"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="stat-label">VEHICLES IN STOCK</div>
+                                        <div class="stat-number" data-target="561">561</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-comments"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="stat-label">DEALER REVIEWS</div>
+                                        <div class="stat-number" data-target="856">856</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-smile"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="stat-label">HAPPY CUSTOMER</div>
+                                        <div class="stat-number" data-target="789">789</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-trophy"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="stat-label">AWARDS</div>
+                                        <div class="stat-number" data-target="356">356</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <span class="counter-label">VEHICLES IN STOCK</span>
-                    <span class="counter-number" data-count="561">0</span>
-                </div>
-            </div>
+                </section>
 
-            <!-- Counter 2: Dealer Reviews -->
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
-                <div class="counter-item-enhanced">
-                    <div class="counter-icon">
-                        <i class="glyph-icon flaticon-interface"></i>
-                    </div>
-                    <span class="counter-label">DEALER REVIEWS</span>
-                    <span class="counter-number" data-count="856">0</span>
-                </div>
-            </div>
+                <!-- Animated counters for statistics-section -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const statsSection = document.querySelector('.statistics-section');
+                        const counters = document.querySelectorAll('.stat-number');
+                        let started = false;
 
-            <!-- Counter 3: Happy Customer -->
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-sm-0">
-                <div class="counter-item-enhanced">
-                    <div class="counter-icon">
-                        <i class="glyph-icon flaticon-circle"></i>
-                    </div>
-                    <span class="counter-label">HAPPY CUSTOMER</span>
-                    <span class="counter-number" data-count="789">0</span>
-                </div>
-            </div>
+                        function animateCounters() {
+                            counters.forEach(counter => {
+                                const raw = counter.getAttribute('data-target') || counter.textContent;
+                                const target = parseInt(String(raw).replace(/,/g, '').replace(/[^0-9]/g, ''), 10) || 0;
+                                let frame = 0;
+                                const duration = 2000; // ms
+                                const fps = 60;
+                                const totalFrames = Math.round((duration / 1000) * fps);
+                                const easeOutQuad = t => t * (2 - t);
 
-            <!-- Counter 4: Awards -->
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="counter-item-enhanced">
-                    <div class="counter-icon">
-                        <i class="glyph-icon flaticon-cup"></i>
-                    </div>
-                    <span class="counter-label">AWARDS</span>
-                    <span class="counter-number" data-count="356">0</span>
-                </div>
-            </div>
+                                const ticker = setInterval(() => {
+                                    frame++;
+                                    const progress = easeOutQuad(frame / totalFrames);
+                                    const value = Math.round(target * progress);
+                                    counter.textContent = value;
+                                    if (frame >= totalFrames) {
+                                        counter.textContent = target;
+                                        clearInterval(ticker);
+                                    }
+                                }, Math.round(1000 / fps));
+                            });
+                        }
 
-        </div>
-    </div>
-</section>
+                        if (!statsSection || counters.length === 0) return;
 
-<!-- Counter Animation JavaScript -->
-<script>
-// Counter Animation Function
-function animateCounter(element, target, duration = 2000) {
-    let start = 0;
-    const increment = target / (duration / 16);
-    
-    const timer = setInterval(() => {
-        start += increment;
-        if (start >= target) {
-            element.textContent = target;
-            element.classList.remove('counting');
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(start);
-            element.classList.add('counting');
-        }
-    }, 16);
-}
-
-// Intersection Observer for triggering animation when section is visible
-const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const counters = entry.target.querySelectorAll('.counter-number');
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-count'));
-                animateCounter(counter, target, 2000);
-            });
-            // Stop observing after animation triggers once
-            counterObserver.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Start observing when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    const counterSection = document.querySelector('.counter-section-enhanced');
-    if (counterSection) {
-        counterObserver.observe(counterSection);
-    }
-});
-</script>
+                        if ('IntersectionObserver' in window) {
+                            const io = new IntersectionObserver((entries, obs) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting && !started) {
+                                        started = true;
+                                        animateCounters();
+                                        obs.disconnect();
+                                    }
+                                });
+                            }, { threshold: 0.3 });
+                            io.observe(statsSection);
+                        } else {
+                            // fallback
+                            animateCounters();
+                        }
+                    });
+                </script>
 
 
 
